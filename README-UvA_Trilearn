@@ -2,7 +2,7 @@
 * UvA_Trilearn 2003 - University of Amsterdam, The Netherlands  *
 * Base code version of the RoboCup-2003 World Champion          *
 * Created by:           Jelle Kok                               *
-* Research Coordinator: Nikos Vlassis                           * 
+* Research Coordinator: Nikos Vlassis                           *
 * Team Coordinator:     Frans Groen                             *
 * Copyright 2000-2001.  Jelle Kok and Remco de Boer             *
 * Copyright 2001-2002.  Jelle Kok                               *
@@ -59,9 +59,9 @@ Usage
  high-level strategy of the team. The other most important areas for
  improvement are:
 
- - the goalie behavior 
- - intercept method that takes opponents into account 
- - dribble skill 
+ - the goalie behavior
+ - intercept method that takes opponents into account
+ - dribble skill
 
 Documentation
 -------------
@@ -70,14 +70,14 @@ Documentation
  (www.doxygen.org).  The created html documentation can be downloaded
  from our website or generated using the command
 
-        make doc 
+        make doc
 
  in the directory of this README. The html files will be placed in the
  directory ./doc/html/. Here it is assumed that the program `dot' has
  been installed to create collaboration diagrams. If this is not the
  case then set the variable `HAVE_DOT' in the file `doc/doxygen.cfg'
  to `NO'.
- 
+
 Changes
 -------
 
@@ -113,13 +113,13 @@ Acknowledgements
 
 More information
 ----------------
- 
+
  More information can be found at the official UvA Trilearn website:
 
    http://www.science.uva.nl/~jellekok/robocup/index.html
- 
+
  or contact:
- 
+
    Jelle Kok     (jellekok@science.uva.nl)
 
 
@@ -135,25 +135,25 @@ Global overview of classes
                       |               |
                       |               |
                       |               |
-                      
+
                   WorldModel --- BasicPlayer
-   
-                      |               | 
+
                       |               |
                       |               |
-                      
+                      |               |
+
                 SenseHandler      ActHandler
-                      |               | 
+                      |               |
                       |               |
                       |_______________|
                              |
-                         Connection 
-                         
+                         Connection
+
                              |
                              |
                              |
                         SOCCERSERVER
-                             
+
  Utility classes which are used by the classes listed above but which
  are not shown in the diagram are the following:
 
@@ -197,7 +197,7 @@ ActHandler
                             during a cycle (kick, dash, etc.); the
                             command which has been received last is
                             sent to the server.
- - m_queueMultipleCommands: contains commands which can be executed 
+ - m_queueMultipleCommands: contains commands which can be executed
                             concurrently with commands in
                             m_queueOneCycleCommand (turn_neck, say,
                             etc.); all commands in this list are sent
@@ -257,12 +257,12 @@ Object
  - DynamicObject: subclass of the Object class that contains information about
                   mobile objects; it adds velocity information to the
                   general information provided by the Object class.
- - BallObject:    subclass of the DynamicObject class which contains 
+ - BallObject:    subclass of the DynamicObject class which contains
                   information about the ball; it adds no additional
                   attributes to those inherited from the DynamicObject
                   superclass.
 
- - PlayerObject:  subclass of the DynamicObject class which contains 
+ - PlayerObject:  subclass of the DynamicObject class which contains
                   information about a specific player on the field
                   (either a teammate or an opponent); it adds
                   attributes denoting the global neck angle and global
@@ -319,7 +319,7 @@ Formations
 
  - PlayerTypeInfo:    contains information about a player type in a formation.
  - FormationTypeInfo: contains information about one specific formation.
- - Formations:        contains information about all the possible team 
+ - Formations:        contains information about all the possible team
                       formations and stores the currently used
                       formation. This class is accessible from the
                       WorldModel class.
@@ -334,7 +334,7 @@ GenericValues
  their associated values are read from (or written to) a file, the
  corresponding variables can be easily set.
 
-  
+
 Logger
 ======
 
@@ -363,7 +363,7 @@ Timing
 
 Parse
 =====
- 
+
  This class contains several static methods for parsing string
  messages. These methods can skip characters up to a specified point
  and convert parts of a string to integer or double values. They are
@@ -382,7 +382,7 @@ ServerSettings
  message is then parsed using the methods from the Parse class and the
  resulting values are stored in ServerSettings.
 
-  
+
 SoccerTypes
 ===========
 
@@ -494,7 +494,7 @@ Rectangle
 
 The main file
 =============
-  
+
  In the file `main.C' all the different classes are initialized and
  linked after which the player mainloop is called. A single execution
  of this loop is as follows:
