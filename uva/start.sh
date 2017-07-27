@@ -19,7 +19,7 @@
 
 set wait  = 0
 set host  = "localhost"
-set team  = "UFABCRobotics-1" 
+set team  = "UFABCRobotics" 
 set dir   = "src"
 set prog  = "${dir}/trilearn_player"
 set coach = "${dir}/trilearn_coach"

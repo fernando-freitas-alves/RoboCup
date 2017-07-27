@@ -110,7 +110,7 @@
 #define PACKAGE_TARNAME "trilearn__base_sources"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL ""
+/* #undef PACKAGE_URL */
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "3.3"
