@@ -1,8 +1,0 @@
-xmlreader.o: xmlreader.cpp /usr/include/stdc-predef.h xmlreader.h \
- ../config.h
-
-/usr/include/stdc-predef.h:
-
-xmlreader.h:
-
-../config.h:
