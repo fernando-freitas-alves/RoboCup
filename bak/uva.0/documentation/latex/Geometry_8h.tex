@@ -1,0 +1,363 @@
+\hypertarget{Geometry_8h}{}\section{src/\+Geometry.h File Reference}
+\label{Geometry_8h}\index{src/\+Geometry.\+h@{src/\+Geometry.\+h}}
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Geometry.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{Geometry_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Geometry_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classVecPosition}{Vec\+Position}
+\item 
+class \hyperlink{classGeometry}{Geometry}
+\item 
+class \hyperlink{classCircle}{Circle}
+\item 
+class \hyperlink{classLine}{Line}
+\item 
+class \hyperlink{classRect}{Rect}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Geometry_8h_a002b2f4894492820fe708b1b7e7c5e70}{E\+P\+S\+I\+L\+ON}~0.\+0001
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \hyperlink{Geometry_8h_a4a8fd1c029bf947992b3d745a2e23363}{Ang\+Rad}
+\item 
+typedef double \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{Geometry_8h_af3e194d00b468bcd9641c4d3576a0624}{Coord\+SystemT} \{ {\bfseries C\+A\+R\+T\+E\+S\+I\+AN}, 
+{\bfseries P\+O\+L\+AR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{Geometry_8h_a0d608373c6f2b9809537cf787583391c}{max} (double d1, double d2)
+\item 
+double \hyperlink{Geometry_8h_acc0c5b1efeaef64a06c0877206917034}{min} (double d1, double d2)
+\item 
+int \hyperlink{Geometry_8h_a349dea271f68410c7de1cfcfb5cd518f}{sign} (double d1)
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{Geometry_8h_a331523aca37d4361f3a069fc2459dd1d}{Rad2\+Deg} (\hyperlink{Geometry_8h_a4a8fd1c029bf947992b3d745a2e23363}{Ang\+Rad} x)
+\item 
+\hyperlink{Geometry_8h_a4a8fd1c029bf947992b3d745a2e23363}{Ang\+Rad} \hyperlink{Geometry_8h_ada23931c22ebf0c6f7cd951db289af86}{Deg2\+Rad} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} x)
+\item 
+double \hyperlink{Geometry_8h_afff1ddfe0d946c0e475af137f0b52d12}{cos\+Deg} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} x)
+\item 
+double \hyperlink{Geometry_8h_a9e3698f673d5f5288e373974c5330a2d}{sin\+Deg} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} x)
+\item 
+double \hyperlink{Geometry_8h_ab5e3e3e4597c9fbaac94b80d3d81671b}{tan\+Deg} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} x)
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{Geometry_8h_ac8d0a1881e2bb94ad8fca9a82d0aa356}{atan\+Deg} (double x)
+\item 
+double \hyperlink{Geometry_8h_a3b5a779dcd2d9ed717ba63c19b0ff8fc}{atan2\+Deg} (double x, double y)
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{Geometry_8h_a06baf28df68cfc97dbd667639ade2a5d}{acos\+Deg} (double x)
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{Geometry_8h_a8e8291ab3916da54b792bee7a421cda1}{asin\+Deg} (double x)
+\item 
+bool \hyperlink{Geometry_8h_a1ce8967c983deb94170ddd393ce4db6e}{is\+Ang\+In\+Interval} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang, \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang\+Min, \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang\+Max)
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{Geometry_8h_afed76fb3fe11b5d209a32cf5df41be34}{get\+Bisector\+Two\+Angles} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang\+Min, \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang\+Max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+\begin{DoxyPre}
+{\bfseries File:}          \hyperlink{Geometry_8h}{Geometry.h}
+{\bfseries Project:}       Robocup Soccer Simulation Team: UvA Trilearn
+{\bfseries Authors:}       Jelle Kok
+{\bfseries Created:}       12/02/2001
+{\bfseries Last Revision:} $ID\$
+{\bfseries Contents:}      Header file for the classes \hyperlink{classVecPosition}{VecPosition}, \hyperlink{classGeometry}{Geometry}, \hyperlink{classLine}{Line},
+               \hyperlink{classCircle}{Circle} and Rectangle. All the member
+               data and member method declarations for all these classes can be
+               found in this file together with some auxiliary functions for
+               numeric and goniometric purposes.
+
+
+
+\subsubsection*{{\bfseries Changes}}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+{\bfseries Date}             {\bfseries Author}          {\bfseries Comment}
+12/02/2001       Jelle Kok       Initial version created
+09/06/2001       Remco de Boer   Version including full documentation completed
+\end{DoxyPre}
+ 
+
+\subsection{Macro Definition Documentation}
+\index{Geometry.\+h@{Geometry.\+h}!E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}}
+\index{E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{E\+P\+S\+I\+L\+ON}{EPSILON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+P\+S\+I\+L\+ON~0.\+0001}\hypertarget{Geometry_8h_a002b2f4894492820fe708b1b7e7c5e70}{}\label{Geometry_8h_a002b2f4894492820fe708b1b7e7c5e70}
+Value used for floating point equality tests. 
+
+\subsection{Typedef Documentation}
+\index{Geometry.\+h@{Geometry.\+h}!Ang\+Deg@{Ang\+Deg}}
+\index{Ang\+Deg@{Ang\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{Ang\+Deg}{AngDeg}}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf Ang\+Deg}}\hypertarget{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{}\label{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}
+Type definition for angles in radians. \index{Geometry.\+h@{Geometry.\+h}!Ang\+Rad@{Ang\+Rad}}
+\index{Ang\+Rad@{Ang\+Rad}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{Ang\+Rad}{AngRad}}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf Ang\+Rad}}\hypertarget{Geometry_8h_a4a8fd1c029bf947992b3d745a2e23363}{}\label{Geometry_8h_a4a8fd1c029bf947992b3d745a2e23363}
+Type definition for angles in degrees. 
+
+\subsection{Enumeration Type Documentation}
+\index{Geometry.\+h@{Geometry.\+h}!Coord\+SystemT@{Coord\+SystemT}}
+\index{Coord\+SystemT@{Coord\+SystemT}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{Coord\+SystemT}{CoordSystemT}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Coord\+SystemT}}\hypertarget{Geometry_8h_af3e194d00b468bcd9641c4d3576a0624}{}\label{Geometry_8h_af3e194d00b468bcd9641c4d3576a0624}
+Coord\+System is an enumeration of the different specified coordinate systems. The two possibilities are C\+A\+R\+T\+E\+S\+I\+AN or P\+O\+L\+AR. These values are for instance used in the initializing a \hyperlink{classVecPosition}{Vec\+Position}. The Coord\+System indicates whether the supplied arguments represent the position in cartesian or in polar coordinates. 
+
+\subsection{Function Documentation}
+\index{Geometry.\+h@{Geometry.\+h}!acos\+Deg@{acos\+Deg}}
+\index{acos\+Deg@{acos\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{acos\+Deg(double x)}{acosDeg(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} acos\+Deg (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a06baf28df68cfc97dbd667639ade2a5d}{}\label{Geometry_8h_a06baf28df68cfc97dbd667639ade2a5d}
+This function returns the principal value of the arc cosine of x in degrees using the built-\/in arc cosine function which returns this value in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & a double value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the arc cosine of the given value in degrees 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!asin\+Deg@{asin\+Deg}}
+\index{asin\+Deg@{asin\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{asin\+Deg(double x)}{asinDeg(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} asin\+Deg (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a8e8291ab3916da54b792bee7a421cda1}{}\label{Geometry_8h_a8e8291ab3916da54b792bee7a421cda1}
+This function returns the principal value of the arc sine of x in degrees using the built-\/in arc sine function which returns this value in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & a double value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the arc sine of the given value in degrees 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!atan2\+Deg@{atan2\+Deg}}
+\index{atan2\+Deg@{atan2\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{atan2\+Deg(double x, double y)}{atan2Deg(double x, double y)}}]{\setlength{\rightskip}{0pt plus 5cm}double atan2\+Deg (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a3b5a779dcd2d9ed717ba63c19b0ff8fc}{}\label{Geometry_8h_a3b5a779dcd2d9ed717ba63c19b0ff8fc}
+This function returns the principal value of the arc tangent of y/x in degrees using the signs of both arguments to determine the quadrant of the return value. For this the built-\/in \textquotesingle{}atan2\textquotesingle{} function is used which returns this value in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & a double value \\
+\hline
+{\em y} & a double value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the arc tangent of y/x in degrees taking the signs of x and y into account 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!atan\+Deg@{atan\+Deg}}
+\index{atan\+Deg@{atan\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{atan\+Deg(double x)}{atanDeg(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} atan\+Deg (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_ac8d0a1881e2bb94ad8fca9a82d0aa356}{}\label{Geometry_8h_ac8d0a1881e2bb94ad8fca9a82d0aa356}
+This function returns the principal value of the arc tangent of x in degrees using the built-\/in arc tangent function which returns this value in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & a double value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the arc tangent of the given value in degrees 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!cos\+Deg@{cos\+Deg}}
+\index{cos\+Deg@{cos\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{cos\+Deg(\+Ang\+Deg x)}{cosDeg(AngDeg x)}}]{\setlength{\rightskip}{0pt plus 5cm}double cos\+Deg (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_afff1ddfe0d946c0e475af137f0b52d12}{}\label{Geometry_8h_afff1ddfe0d946c0e475af137f0b52d12}
+This function returns the cosine of a given angle in degrees using the built-\/in cosine function that works with angles in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & an angle in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cosine of the given angle 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!Deg2\+Rad@{Deg2\+Rad}}
+\index{Deg2\+Rad@{Deg2\+Rad}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{Deg2\+Rad(\+Ang\+Deg x)}{Deg2Rad(AngDeg x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Rad} Deg2\+Rad (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_ada23931c22ebf0c6f7cd951db289af86}{}\label{Geometry_8h_ada23931c22ebf0c6f7cd951db289af86}
+This function converts an angle in degrees to the corresponding angle in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & an angle in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding angle in radians 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!get\+Bisector\+Two\+Angles@{get\+Bisector\+Two\+Angles}}
+\index{get\+Bisector\+Two\+Angles@{get\+Bisector\+Two\+Angles}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{get\+Bisector\+Two\+Angles(\+Ang\+Deg ang\+Min, Ang\+Deg ang\+Max)}{getBisectorTwoAngles(AngDeg angMin, AngDeg angMax)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} get\+Bisector\+Two\+Angles (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{ang\+Min, }
+\item[{{\bf Ang\+Deg}}]{ang\+Max}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_afed76fb3fe11b5d209a32cf5df41be34}{}\label{Geometry_8h_afed76fb3fe11b5d209a32cf5df41be34}
+This method returns the bisector (average) of two angles. It deals with the boundary problem, thus when \textquotesingle{}ang\+Min\textquotesingle{} equals 170 and \textquotesingle{}ang\+Max\textquotesingle{} equals -\/100, -\/145 is returned. 
+\begin{DoxyParams}{Parameters}
+{\em ang\+Min} & minimum angle \mbox{[}-\/180,180\mbox{]} \\
+\hline
+{\em ang\+Max} & maximum angle \mbox{[}-\/180,180\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+average of ang\+Min and ang\+Max. 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!is\+Ang\+In\+Interval@{is\+Ang\+In\+Interval}}
+\index{is\+Ang\+In\+Interval@{is\+Ang\+In\+Interval}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{is\+Ang\+In\+Interval(\+Ang\+Deg ang, Ang\+Deg ang\+Min, Ang\+Deg ang\+Max)}{isAngInInterval(AngDeg ang, AngDeg angMin, AngDeg angMax)}}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Ang\+In\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{ang, }
+\item[{{\bf Ang\+Deg}}]{ang\+Min, }
+\item[{{\bf Ang\+Deg}}]{ang\+Max}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a1ce8967c983deb94170ddd393ce4db6e}{}\label{Geometry_8h_a1ce8967c983deb94170ddd393ce4db6e}
+This function returns a boolean value which indicates whether the value \textquotesingle{}ang\textquotesingle{} (from interval \mbox{[}-\/180..180\mbox{]} lies in the interval \mbox{[}ang\+Min..ang\+Max\mbox{]}. Examples\+: is\+Ang\+In\+Interval( -\/100, 4, -\/150) returns false is\+Ang\+In\+Interval( 45, 4, -\/150) returns true 
+\begin{DoxyParams}{Parameters}
+{\em ang} & angle that should be checked \\
+\hline
+{\em ang\+Min} & minimum angle in interval \\
+\hline
+{\em ang\+Max} & maximum angle in interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean indicating whether ang lies in \mbox{[}ang\+Min..ang\+Max\mbox{]} 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!max@{max}}
+\index{max@{max}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{max(double d1, double d2)}{max(double d1, double d2)}}]{\setlength{\rightskip}{0pt plus 5cm}double max (
+\begin{DoxyParamCaption}
+\item[{double}]{d1, }
+\item[{double}]{d2}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a0d608373c6f2b9809537cf787583391c}{}\label{Geometry_8h_a0d608373c6f2b9809537cf787583391c}
+This function returns the maximum of two given doubles. 
+\begin{DoxyParams}{Parameters}
+{\em d1} & first parameter \\
+\hline
+{\em d2} & second parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the maximum of these two parameters 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!min@{min}}
+\index{min@{min}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{min(double d1, double d2)}{min(double d1, double d2)}}]{\setlength{\rightskip}{0pt plus 5cm}double min (
+\begin{DoxyParamCaption}
+\item[{double}]{d1, }
+\item[{double}]{d2}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_acc0c5b1efeaef64a06c0877206917034}{}\label{Geometry_8h_acc0c5b1efeaef64a06c0877206917034}
+This function returns the minimum of two given doubles. 
+\begin{DoxyParams}{Parameters}
+{\em d1} & first parameter \\
+\hline
+{\em d2} & second parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the minimum of these two parameters 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!Rad2\+Deg@{Rad2\+Deg}}
+\index{Rad2\+Deg@{Rad2\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{Rad2\+Deg(\+Ang\+Rad x)}{Rad2Deg(AngRad x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Rad2\+Deg (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Rad}}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a331523aca37d4361f3a069fc2459dd1d}{}\label{Geometry_8h_a331523aca37d4361f3a069fc2459dd1d}
+This function converts an angle in radians to the corresponding angle in degrees. 
+\begin{DoxyParams}{Parameters}
+{\em x} & an angle in radians \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding angle in degrees 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!sign@{sign}}
+\index{sign@{sign}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{sign(double d1)}{sign(double d1)}}]{\setlength{\rightskip}{0pt plus 5cm}int sign (
+\begin{DoxyParamCaption}
+\item[{double}]{d1}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a349dea271f68410c7de1cfcfb5cd518f}{}\label{Geometry_8h_a349dea271f68410c7de1cfcfb5cd518f}
+This function returns the sign of a give double. 1 is positive, -\/1 is negative 
+\begin{DoxyParams}{Parameters}
+{\em d1} & first parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sign of this double 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!sin\+Deg@{sin\+Deg}}
+\index{sin\+Deg@{sin\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{sin\+Deg(\+Ang\+Deg x)}{sinDeg(AngDeg x)}}]{\setlength{\rightskip}{0pt plus 5cm}double sin\+Deg (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_a9e3698f673d5f5288e373974c5330a2d}{}\label{Geometry_8h_a9e3698f673d5f5288e373974c5330a2d}
+This function returns the sine of a given angle in degrees using the built-\/in sine function that works with angles in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & an angle in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sine of the given angle 
+\end{DoxyReturn}
+\index{Geometry.\+h@{Geometry.\+h}!tan\+Deg@{tan\+Deg}}
+\index{tan\+Deg@{tan\+Deg}!Geometry.\+h@{Geometry.\+h}}
+\subsubsection[{\texorpdfstring{tan\+Deg(\+Ang\+Deg x)}{tanDeg(AngDeg x)}}]{\setlength{\rightskip}{0pt plus 5cm}double tan\+Deg (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{Geometry_8h_ab5e3e3e4597c9fbaac94b80d3d81671b}{}\label{Geometry_8h_ab5e3e3e4597c9fbaac94b80d3d81671b}
+This function returns the tangent of a given angle in degrees using the built-\/in tangent function that works with angles in radians. 
+\begin{DoxyParams}{Parameters}
+{\em x} & an angle in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tangent of the given angle 
+\end{DoxyReturn}

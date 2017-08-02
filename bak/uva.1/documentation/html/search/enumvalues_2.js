@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['clear_5fball_5fdefensive',['CLEAR_BALL_DEFENSIVE',['../SoccerTypes_8h.html#ae2955c91fd80f27b4c28cfd55a517e77ab25f558225dc472e43206ef2de0f279c',1,'SoccerTypes.h']]],
+  ['clear_5fball_5fgoal',['CLEAR_BALL_GOAL',['../SoccerTypes_8h.html#ae2955c91fd80f27b4c28cfd55a517e77a3e017f0ab8ea1dbcfde923e52aa181c4',1,'SoccerTypes.h']]],
+  ['clear_5fball_5fillegal',['CLEAR_BALL_ILLEGAL',['../SoccerTypes_8h.html#ae2955c91fd80f27b4c28cfd55a517e77abfcf69748af87346dd214bc8bafb51a8',1,'SoccerTypes.h']]],
+  ['clear_5fball_5foffensive',['CLEAR_BALL_OFFENSIVE',['../SoccerTypes_8h.html#ae2955c91fd80f27b4c28cfd55a517e77a7e64886efb9e1cde096380118799d4a5',1,'SoccerTypes.h']]],
+  ['clear_5fball_5foffensive_5fside',['CLEAR_BALL_OFFENSIVE_SIDE',['../SoccerTypes_8h.html#ae2955c91fd80f27b4c28cfd55a517e77a9d4960566df9e4fb0eb640a727d408d9',1,'SoccerTypes.h']]],
+  ['cmd_5fattentionto',['CMD_ATTENTIONTO',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a0c3d50531204511357ac7ed69fedfb02',1,'SoccerTypes.h']]],
+  ['cmd_5fcatch',['CMD_CATCH',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a1d2ae8b08af5ec18297599378fe5d4ce',1,'SoccerTypes.h']]],
+  ['cmd_5fchangeplayer',['CMD_CHANGEPLAYER',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5afc624ff60af12f07fe1c39df30e452ce',1,'SoccerTypes.h']]],
+  ['cmd_5fchangeview',['CMD_CHANGEVIEW',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a982fb31ed350ed99c346d1b0f05cf235',1,'SoccerTypes.h']]],
+  ['cmd_5fdash',['CMD_DASH',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5aecc887fb41c34588bcc30eabcd71c192',1,'SoccerTypes.h']]],
+  ['cmd_5fillegal',['CMD_ILLEGAL',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a38bf205bc1abc83eb30942d4e6511783',1,'SoccerTypes.h']]],
+  ['cmd_5fkick',['CMD_KICK',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5aaeb85c9f900a5e9ed191734a810a0084',1,'SoccerTypes.h']]],
+  ['cmd_5fmax_5fcommands',['CMD_MAX_COMMANDS',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a327a664a38e30049dd235d73b89bbf1a',1,'SoccerTypes.h']]],
+  ['cmd_5fmove',['CMD_MOVE',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a26dac54a6cac64973430cc31c71b1488',1,'SoccerTypes.h']]],
+  ['cmd_5fpointto',['CMD_POINTTO',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a31cc05486db291b857fc2fa54ca8a75c',1,'SoccerTypes.h']]],
+  ['cmd_5fsay',['CMD_SAY',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a1a63adea3fce7dd63f8bf99f4614b899',1,'SoccerTypes.h']]],
+  ['cmd_5fsensebody',['CMD_SENSEBODY',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5af743a909b272a2b79788e28e35124e69',1,'SoccerTypes.h']]],
+  ['cmd_5ftackle',['CMD_TACKLE',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a312bcb5e159c2351c36a38646b01eb34',1,'SoccerTypes.h']]],
+  ['cmd_5fturn',['CMD_TURN',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5ae27b9caf9875de90902e405e6f548a4d',1,'SoccerTypes.h']]],
+  ['cmd_5fturnneck',['CMD_TURNNECK',['../SoccerTypes_8h.html#ac986daf8a835e88572b79bcb63f5bbd5a87be8934c6727a094ff9e527ffbad2e2',1,'SoccerTypes.h']]]
+];

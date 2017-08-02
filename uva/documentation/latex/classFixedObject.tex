@@ -1,0 +1,97 @@
+\hypertarget{classFixedObject}{}\section{Fixed\+Object Class Reference}
+\label{classFixedObject}\index{Fixed\+Object@{Fixed\+Object}}
+
+
+{\ttfamily \#include $<$Objects.\+h$>$}
+
+
+
+Inheritance diagram for Fixed\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classFixedObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fixed\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classFixedObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classFixedObject_a7a50b54f0ca18257ab3d45afb3fd816c}{get\+Global\+Position} (\hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s, double d\+Goal\+Width=14.\+02) const 
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{classFixedObject_abcbfb2537519c3328a896b3b44070ea6}{get\+Global\+Angle} (\hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s)
+\item 
+void \hyperlink{classFixedObject_ad8771b36cc2073d4a9fe1879b2f91d06}{show} (ostream \&os=cout)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classFixedObject}{Fixed\+Object} contains Robo\+Cup information that is available for objects that cannot move (flags, goals, lines). No additional information is added to the superclass \hyperlink{classObject}{Object}. 
+
+\subsection{Member Function Documentation}
+\index{Fixed\+Object@{Fixed\+Object}!get\+Global\+Angle@{get\+Global\+Angle}}
+\index{get\+Global\+Angle@{get\+Global\+Angle}!Fixed\+Object@{Fixed\+Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Angle(\+Side\+T s)}{getGlobalAngle(SideT s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Fixed\+Object\+::get\+Global\+Angle (
+\begin{DoxyParamCaption}
+\item[{{\bf SideT}}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classFixedObject_abcbfb2537519c3328a896b3b44070ea6}{}\label{classFixedObject_abcbfb2537519c3328a896b3b44070ea6}
+This methods returns the global angle of this fixed object in the world. Only works when the fixed object is a line. The angle for the left team rises clockwise, i.\+e. left=0, bottom=90, etc. For the right team this is counterclockwise\+: right=0, top=90, etc) 
+\begin{DoxyParams}{Parameters}
+{\em s} & side of agent (angles differ for left and right side) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+global angle of this line in the world. 
+\end{DoxyReturn}
+\index{Fixed\+Object@{Fixed\+Object}!get\+Global\+Position@{get\+Global\+Position}}
+\index{get\+Global\+Position@{get\+Global\+Position}!Fixed\+Object@{Fixed\+Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Position(\+Side\+T s, double d\+Goal\+Width=14.\+02) const }{getGlobalPosition(SideT s, double dGoalWidth=14.02) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Fixed\+Object\+::get\+Global\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf SideT}}]{s, }
+\item[{double}]{d\+Goal\+Width = {\ttfamily 14.02}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classFixedObject_a7a50b54f0ca18257ab3d45afb3fd816c}{}\label{classFixedObject_a7a50b54f0ca18257ab3d45afb3fd816c}
+This method returns the global position of this fixed object. Only works when the object type equals a flag or a goal. Furthermore the side of the agent has to be passed since the global positions differ for the left and the right side. For some flags the size of the goal is important. So this value can be passed also. Otherwise the default value is 14.\+02. 
+\begin{DoxyParams}{Parameters}
+{\em s} & side of agent (global position differs for left and right side) \\
+\hline
+{\em d\+Goal\+Width} & width of a goal, needed for pole objects next to goal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+global position of this fixed object. 
+\end{DoxyReturn}
+\index{Fixed\+Object@{Fixed\+Object}!show@{show}}
+\index{show@{show}!Fixed\+Object@{Fixed\+Object}}
+\subsubsection[{\texorpdfstring{show(ostream \&os=cout)}{show(ostream &os=cout)}}]{\setlength{\rightskip}{0pt plus 5cm}void Fixed\+Object\+::show (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFixedObject_ad8771b36cc2073d4a9fe1879b2f91d06}{}\label{classFixedObject_ad8771b36cc2073d4a9fe1879b2f91d06}
+This method prints all the information about this \hyperlink{classFixedObject}{Fixed\+Object} to the specified output stream 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to print all relevant information to. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classObject_abdfad2372e7ec5f9aa271a1677653778}{Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Objects_8h}{Objects.\+h}\item 
+src/\hyperlink{Objects_8cpp}{Objects.\+cpp}\end{DoxyCompactItemize}

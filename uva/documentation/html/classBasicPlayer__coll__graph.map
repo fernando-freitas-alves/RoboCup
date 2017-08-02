@@ -1,0 +1,8 @@
+<map id="BasicPlayer" name="BasicPlayer">
+<area shape="rect" id="node2" href="$classPlayerSettings.html" title="PlayerSettings" alt="" coords="5,95,112,121"/>
+<area shape="rect" id="node3" href="$classGenericValues.html" title="GenericValues" alt="" coords="60,5,167,32"/>
+<area shape="rect" id="node6" href="$classServerSettings.html" title="ServerSettings" alt="" coords="137,95,245,121"/>
+<area shape="rect" id="node4" href="$classWorldModel.html" title="WorldModel" alt="" coords="269,95,360,121"/>
+<area shape="rect" id="node5" href="$classTime.html" title="Time" alt="" coords="289,5,340,32"/>
+<area shape="rect" id="node7" href="$classActHandler.html" title="ActHandler" alt="" coords="385,95,471,121"/>
+</map>

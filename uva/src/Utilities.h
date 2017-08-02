@@ -1,14 +1,16 @@
-#include <stdlib.h>
+// #include <stdlib.h>
+#include <cstdio>
+#include <utility>
+#include "WorldModel.h"
 
 using namespace std;
 
-void test(void);
-std::pair<unsigned int, unsigned int> getBallZone(WorldModel *WM);
+pair<unsigned int, unsigned int> getBallZone(WorldModel *WM);
 
 enum BallZoneX
 {
     DEFENSE,
-    MIDFIELD,
+    CENTER,
     ATTACK
 };
 

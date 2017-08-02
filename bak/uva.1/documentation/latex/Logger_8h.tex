@@ -1,0 +1,74 @@
+\hypertarget{Logger_8h}{}\section{src/\+Logger.h File Reference}
+\label{Logger_8h}\index{src/\+Logger.\+h@{src/\+Logger.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+Include dependency graph for Logger.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Logger_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTiming}{Timing}
+\item 
+class \hyperlink{classLogger}{Logger}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Logger_8h_ad1ad1107b2fb6e51cd78d16a64920eca}{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE}~3072
+\item 
+\#define \hyperlink{Logger_8h_ab400cc7c8787796a32ff06fb899a9ac2}{M\+A\+X\+\_\+\+H\+E\+A\+D\+ER}~128
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+\begin{DoxyPre}
+{\bfseries File:}          \hyperlink{Logger_8h}{Logger.h}
+{\bfseries Project:}       Robocup Soccer Simulation Team: UvA Trilearn
+{\bfseries Authors:}       Jelle Kok
+{\bfseries Created:}       3/3/2000
+{\bfseries Last Revision:} $ID\$
+{\bfseries Contents:}      This file contains the class to log information about the
+               system to any output stream. A range can be specified
+               for which the received log information is printed.
+               Furthermore it is possible to print the time since the
+               timer of the \hyperlink{classLogger}{Logger} has been restarted.
+
+
+
+\subsubsection*{{\bfseries Changes}}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+{\bfseries Date}             {\bfseries Author}          {\bfseries Comment}
+3/3/2001         Jelle Kok       Initial version created
+\end{DoxyPre}
+ 
+
+\subsection{Macro Definition Documentation}
+\index{Logger.\+h@{Logger.\+h}!M\+A\+X\+\_\+\+H\+E\+A\+D\+ER@{M\+A\+X\+\_\+\+H\+E\+A\+D\+ER}}
+\index{M\+A\+X\+\_\+\+H\+E\+A\+D\+ER@{M\+A\+X\+\_\+\+H\+E\+A\+D\+ER}!Logger.\+h@{Logger.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+H\+E\+A\+D\+ER}{MAX_HEADER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+H\+E\+A\+D\+ER~128}\hypertarget{Logger_8h_ab400cc7c8787796a32ff06fb899a9ac2}{}\label{Logger_8h_ab400cc7c8787796a32ff06fb899a9ac2}
+maximum size of the header \index{Logger.\+h@{Logger.\+h}!M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE@{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE}}
+\index{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE@{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE}!Logger.\+h@{Logger.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE}{MAX_LOG_LINE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+L\+I\+NE~3072}\hypertarget{Logger_8h_ad1ad1107b2fb6e51cd78d16a64920eca}{}\label{Logger_8h_ad1ad1107b2fb6e51cd78d16a64920eca}
+maximum size of a log message 

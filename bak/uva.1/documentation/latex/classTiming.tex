@@ -1,0 +1,85 @@
+\hypertarget{classTiming}{}\section{Timing Class Reference}
+\label{classTiming}\index{Timing@{Timing}}
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTiming_a6d15bb6b7407e89fd5e315bd84f3493f}{print\+Time\+Diff\+With\+Text} (ostream \&os, char $\ast$str, int i\+Factor=1000)
+\item 
+double \hyperlink{classTiming_a9745c4117778f1f6bdd4b43d50ae1248}{get\+Elapsed\+Time} (int i\+Factor=1)
+\item 
+void \hyperlink{classTiming_afd9d1489954f760ccfcbdd4742bcabf1}{restart\+Time} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classTiming_abbd2aa42bdf82ec778c7da2d44bdc167}{get\+Time\+Difference} (struct timeval t1, struct timeval t2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds a timer. This timer can be set (restart\+Time) and text can be printed with the elapsed time since the timer was restarted.. 
+
+\subsection{Member Function Documentation}
+\index{Timing@{Timing}!get\+Elapsed\+Time@{get\+Elapsed\+Time}}
+\index{get\+Elapsed\+Time@{get\+Elapsed\+Time}!Timing@{Timing}}
+\subsubsection[{\texorpdfstring{get\+Elapsed\+Time(int i\+Factor=1)}{getElapsedTime(int iFactor=1)}}]{\setlength{\rightskip}{0pt plus 5cm}double Timing\+::get\+Elapsed\+Time (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Factor = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classTiming_a9745c4117778f1f6bdd4b43d50ae1248}{}\label{classTiming_a9745c4117778f1f6bdd4b43d50ae1248}
+This method returns the time (in seconds) since the last time the timer was restarted. \begin{DoxyReturn}{Returns}
+double seconds that have passed since last restart of timer 
+\end{DoxyReturn}
+\index{Timing@{Timing}!get\+Time\+Difference@{get\+Time\+Difference}}
+\index{get\+Time\+Difference@{get\+Time\+Difference}!Timing@{Timing}}
+\subsubsection[{\texorpdfstring{get\+Time\+Difference(struct timeval t1, struct timeval t2)}{getTimeDifference(struct timeval t1, struct timeval t2)}}]{\setlength{\rightskip}{0pt plus 5cm}double Timing\+::get\+Time\+Difference (
+\begin{DoxyParamCaption}
+\item[{struct timeval}]{tv1, }
+\item[{struct timeval}]{tv2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTiming_abbd2aa42bdf82ec778c7da2d44bdc167}{}\label{classTiming_abbd2aa42bdf82ec778c7da2d44bdc167}
+This method returns the difference between two timevals in seconds. 
+\begin{DoxyParams}{Parameters}
+{\em tv1} & first timeval \\
+\hline
+{\em tv2} & second timeval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double representing the difference between t1 and t2 in seconds 
+\end{DoxyReturn}
+\index{Timing@{Timing}!print\+Time\+Diff\+With\+Text@{print\+Time\+Diff\+With\+Text}}
+\index{print\+Time\+Diff\+With\+Text@{print\+Time\+Diff\+With\+Text}!Timing@{Timing}}
+\subsubsection[{\texorpdfstring{print\+Time\+Diff\+With\+Text(ostream \&os, char $\ast$str, int i\+Factor=1000)}{printTimeDiffWithText(ostream &os, char *str, int iFactor=1000)}}]{\setlength{\rightskip}{0pt plus 5cm}void Timing\+::print\+Time\+Diff\+With\+Text (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{i\+Factor = {\ttfamily 1000}}
+\end{DoxyParamCaption}
+)}\hypertarget{classTiming_a6d15bb6b7407e89fd5e315bd84f3493f}{}\label{classTiming_a6d15bb6b7407e89fd5e315bd84f3493f}
+This method prints the time in seconds that elapsed since the timer was restarted. It is possible to multiply this time with a factor, such that it can be used for different quantity values. In the default case this value is 1000 with the effect that the resulting value resembles miliseconds. 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to which output should be written. \\
+\hline
+{\em str} & that should be printed \\
+\hline
+{\em i\+Factor} & with which the elapsed time is multiplied (default 1000) \\
+\hline
+\end{DoxyParams}
+\index{Timing@{Timing}!restart\+Time@{restart\+Time}}
+\index{restart\+Time@{restart\+Time}!Timing@{Timing}}
+\subsubsection[{\texorpdfstring{restart\+Time()}{restartTime()}}]{\setlength{\rightskip}{0pt plus 5cm}void Timing\+::restart\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTiming_afd9d1489954f760ccfcbdd4742bcabf1}{}\label{classTiming_afd9d1489954f760ccfcbdd4742bcabf1}
+This method restarts the timer by setting it to the current time 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Logger_8h}{Logger.\+h}\item 
+src/\hyperlink{Logger_8cpp}{Logger.\+cpp}\end{DoxyCompactItemize}

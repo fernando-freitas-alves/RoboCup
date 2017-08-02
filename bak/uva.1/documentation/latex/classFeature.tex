@@ -1,0 +1,276 @@
+\hypertarget{classFeature}{}\section{Feature Class Reference}
+\label{classFeature}\index{Feature@{Feature}}
+
+
+{\ttfamily \#include $<$Soccer\+Types.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFeature_a06d191f6daea88e0029440a2137f2e07}{Feature} ()
+\item 
+\hyperlink{classFeature_a01cfe1198d0d9483f6d7196d8371c921}{Feature} (\hyperlink{classTime}{Time} time\+See, \hyperlink{classTime}{Time} time\+Sense, \hyperlink{classTime}{Time} time\+Hear, \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} object, double d\+Info=\hyperlink{SoccerTypes_8h_ab232b103c74e1770db1120be5bae9be5}{Unknown\+Double\+Value}, \hyperlink{classSoccerCommand}{Soccer\+Command} soc=\hyperlink{classSoccerCommand}{Soccer\+Command}(\hyperlink{SoccerTypes_8h_ac986daf8a835e88572b79bcb63f5bbd5a38bf205bc1abc83eb30942d4e6511783}{C\+M\+D\+\_\+\+I\+L\+L\+E\+G\+AL}), \hyperlink{classVecPosition}{Vec\+Position} pos=\hyperlink{classVecPosition}{Vec\+Position}(0, 0))
+\item 
+bool \hyperlink{classFeature_ac66b87f375acc915a31dd3eaa1ab6db9}{set\+Feature} (\hyperlink{classTime}{Time} time\+See, \hyperlink{classTime}{Time} time\+Sense, \hyperlink{classTime}{Time} time\+Hear, \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} object, double d\+Info=\hyperlink{SoccerTypes_8h_ab232b103c74e1770db1120be5bae9be5}{Unknown\+Double\+Value}, \hyperlink{classSoccerCommand}{Soccer\+Command} soc=\hyperlink{classSoccerCommand}{Soccer\+Command}(\hyperlink{SoccerTypes_8h_ac986daf8a835e88572b79bcb63f5bbd5a38bf205bc1abc83eb30942d4e6511783}{C\+M\+D\+\_\+\+I\+L\+L\+E\+G\+AL}), \hyperlink{classVecPosition}{Vec\+Position} pos=\hyperlink{classVecPosition}{Vec\+Position}(0, 0))
+\item 
+bool \hyperlink{classFeature_a24e0447de2e87c722b5bf5a900510c9a}{set\+Time\+See} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classFeature_a4a9c3a4e9a59bb8d16d4a393dfe95a09}{get\+Time\+See} ()
+\item 
+bool \hyperlink{classFeature_a1a6c52bd5ab1cc70ffe39a1c20a9a556}{set\+Time\+Sense} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classFeature_a9f68128c0ba804df00bc1d25da03c65b}{get\+Time\+Sense} ()
+\item 
+bool \hyperlink{classFeature_af282805fca320ed0e087dde342ee6e79}{set\+Time\+Hear} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classFeature_a2a4657d2b0acd10c5ab5c547dbfaa85f}{get\+Time\+Hear} ()
+\item 
+bool \hyperlink{classFeature_af710a974e8dcd80c439a7a6ad6c00bb4}{set\+Object} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} obj)
+\item 
+\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classFeature_acf5901a189ac10a41cb7a3e17fa053de}{get\+Object} ()
+\item 
+bool \hyperlink{classFeature_a7c2fee01599f7d0cfd4ece91ee8ea145}{set\+Info} (double d)
+\item 
+double \hyperlink{classFeature_a9c83fc848f317203cd1af047fa2e87b1}{get\+Info} ()
+\item 
+bool \hyperlink{classFeature_ab0f96ebb874191c1adba7cdf22cc2086}{set\+Vec} (\hyperlink{classVecPosition}{Vec\+Position} pos)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classFeature_a2e35795fe923586d5292b1bc782f834a}{get\+Vec} ()
+\item 
+bool \hyperlink{classFeature_a875f14699302699f2ca7cb0a9d311627}{set\+Command} (\hyperlink{classSoccerCommand}{Soccer\+Command} soc)
+\item 
+\hyperlink{classSoccerCommand}{Soccer\+Command} \hyperlink{classFeature_abfdd2bfd5de65dceee55c862356cfe8d}{get\+Command} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains information for one specific feature (e.\+g., fastest teammate to the ball. A feature corresponds to a specific time and is often related to a specific object and a specific value. Therefore, these values are stored in this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Feature@{Feature}!Feature@{Feature}}
+\index{Feature@{Feature}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{Feature()}{Feature()}}]{\setlength{\rightskip}{0pt plus 5cm}Feature\+::\+Feature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a06d191f6daea88e0029440a2137f2e07}{}\label{classFeature_a06d191f6daea88e0029440a2137f2e07}
+This is the constructor for the \hyperlink{classFeature}{Feature} class. A feature (specific information that applies to the current time can be stored here. \index{Feature@{Feature}!Feature@{Feature}}
+\index{Feature@{Feature}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{Feature(\+Time time\+See, Time time\+Sense, Time time\+Hear, Object\+T object, double d\+Info=\+Unknown\+Double\+Value, Soccer\+Command soc=\+Soccer\+Command(\+C\+M\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L), Vec\+Position pos=\+Vec\+Position(0, 0))}{Feature(Time timeSee, Time timeSense, Time timeHear, ObjectT object, double dInfo=UnknownDoubleValue, SoccerCommand soc=SoccerCommand(CMD_ILLEGAL), VecPosition pos=VecPosition(0, 0))}}]{\setlength{\rightskip}{0pt plus 5cm}Feature\+::\+Feature (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time\+See, }
+\item[{{\bf Time}}]{time\+Sense, }
+\item[{{\bf Time}}]{time\+Hear, }
+\item[{{\bf ObjectT}}]{object, }
+\item[{double}]{d\+Info = {\ttfamily {\bf Unknown\+Double\+Value}}, }
+\item[{{\bf Soccer\+Command}}]{soc = {\ttfamily {\bf Soccer\+Command}({\bf C\+M\+D\+\_\+\+I\+L\+L\+E\+G\+AL})}, }
+\item[{{\bf Vec\+Position}}]{pos = {\ttfamily {\bf Vec\+Position}(0,0)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a01cfe1198d0d9483f6d7196d8371c921}{}\label{classFeature_a01cfe1198d0d9483f6d7196d8371c921}
+This is the constructor for the \hyperlink{classFeature}{Feature} class. A feature (specific information that applies to the current time can be stored here. For example, when the information about the fastest player to the ball is calculated, this can be stored in a feauture. This information can then be used for another calculation in the same cycle. 
+\begin{DoxyParams}{Parameters}
+{\em time\+See} & time of see message to which this feature applies. \\
+\hline
+{\em time\+Sense} & time of sense message to which this feature applies. \\
+\hline
+{\em object} & object to which this feature applies \\
+\hline
+{\em d\+Info} & specific information that can be stored about this feature. \\
+\hline
+{\em soc} & soccercommand stored with this feature \\
+\hline
+{\em pos} & position information stored with this feature \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Feature@{Feature}!get\+Command@{get\+Command}}
+\index{get\+Command@{get\+Command}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Command()}{getCommand()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Soccer\+Command} Feature\+::get\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_abfdd2bfd5de65dceee55c862356cfe8d}{}\label{classFeature_abfdd2bfd5de65dceee55c862356cfe8d}
+This method returns the command corresponding to this feature. \begin{DoxyReturn}{Returns}
+command stored with this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Info()}{getInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}double Feature\+::get\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a9c83fc848f317203cd1af047fa2e87b1}{}\label{classFeature_a9c83fc848f317203cd1af047fa2e87b1}
+This method returns the information for a feature. \begin{DoxyReturn}{Returns}
+information stored with this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!get\+Object@{get\+Object}}
+\index{get\+Object@{get\+Object}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Object()}{getObject()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Feature\+::get\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_acf5901a189ac10a41cb7a3e17fa053de}{}\label{classFeature_acf5901a189ac10a41cb7a3e17fa053de}
+This method returns the object related to this feature. \begin{DoxyReturn}{Returns}
+object stored with this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!get\+Time\+Hear@{get\+Time\+Hear}}
+\index{get\+Time\+Hear@{get\+Time\+Hear}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Time\+Hear()}{getTimeHear()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Feature\+::get\+Time\+Hear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a2a4657d2b0acd10c5ab5c547dbfaa85f}{}\label{classFeature_a2a4657d2b0acd10c5ab5c547dbfaa85f}
+This method returns the hear time for a feature. \begin{DoxyReturn}{Returns}
+time that is related to this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!get\+Time\+See@{get\+Time\+See}}
+\index{get\+Time\+See@{get\+Time\+See}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Time\+See()}{getTimeSee()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Feature\+::get\+Time\+See (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a4a9c3a4e9a59bb8d16d4a393dfe95a09}{}\label{classFeature_a4a9c3a4e9a59bb8d16d4a393dfe95a09}
+This method returns the see time for a feature. \begin{DoxyReturn}{Returns}
+time that is related to this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!get\+Time\+Sense@{get\+Time\+Sense}}
+\index{get\+Time\+Sense@{get\+Time\+Sense}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Time\+Sense()}{getTimeSense()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Feature\+::get\+Time\+Sense (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a9f68128c0ba804df00bc1d25da03c65b}{}\label{classFeature_a9f68128c0ba804df00bc1d25da03c65b}
+This method returns the sense time for a feature. \begin{DoxyReturn}{Returns}
+time that is related to this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!get\+Vec@{get\+Vec}}
+\index{get\+Vec@{get\+Vec}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{get\+Vec()}{getVec()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Feature\+::get\+Vec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a2e35795fe923586d5292b1bc782f834a}{}\label{classFeature_a2e35795fe923586d5292b1bc782f834a}
+This method returns the position information for a feature. \begin{DoxyReturn}{Returns}
+position information stored with this feature. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!set\+Command@{set\+Command}}
+\index{set\+Command@{set\+Command}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Command(\+Soccer\+Command soc)}{setCommand(SoccerCommand soc)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf Soccer\+Command}}]{soc}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a875f14699302699f2ca7cb0a9d311627}{}\label{classFeature_a875f14699302699f2ca7cb0a9d311627}
+This method sets the command corresponding to this feature. \begin{DoxyReturn}{Returns}
+boolean indicating whether update was succesfull. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!set\+Feature@{set\+Feature}}
+\index{set\+Feature@{set\+Feature}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Feature(\+Time time\+See, Time time\+Sense, Time time\+Hear, Object\+T object, double d\+Info=\+Unknown\+Double\+Value, Soccer\+Command soc=\+Soccer\+Command(\+C\+M\+D\+\_\+\+I\+L\+L\+E\+G\+A\+L), Vec\+Position pos=\+Vec\+Position(0, 0))}{setFeature(Time timeSee, Time timeSense, Time timeHear, ObjectT object, double dInfo=UnknownDoubleValue, SoccerCommand soc=SoccerCommand(CMD_ILLEGAL), VecPosition pos=VecPosition(0, 0))}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Feature (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time\+See, }
+\item[{{\bf Time}}]{time\+Sense, }
+\item[{{\bf Time}}]{time\+Hear, }
+\item[{{\bf ObjectT}}]{object, }
+\item[{double}]{d\+Info = {\ttfamily {\bf Unknown\+Double\+Value}}, }
+\item[{{\bf Soccer\+Command}}]{soc = {\ttfamily {\bf Soccer\+Command}({\bf C\+M\+D\+\_\+\+I\+L\+L\+E\+G\+AL})}, }
+\item[{{\bf Vec\+Position}}]{pos = {\ttfamily {\bf Vec\+Position}(0,0)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_ac66b87f375acc915a31dd3eaa1ab6db9}{}\label{classFeature_ac66b87f375acc915a31dd3eaa1ab6db9}
+This methods sets the values of the \hyperlink{classFeature}{Feature} class. A feature (specific information that applies to the current time can be stored here. For example, when the information about the fastest player to the ball is calculated, this can be stored in a feauture. This information can then be used for another calculation in the same cycle. 
+\begin{DoxyParams}{Parameters}
+{\em time\+See} & time of see message to which this feature applies. \\
+\hline
+{\em time\+Sense} & time of sense message to which this feature applies. \\
+\hline
+{\em time\+Sense} & time of hear message to which this feature applies. \\
+\hline
+{\em object} & object to which this feature applies \\
+\hline
+{\em d\+Info} & specific information that can be stored about this feature. \\
+\hline
+{\em soc} & command stored with this feature \\
+\hline
+{\em pos} & position information stored with this feature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean indicating whether update was successful. 
+\end{DoxyReturn}
+\index{Feature@{Feature}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Info(double d)}{setInfo(double d)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a7c2fee01599f7d0cfd4ece91ee8ea145}{}\label{classFeature_a7c2fee01599f7d0cfd4ece91ee8ea145}
+This method sets the information for a feature. 
+\begin{DoxyParams}{Parameters}
+{\em d} & double information that applies to this feature. \\
+\hline
+\end{DoxyParams}
+\index{Feature@{Feature}!set\+Object@{set\+Object}}
+\index{set\+Object@{set\+Object}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Object(\+Object\+T obj)}{setObject(ObjectT obj)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{object}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_af710a974e8dcd80c439a7a6ad6c00bb4}{}\label{classFeature_af710a974e8dcd80c439a7a6ad6c00bb4}
+This method sets the object for a feature. 
+\begin{DoxyParams}{Parameters}
+{\em object} & object type that applies to this feature. \\
+\hline
+\end{DoxyParams}
+\index{Feature@{Feature}!set\+Time\+Hear@{set\+Time\+Hear}}
+\index{set\+Time\+Hear@{set\+Time\+Hear}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Time\+Hear(\+Time time)}{setTimeHear(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Time\+Hear (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_af282805fca320ed0e087dde342ee6e79}{}\label{classFeature_af282805fca320ed0e087dde342ee6e79}
+This method sets the hear time for a feature. 
+\begin{DoxyParams}{Parameters}
+{\em time} & hear time that applies to this feature. \\
+\hline
+\end{DoxyParams}
+\index{Feature@{Feature}!set\+Time\+See@{set\+Time\+See}}
+\index{set\+Time\+See@{set\+Time\+See}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Time\+See(\+Time time)}{setTimeSee(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Time\+See (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a24e0447de2e87c722b5bf5a900510c9a}{}\label{classFeature_a24e0447de2e87c722b5bf5a900510c9a}
+This method sets the see time for a feature. 
+\begin{DoxyParams}{Parameters}
+{\em time} & see time that applies to this feature. \\
+\hline
+\end{DoxyParams}
+\index{Feature@{Feature}!set\+Time\+Sense@{set\+Time\+Sense}}
+\index{set\+Time\+Sense@{set\+Time\+Sense}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Time\+Sense(\+Time time)}{setTimeSense(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Time\+Sense (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_a1a6c52bd5ab1cc70ffe39a1c20a9a556}{}\label{classFeature_a1a6c52bd5ab1cc70ffe39a1c20a9a556}
+This method sets the sense time for a feature. 
+\begin{DoxyParams}{Parameters}
+{\em time} & sense time that applies to this feature. \\
+\hline
+\end{DoxyParams}
+\index{Feature@{Feature}!set\+Vec@{set\+Vec}}
+\index{set\+Vec@{set\+Vec}!Feature@{Feature}}
+\subsubsection[{\texorpdfstring{set\+Vec(\+Vec\+Position pos)}{setVec(VecPosition pos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Feature\+::set\+Vec (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classFeature_ab0f96ebb874191c1adba7cdf22cc2086}{}\label{classFeature_ab0f96ebb874191c1adba7cdf22cc2086}
+This method sets the posiiton corresponding to this feature. \begin{DoxyReturn}{Returns}
+boolean indicating whether update was succesfull. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SoccerTypes_8h}{Soccer\+Types.\+h}\item 
+src/\hyperlink{SoccerTypes_8cpp}{Soccer\+Types.\+cpp}\end{DoxyCompactItemize}

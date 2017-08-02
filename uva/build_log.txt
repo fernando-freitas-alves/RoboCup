@@ -1,0 +1,19 @@
+
+
+
+################### make ###################
+
+make  all-recursive
+make[1]: Entering directory `/home/ubuntu/workspace/uva'
+Making all in src
+make[2]: Entering directory `/home/ubuntu/workspace/uva/src'
+g++ -DHAVE_CONFIG_H -I. -I..    -std=c++11 -g -O2 -MT Player.o -MD -MP -MF .deps/Player.Tpo -c -o Player.o Player.cpp
+mv -f .deps/Player.Tpo .deps/Player.Po
+g++ -DHAVE_CONFIG_H -I. -I..    -std=c++11 -g -O2 -MT Utilities.o -MD -MP -MF .deps/Utilities.Tpo -c -o Utilities.o Utilities.cpp
+mv -f .deps/Utilities.Tpo .deps/Utilities.Po
+/bin/bash ../libtool  --tag=CXX   --mode=link g++ -std=c++11 -g -O2   -o trilearn_player Connection.o SenseHandler.o ActHandler.o SoccerTypes.o Objects.o WorldModel.o WorldModelHighLevel.o WorldModelPredict.o WorldModelUpdate.o ServerSettings.o PlayerSettings.o GenericValues.o Formations.o Geometry.o Parse.o Logger.o BasicPlayer.o Player.o PlayerTeams.o main.o Utilities.o  -lpthread 
+libtool: link: g++ -std=c++11 -g -O2 -o trilearn_player Connection.o SenseHandler.o ActHandler.o SoccerTypes.o Objects.o WorldModel.o WorldModelHighLevel.o WorldModelPredict.o WorldModelUpdate.o ServerSettings.o PlayerSettings.o GenericValues.o Formations.o Geometry.o Parse.o Logger.o BasicPlayer.o Player.o PlayerTeams.o main.o Utilities.o  -lpthread
+make[2]: Leaving directory `/home/ubuntu/workspace/uva/src'
+make[2]: Entering directory `/home/ubuntu/workspace/uva'
+make[2]: Leaving directory `/home/ubuntu/workspace/uva'
+make[1]: Leaving directory `/home/ubuntu/workspace/uva'

@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classObject.html" title="Object" alt="" coords="5,56,65,83"/>
+<area shape="rect" id="node2" href="$classDynamicObject.html" title="DynamicObject" alt="" coords="113,31,225,57"/>
+<area shape="rect" id="node6" href="$classFixedObject.html" title="FixedObject" alt="" coords="123,81,215,108"/>
+<area shape="rect" id="node3" href="$classBallObject.html" title="BallObject" alt="" coords="281,5,363,32"/>
+<area shape="rect" id="node4" href="$classPlayerObject.html" title="PlayerObject" alt="" coords="273,56,371,83"/>
+<area shape="rect" id="node5" href="$classAgentObject.html" title="AgentObject" alt="" coords="419,56,513,83"/>
+</map>

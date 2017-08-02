@@ -3,7 +3,7 @@
 # sudo apt install tcsh
 
 
-# This script starts the UvA_Trilearn_2003 team. When player numbers are 
+# This script starts the UvA_Trilearn_2003 team. When player numbers are
 # supplied before the (optional) host-name and team-name arguments only
 # these players are started, otherwise all players are started.
 # Usage:   start.sh <player-numbers> <host-name> <team-name>
@@ -15,11 +15,11 @@
 # Example: start.sh 1 2 3 4         players 1-4 on default host and name
 # Example: start.sh 1 2 remote      players 1-2 on host 'remote'
 # Example: start.sh 9 10 remote UvA players 9-10 on host remote and name 'UvA'
-# Example: start.sh 0               start coach on default host 
+# Example: start.sh 0               start coach on default host
 
 set wait  = 0
 set host  = "localhost"
-set team  = "UFABCRobotics" 
+set team  = "UFABCRobotics"
 set dir   = "src"
 set prog  = "${dir}/trilearn_player"
 set coach = "${dir}/trilearn_coach"
@@ -30,7 +30,7 @@ echo "*****************************************************************"
 echo "* UvA_Trilearn 2003 - University of Amsterdam, The Netherlands  *"
 echo "* Base code version                                             *"
 echo "* Created by:           Jelle Kok                               *"
-echo "* Research Coordinator: Nikos Vlassis                           *" 
+echo "* Research Coordinator: Nikos Vlassis                           *"
 echo "* Team Coordinator:     Frans Groen                             *"
 echo "* Copyright 2000-2001.  Jelle Kok and Remco de Boer             *"
 echo "* Copyright 2001-2002.  Jelle Kok                               *"
@@ -42,7 +42,7 @@ echo "*****************************************************************"
 #first check if the last two supplied arguments are no numbers and represent
 #<host-name> or <host-name> <team-name>
 if( $#argv > 0 && ($argv[$#argv] !~ [0123456789]* || $argv[$#argv] =~ *.* ) ) then
-  @ second_last = $#argv - 1  
+  @ second_last = $#argv - 1
   if( $#argv > 1 && ($argv[$second_last] !~ [0123456789]* || $argv[$second_last] =~ *.* ) ) then
       set host = $argv[$second_last]
       set team = $argv[$#argv]
@@ -58,7 +58,8 @@ if( $1 =~ [0123456789]* && $1 !~ *.* ) then
     echo "$1"
   foreach arg ($argv)
     if( $arg =~ [123456789]* && $arg !~ *.*) then
-      ${prog} -num ${arg} -host ${host} -team ${team} -f ${fconf} -c ${pconf} &
+      # ${prog} -num ${arg} -host ${host} -team ${team} -f ${fconf} -c ${pconf} &
+      ${prog} -log 0 -num ${arg} -host ${host} -team ${team} -f ${fconf} -c ${pconf} &
       sleep $wait
     else if( $arg =~ [0]* ) then
       sleep 2
@@ -68,7 +69,8 @@ if( $1 =~ [0123456789]* && $1 !~ *.* ) then
 else
   set i = 1
   while ( ${i} <12 )
-    ${prog} -log 101 -number ${i} -host ${host} -team ${team}  -f ${fconf} -c ${pconf} &
+    # ${prog} -log 101 -number ${i} -host ${host} -team ${team}  -f ${fconf} -c ${pconf} &
+    ${prog} -log 200 -number ${i} -host ${host} -team ${team}  -f ${fconf} -c ${pconf} &
     sleep $wait
     @ i++
   end
