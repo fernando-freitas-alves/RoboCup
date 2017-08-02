@@ -1,0 +1,7 @@
+<map id="Object" name="Object">
+<area shape="rect" id="node2" href="$classDynamicObject.html" title="DynamicObject" alt="" coords="48,80,160,107"/>
+<area shape="rect" id="node6" href="$classFixedObject.html" title="FixedObject" alt="" coords="185,80,277,107"/>
+<area shape="rect" id="node3" href="$classBallObject.html" title="BallObject" alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node4" href="$classPlayerObject.html" title="PlayerObject" alt="" coords="113,155,210,181"/>
+<area shape="rect" id="node5" href="$classAgentObject.html" title="AgentObject" alt="" coords="114,229,209,256"/>
+</map>

@@ -1,0 +1,86 @@
+\hypertarget{ActHandler_8h}{}\section{src/\+Act\+Handler.h File Reference}
+\label{ActHandler_8h}\index{src/\+Act\+Handler.\+h@{src/\+Act\+Handler.\+h}}
+{\ttfamily \#include \char`\"{}Connection.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}World\+Model.\+h\char`\"{}}\\*
+Include dependency graph for Act\+Handler.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ActHandler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ActHandler_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classActHandler}{Act\+Handler}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ActHandler_8h_a5e8e3eb01478c3644f810f1a860e6499}{sigalarm\+Handler} (int i)
+\item 
+void {\bfseries send\+Change\+View\+Commands} (int i\+Sync\+Counter)\hypertarget{ActHandler_8h_aa34cbff16cbe9015905b66cf9e04f2a4}{}\label{ActHandler_8h_aa34cbff16cbe9015905b66cf9e04f2a4}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLogger}{Logger} \hyperlink{ActHandler_8h_af2ed886ec3d2b2fd42fd0c5dad2f8cc5}{Log}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+\begin{DoxyPre}
+{\bfseries File:}          \hyperlink{ActHandler_8h}{ActHandler.h}
+{\bfseries Project:}       Robocup Soccer Simulation Team: UvA Trilearn
+{\bfseries Authors:}       Jelle Kok
+{\bfseries Created:}       28/11/2000
+{\bfseries Last Revision:} $ID\$
+{\bfseries Contents:}      This file contains the class declarations for the
+               \hyperlink{classActHandler}{ActHandler} that handles the outgoing messages to the
+               server.
+
+
+
+\subsubsection*{{\bfseries Changes}}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+{\bfseries Date}             {\bfseries Author}          {\bfseries Comment}
+28/11/2000       Jelle Kok       Initial version created
+\end{DoxyPre}
+ 
+
+\subsection{Function Documentation}
+\index{Act\+Handler.\+h@{Act\+Handler.\+h}!sigalarm\+Handler@{sigalarm\+Handler}}
+\index{sigalarm\+Handler@{sigalarm\+Handler}!Act\+Handler.\+h@{Act\+Handler.\+h}}
+\subsubsection[{\texorpdfstring{sigalarm\+Handler(int i)}{sigalarmHandler(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void sigalarm\+Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{ActHandler_8h_a5e8e3eb01478c3644f810f1a860e6499}{}\label{ActHandler_8h_a5e8e3eb01478c3644f810f1a860e6499}
+This function is executed when a S\+I\+G\+A\+L\+A\+RM singal arrives. The time this signal comes is defined by the \hyperlink{classSenseHandler}{Sense\+Handler} (depending on incoming sense\+\_\+body messages). When the signal arrives, the commands currently stored in the queue of the \hyperlink{classActHandler}{Act\+Handler} are send to the server (using the method send\+Commands). 
+\begin{DoxyParams}{Parameters}
+{\em i} & is ignored \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{Act\+Handler.\+h@{Act\+Handler.\+h}!Log@{Log}}
+\index{Log@{Log}!Act\+Handler.\+h@{Act\+Handler.\+h}}
+\subsubsection[{\texorpdfstring{Log}{Log}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} Log}\hypertarget{ActHandler_8h_af2ed886ec3d2b2fd42fd0c5dad2f8cc5}{}\label{ActHandler_8h_af2ed886ec3d2b2fd42fd0c5dad2f8cc5}
+Reference to the \hyperlink{classLogger}{Logger} to write log info to
+
+\hyperlink{classLogger}{Logger} instantation that can be used by all classes 

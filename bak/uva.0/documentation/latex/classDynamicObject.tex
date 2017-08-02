@@ -1,0 +1,279 @@
+\hypertarget{classDynamicObject}{}\section{Dynamic\+Object Class Reference}
+\label{classDynamicObject}\index{Dynamic\+Object@{Dynamic\+Object}}
+
+
+{\ttfamily \#include $<$Objects.\+h$>$}
+
+
+
+Inheritance diagram for Dynamic\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classDynamicObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dynamic\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDynamicObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDynamicObject_a50a7adf3d7d1f411ed2aa9a663bfe275}{Dynamic\+Object} ()
+\item 
+bool \hyperlink{classDynamicObject_ace3f0247ccbee18b060700e29cdaecfa}{set\+Relative\+Distance\+Change} (double d, \hyperlink{classTime}{Time} time)
+\item 
+double \hyperlink{classDynamicObject_a01e5c91446a97159dea6d7b55758ccf6}{get\+Relative\+Distance\+Change} () const 
+\item 
+bool \hyperlink{classDynamicObject_a8430113772bf1a1d53dd59d29217ed83}{set\+Relative\+Angle\+Change} (double d, \hyperlink{classTime}{Time} time)
+\item 
+double \hyperlink{classDynamicObject_a58c9e65e972c30b05a1e1196edadab00}{get\+Relative\+Angle\+Change} () const 
+\item 
+bool \hyperlink{classDynamicObject_ae1ddbb4b84bb8d7096541eef9f15c3cb}{set\+Time\+Change\+Information} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classDynamicObject_a0912aa0aec8a67175463576e9b15fc49}{get\+Time\+Change\+Information} () const 
+\item 
+bool \hyperlink{classDynamicObject_aca8b9324090abaee722a3366781b3876}{set\+Global\+Velocity} (\hyperlink{classVecPosition}{Vec\+Position} v, \hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classDynamicObject_a35d2822999116ed8c0187322083efa63}{get\+Global\+Velocity} () const 
+\item 
+double \hyperlink{classDynamicObject_a3bd37ea0678865322cf0891325edebe0}{get\+Speed} () const 
+\item 
+bool \hyperlink{classDynamicObject_a1793d8c9a716fbaa8629578bbd22955b}{set\+Time\+Global\+Velocity} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classDynamicObject_aad3d5947f0432aa45fffd80d0ca06bf4}{get\+Time\+Global\+Velocity} () const 
+\item 
+bool \hyperlink{classDynamicObject_adfd0fffaff1853186cc1d9d04a4530f0}{set\+Global\+Velocity\+Last\+See} (\hyperlink{classVecPosition}{Vec\+Position} vec)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classDynamicObject_a9e72fbe37e1908f862d84cfd7a6da434}{get\+Global\+Velocity\+Last\+See} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classDynamicObject_a64067c37d37e3484fea758cf388586e2}{vec\+Global\+Velocity}
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classDynamicObject_a145bad5d089c8bcb80fbc797efa32e41}{time\+Global\+Velocity}
+\item 
+double \hyperlink{classDynamicObject_a3997feabd9a1705e48e78e4ecf5c709d}{d\+Relative\+Distance\+Change}
+\item 
+double \hyperlink{classDynamicObject_ab99ba16d2c8526f809832f28aa0d0824}{d\+Relative\+Angle\+Change}
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classDynamicObject_a865b3a9f9e6c65da265ae11c5e96b28e}{time\+Change\+Information}
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classDynamicObject_a61dfb8e440f2f045dccfb1b8e3759bae}{vec\+Global\+Velocity\+Last\+See}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classDynamicObject}{Dynamic\+Object} contains Robo\+Cup information that is available for objects that can move (players, ball). Different variables are added to the superclass \hyperlink{classObject}{Object} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Dynamic\+Object@{Dynamic\+Object}!Dynamic\+Object@{Dynamic\+Object}}
+\index{Dynamic\+Object@{Dynamic\+Object}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{Dynamic\+Object()}{DynamicObject()}}]{\setlength{\rightskip}{0pt plus 5cm}Dynamic\+Object\+::\+Dynamic\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_a50a7adf3d7d1f411ed2aa9a663bfe275}{}\label{classDynamicObject_a50a7adf3d7d1f411ed2aa9a663bfe275}
+This is the constructor for \hyperlink{classDynamicObject}{Dynamic\+Object}. A \hyperlink{classDynamicObject}{Dynamic\+Object} is created with all the variables initialized by (illegal) default values 
+
+\subsection{Member Function Documentation}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Global\+Velocity@{get\+Global\+Velocity}}
+\index{get\+Global\+Velocity@{get\+Global\+Velocity}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Velocity() const }{getGlobalVelocity() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Dynamic\+Object\+::get\+Global\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_a35d2822999116ed8c0187322083efa63}{}\label{classDynamicObject_a35d2822999116ed8c0187322083efa63}
+This method returns the global velocity of this object. The time of this information is related to the time returned by \hyperlink{classDynamicObject_aad3d5947f0432aa45fffd80d0ca06bf4}{get\+Time\+Global\+Velocity()}. \begin{DoxyReturn}{Returns}
+global position of this object 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Global\+Velocity\+Last\+See@{get\+Global\+Velocity\+Last\+See}}
+\index{get\+Global\+Velocity\+Last\+See@{get\+Global\+Velocity\+Last\+See}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Velocity\+Last\+See() const }{getGlobalVelocityLastSee() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Dynamic\+Object\+::get\+Global\+Velocity\+Last\+See (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_a9e72fbe37e1908f862d84cfd7a6da434}{}\label{classDynamicObject_a9e72fbe37e1908f862d84cfd7a6da434}
+This method returns the global velocity of the object calculated after the last see message. The time of this information corresponds to \textquotesingle{}get\+Time\+Change\+Information\textquotesingle{}. \begin{DoxyReturn}{Returns}
+global body velocity derived from the last see message 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Relative\+Angle\+Change@{get\+Relative\+Angle\+Change}}
+\index{get\+Relative\+Angle\+Change@{get\+Relative\+Angle\+Change}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Relative\+Angle\+Change() const }{getRelativeAngleChange() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Dynamic\+Object\+::get\+Relative\+Angle\+Change (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_a58c9e65e972c30b05a1e1196edadab00}{}\label{classDynamicObject_a58c9e65e972c30b05a1e1196edadab00}
+This method returns the relative angle change of this object. This information belongs to the server time that is returned by \hyperlink{classDynamicObject_a0912aa0aec8a67175463576e9b15fc49}{get\+Time\+Change\+Information()}. \begin{DoxyReturn}{Returns}
+relative angle change of object in the last cycle 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Relative\+Distance\+Change@{get\+Relative\+Distance\+Change}}
+\index{get\+Relative\+Distance\+Change@{get\+Relative\+Distance\+Change}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Relative\+Distance\+Change() const }{getRelativeDistanceChange() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Dynamic\+Object\+::get\+Relative\+Distance\+Change (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_a01e5c91446a97159dea6d7b55758ccf6}{}\label{classDynamicObject_a01e5c91446a97159dea6d7b55758ccf6}
+This method returns the relative distance change of this object. Note that this value is zero when object is at the same distance, but at a complete different angle. This occurs when an object has moved a lot in one cycle. This information belongs to the server time that is returned by \hyperlink{classDynamicObject_a0912aa0aec8a67175463576e9b15fc49}{get\+Time\+Change\+Information()}. \begin{DoxyReturn}{Returns}
+relative distance change of object in the last cycle 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Speed() const }{getSpeed() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Dynamic\+Object\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_a3bd37ea0678865322cf0891325edebe0}{}\label{classDynamicObject_a3bd37ea0678865322cf0891325edebe0}
+This method returns the speed of this object. The speed is the magnitude of the global velocity of the object \begin{DoxyReturn}{Returns}
+speed of this object (zero for non-\/moving objects) 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Time\+Change\+Information@{get\+Time\+Change\+Information}}
+\index{get\+Time\+Change\+Information@{get\+Time\+Change\+Information}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Time\+Change\+Information() const }{getTimeChangeInformation() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Dynamic\+Object\+::get\+Time\+Change\+Information (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_a0912aa0aec8a67175463576e9b15fc49}{}\label{classDynamicObject_a0912aa0aec8a67175463576e9b15fc49}
+This method returns the server time that belongs to the relative distance and relative angle change of this object. \begin{DoxyReturn}{Returns}
+time of the change information of this \hyperlink{classDynamicObject}{Dynamic\+Object} 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!get\+Time\+Global\+Velocity@{get\+Time\+Global\+Velocity}}
+\index{get\+Time\+Global\+Velocity@{get\+Time\+Global\+Velocity}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{get\+Time\+Global\+Velocity() const }{getTimeGlobalVelocity() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Dynamic\+Object\+::get\+Time\+Global\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDynamicObject_aad3d5947f0432aa45fffd80d0ca06bf4}{}\label{classDynamicObject_aad3d5947f0432aa45fffd80d0ca06bf4}
+This method returns the time that belongs to the global velocity of this object. \begin{DoxyReturn}{Returns}
+time of the global velocity of this object 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Global\+Velocity@{set\+Global\+Velocity}}
+\index{set\+Global\+Velocity@{set\+Global\+Velocity}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{set\+Global\+Velocity(\+Vec\+Position v, Time time)}{setGlobalVelocity(VecPosition v, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Object\+::set\+Global\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{v, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_aca8b9324090abaee722a3366781b3876}{}\label{classDynamicObject_aca8b9324090abaee722a3366781b3876}
+This method sets the global velocity of this object and the time of this information 
+\begin{DoxyParams}{Parameters}
+{\em v} & new global velocity \\
+\hline
+{\em time} & time global velocity was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Global\+Velocity\+Last\+See@{set\+Global\+Velocity\+Last\+See}}
+\index{set\+Global\+Velocity\+Last\+See@{set\+Global\+Velocity\+Last\+See}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{set\+Global\+Velocity\+Last\+See(\+Vec\+Position vec)}{setGlobalVelocityLastSee(VecPosition vec)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Object\+::set\+Global\+Velocity\+Last\+See (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{vec}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_adfd0fffaff1853186cc1d9d04a4530f0}{}\label{classDynamicObject_adfd0fffaff1853186cc1d9d04a4530f0}
+This method sets the global velocity of the object calculated after the last see message. The time of this information corresponds to \textquotesingle{}get\+Time\+Change\+Information\textquotesingle{}. \begin{DoxyReturn}{Returns}
+global body velocity derived from the last see message 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Relative\+Angle\+Change@{set\+Relative\+Angle\+Change}}
+\index{set\+Relative\+Angle\+Change@{set\+Relative\+Angle\+Change}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{set\+Relative\+Angle\+Change(double d, Time time)}{setRelativeAngleChange(double d, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Object\+::set\+Relative\+Angle\+Change (
+\begin{DoxyParamCaption}
+\item[{double}]{d, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_a8430113772bf1a1d53dd59d29217ed83}{}\label{classDynamicObject_a8430113772bf1a1d53dd59d29217ed83}
+This method sets the relative angle change and the server time this information belongs to. 
+\begin{DoxyParams}{Parameters}
+{\em d} & new relative angle change \\
+\hline
+{\em time} & time relative angle change was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Relative\+Distance\+Change@{set\+Relative\+Distance\+Change}}
+\index{set\+Relative\+Distance\+Change@{set\+Relative\+Distance\+Change}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{set\+Relative\+Distance\+Change(double d, Time time)}{setRelativeDistanceChange(double d, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Object\+::set\+Relative\+Distance\+Change (
+\begin{DoxyParamCaption}
+\item[{double}]{d, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_ace3f0247ccbee18b060700e29cdaecfa}{}\label{classDynamicObject_ace3f0247ccbee18b060700e29cdaecfa}
+This method sets the relative distance change and the time this information was calculated. 
+\begin{DoxyParams}{Parameters}
+{\em d} & new relative distance change \\
+\hline
+{\em time} & time relative distance change was calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Time\+Change\+Information@{set\+Time\+Change\+Information}}
+\index{set\+Time\+Change\+Information@{set\+Time\+Change\+Information}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{set\+Time\+Change\+Information(\+Time time)}{setTimeChangeInformation(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Object\+::set\+Time\+Change\+Information (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_ae1ddbb4b84bb8d7096541eef9f15c3cb}{}\label{classDynamicObject_ae1ddbb4b84bb8d7096541eef9f15c3cb}
+This method sets the time the change information was calculated. 
+\begin{DoxyParams}{Parameters}
+{\em time} & time information for change was calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values was set 
+\end{DoxyReturn}
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Time\+Global\+Velocity@{set\+Time\+Global\+Velocity}}
+\index{set\+Time\+Global\+Velocity@{set\+Time\+Global\+Velocity}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{set\+Time\+Global\+Velocity(\+Time time)}{setTimeGlobalVelocity(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dynamic\+Object\+::set\+Time\+Global\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classDynamicObject_a1793d8c9a716fbaa8629578bbd22955b}{}\label{classDynamicObject_a1793d8c9a716fbaa8629578bbd22955b}
+This method sets the time that corresponds to the last update of the global velocity of this object. 
+\begin{DoxyParams}{Parameters}
+{\em time} & time corresponding to current value of global velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the value was set 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Dynamic\+Object@{Dynamic\+Object}!d\+Relative\+Angle\+Change@{d\+Relative\+Angle\+Change}}
+\index{d\+Relative\+Angle\+Change@{d\+Relative\+Angle\+Change}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{d\+Relative\+Angle\+Change}{dRelativeAngleChange}}]{\setlength{\rightskip}{0pt plus 5cm}double Dynamic\+Object\+::d\+Relative\+Angle\+Change\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDynamicObject_ab99ba16d2c8526f809832f28aa0d0824}{}\label{classDynamicObject_ab99ba16d2c8526f809832f28aa0d0824}
+Relative angle change \index{Dynamic\+Object@{Dynamic\+Object}!d\+Relative\+Distance\+Change@{d\+Relative\+Distance\+Change}}
+\index{d\+Relative\+Distance\+Change@{d\+Relative\+Distance\+Change}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{d\+Relative\+Distance\+Change}{dRelativeDistanceChange}}]{\setlength{\rightskip}{0pt plus 5cm}double Dynamic\+Object\+::d\+Relative\+Distance\+Change\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDynamicObject_a3997feabd9a1705e48e78e4ecf5c709d}{}\label{classDynamicObject_a3997feabd9a1705e48e78e4ecf5c709d}
+Relative distance change \index{Dynamic\+Object@{Dynamic\+Object}!time\+Change\+Information@{time\+Change\+Information}}
+\index{time\+Change\+Information@{time\+Change\+Information}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{time\+Change\+Information}{timeChangeInformation}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Dynamic\+Object\+::time\+Change\+Information\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDynamicObject_a865b3a9f9e6c65da265ae11c5e96b28e}{}\label{classDynamicObject_a865b3a9f9e6c65da265ae11c5e96b28e}
+\hyperlink{classTime}{Time} of change information \index{Dynamic\+Object@{Dynamic\+Object}!time\+Global\+Velocity@{time\+Global\+Velocity}}
+\index{time\+Global\+Velocity@{time\+Global\+Velocity}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{time\+Global\+Velocity}{timeGlobalVelocity}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Dynamic\+Object\+::time\+Global\+Velocity\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDynamicObject_a145bad5d089c8bcb80fbc797efa32e41}{}\label{classDynamicObject_a145bad5d089c8bcb80fbc797efa32e41}
+\hyperlink{classTime}{Time} of the corresponding velocity \index{Dynamic\+Object@{Dynamic\+Object}!vec\+Global\+Velocity@{vec\+Global\+Velocity}}
+\index{vec\+Global\+Velocity@{vec\+Global\+Velocity}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{vec\+Global\+Velocity}{vecGlobalVelocity}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Dynamic\+Object\+::vec\+Global\+Velocity\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDynamicObject_a64067c37d37e3484fea758cf388586e2}{}\label{classDynamicObject_a64067c37d37e3484fea758cf388586e2}
+Global velocity of the player \index{Dynamic\+Object@{Dynamic\+Object}!vec\+Global\+Velocity\+Last\+See@{vec\+Global\+Velocity\+Last\+See}}
+\index{vec\+Global\+Velocity\+Last\+See@{vec\+Global\+Velocity\+Last\+See}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection[{\texorpdfstring{vec\+Global\+Velocity\+Last\+See}{vecGlobalVelocityLastSee}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Dynamic\+Object\+::vec\+Global\+Velocity\+Last\+See\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classDynamicObject_a61dfb8e440f2f045dccfb1b8e3759bae}{}\label{classDynamicObject_a61dfb8e440f2f045dccfb1b8e3759bae}
+vel. derived from last see 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Objects_8h}{Objects.\+h}\item 
+src/\hyperlink{Objects_8cpp}{Objects.\+cpp}\end{DoxyCompactItemize}

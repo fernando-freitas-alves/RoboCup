@@ -1,7 +1,9 @@
 ## Makefile.am for pursuit server
 
 ## define the program that has to be built and the related sources
-bin_PROGRAMS = trilearn_player trilearn_coach 
+bin_PROGRAMS = trilearn_player trilearn_coach
+
+AM_CXXFLAGS=-std=c++11
 
 SOURCES =         Connection.cpp \
         SenseHandler.cpp \
@@ -31,7 +33,7 @@ SOURCES =         Connection.cpp \
         Formations.h \
         Geometry.h \
         Parse.h \
-        Logger.h 
+        Logger.h
 
 trilearn_player_SOURCES = ${SOURCES}    \
         BasicPlayer.cpp \
@@ -39,13 +41,15 @@ trilearn_player_SOURCES = ${SOURCES}    \
         PlayerTeams.cpp \
         main.cpp \
         BasicPlayer.h \
-        Player.h 
+        Player.h \
+        Utilities.h \
+        Utilities.cpp
 
 trilearn_coach_SOURCES = ${SOURCES} \
         BasicCoach.cpp \
         BasicCoach.h \
-        mainCoach.cpp 
+        mainCoach.cpp
 
-## also distribute configuration file with distribution 
+## also distribute configuration file with distribution
 EXTRA_DIST = formations.conf player.conf
 

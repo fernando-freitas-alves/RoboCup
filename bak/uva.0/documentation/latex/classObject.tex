@@ -1,0 +1,417 @@
+\hypertarget{classObject}{}\section{Object Class Reference}
+\label{classObject}\index{Object@{Object}}
+
+
+{\ttfamily \#include $<$Objects.\+h$>$}
+
+
+
+Inheritance diagram for Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObject_a40860402e64d8008fb42329df7097cdb}{Object} ()
+\item 
+virtual void \hyperlink{classObject_abdfad2372e7ec5f9aa271a1677653778}{show} (ostream \&os=cout)=0
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{classObject_a28709fc5998f7f24f3aa32a9dfcd1e42}{get\+Relative\+Angle} ()
+\item 
+double \hyperlink{classObject_af111de23285de9a9e29f7c7fae6401b6}{get\+Relative\+Distance} ()
+\item 
+double \hyperlink{classObject_ac2d82f3b7d82f5098095ff83f4af597b}{get\+Confidence} (\hyperlink{classTime}{Time} time)
+\item 
+bool \hyperlink{classObject_aec36935819c3c4f5050d73a3f2ebbfdb}{set\+Type} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classObject_a16cba98d16d802e6858a3aee946f7231}{get\+Type} () const 
+\item 
+bool \hyperlink{classObject_aa31b35b9ee29ee5886e164d19ba461b4}{set\+Relative\+Position} (double d\+Dist, \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} d\+Ang, \hyperlink{classTime}{Time} time)
+\item 
+bool \hyperlink{classObject_a1d0f80823f4b2c077a3d91d8ba2b8851}{set\+Relative\+Position} (\hyperlink{classVecPosition}{Vec\+Position} v, \hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classObject_ac7ecab5852daef8614add5422eb36838}{get\+Relative\+Position} () const 
+\item 
+bool \hyperlink{classObject_a71656669e4ba8fb84363a33c375c7a83}{set\+Time\+Relative\+Position} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_a83fc6b5fe56b15472b9d072bd6cc197b}{get\+Time\+Relative\+Position} () const 
+\item 
+bool \hyperlink{classObject_aef89da7e4ec7a846b056b8739c486ca4}{set\+Global\+Position} (\hyperlink{classVecPosition}{Vec\+Position} p, \hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classObject_ac2842396c6a820a0864b767487b465ad}{get\+Global\+Position} () const 
+\item 
+bool \hyperlink{classObject_a47c32dc89a659bfd381c68ed57917afc}{set\+Time\+Global\+Position} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_a599ae480b2d1df43ff83265157a351c1}{get\+Time\+Global\+Position} () const 
+\item 
+bool \hyperlink{classObject_a65fa38852f3c0ba301dcfa812830c326}{set\+Global\+Position\+Last\+See} (\hyperlink{classVecPosition}{Vec\+Position} p, \hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classObject_afd7b10a82d0394f1403fc5991a689000}{get\+Global\+Position\+Last\+See} () const 
+\item 
+bool \hyperlink{classObject_a40b99a05ab37134539b6c52bb95999eb}{set\+Time\+Global\+Pos\+Derived\+From\+See} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_abe9fa85b94c18242f856c5c6628077af}{get\+Time\+Global\+Pos\+Derived\+From\+See} () const 
+\item 
+bool \hyperlink{classObject_a8eedc3dc09c2a67fe6192167f7d2aa60}{set\+Time\+Last\+Seen} (\hyperlink{classTime}{Time} time)
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_ae2c8eca388d024f1660e203aed3aa35a}{get\+Time\+Last\+Seen} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classObject_a1ecdca38441a375acbd102de3060b972}{object\+Type}
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_ac119901c38bac85c71027606f36cd38d}{time\+Last\+Seen}
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classObject_a7b1e09877ae916b49f64b9a9e9a3e0d1}{pos\+Global}
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_a8892e8727938cdde9c00348848e39b53}{time\+Global\+Position}
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classObject_afc3fa9f935ff0e47ea8057f742ea623c}{pos\+Relative}
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_a0efe361db316649d7d40132b76ed8d41}{time\+Relative\+Position}
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classObject_a49148cd616efbb888175bfa825dcd167}{pos\+Global\+Last\+See}
+\item 
+\hyperlink{classTime}{Time} \hyperlink{classObject_a2f113089a45a792db77b03e16b8152a1}{time\+Global\+Pos\+Derived\+From\+See}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classObject}{Object} contains Robo\+Cup information that is available for all objects in the simulation. All (relative) information is relative to an agent as declared in \hyperlink{classAgentObject}{Agent\+Object}. Update of an object (or one of the subclasses) happens by calling the standard get and set methods available in these classes. Calculations on these attributes do not occur in these classes, but in the update methods of the \hyperlink{classWorldModel}{World\+Model}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\subsubsection[{\texorpdfstring{Object()}{Object()}}]{\setlength{\rightskip}{0pt plus 5cm}Object\+::\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a40860402e64d8008fb42329df7097cdb}{}\label{classObject_a40860402e64d8008fb42329df7097cdb}
+This constructor creates an object, all variables are initialized by default (illegal) values 
+
+\subsection{Member Function Documentation}
+\index{Object@{Object}!get\+Confidence@{get\+Confidence}}
+\index{get\+Confidence@{get\+Confidence}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Confidence(\+Time time)}{getConfidence(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}double Object\+::get\+Confidence (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_ac2d82f3b7d82f5098095ff83f4af597b}{}\label{classObject_ac2d82f3b7d82f5098095ff83f4af597b}
+This method returns the confidence of the information of this object. The confidence is related to the last time this object was seen and the specified time (normally the time of the last received message). 
+\begin{DoxyParams}{Parameters}
+{\em time} & current time to compare with time object was last seen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+confidence factor of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Global\+Position@{get\+Global\+Position}}
+\index{get\+Global\+Position@{get\+Global\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Position() const }{getGlobalPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Object\+::get\+Global\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_ac2842396c6a820a0864b767487b465ad}{}\label{classObject_ac2842396c6a820a0864b767487b465ad}
+This method returns the global position of this object. The time of this information is related to the time returned by \hyperlink{classObject_a599ae480b2d1df43ff83265157a351c1}{get\+Time\+Global\+Position()}, but is not checked. So if you want to know the relevance of this position use this method. \begin{DoxyReturn}{Returns}
+global position of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Global\+Position\+Last\+See@{get\+Global\+Position\+Last\+See}}
+\index{get\+Global\+Position\+Last\+See@{get\+Global\+Position\+Last\+See}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Position\+Last\+See() const }{getGlobalPositionLastSee() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Object\+::get\+Global\+Position\+Last\+See (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_afd7b10a82d0394f1403fc5991a689000}{}\label{classObject_afd7b10a82d0394f1403fc5991a689000}
+This method returns the global position of this object at the time of the last see message. The time of this information is related to the time returned by \hyperlink{classObject_abe9fa85b94c18242f856c5c6628077af}{get\+Time\+Global\+Pos\+Derived\+From\+See()}. \begin{DoxyReturn}{Returns}
+global position of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Relative\+Angle@{get\+Relative\+Angle}}
+\index{get\+Relative\+Angle@{get\+Relative\+Angle}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Relative\+Angle()}{getRelativeAngle()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Object\+::get\+Relative\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a28709fc5998f7f24f3aa32a9dfcd1e42}{}\label{classObject_a28709fc5998f7f24f3aa32a9dfcd1e42}
+This method returns the relative angle of this object to the agent. This equals the angle of the relative position vector. \begin{DoxyReturn}{Returns}
+relative angle to this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Relative\+Distance@{get\+Relative\+Distance}}
+\index{get\+Relative\+Distance@{get\+Relative\+Distance}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Relative\+Distance()}{getRelativeDistance()}}]{\setlength{\rightskip}{0pt plus 5cm}double Object\+::get\+Relative\+Distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_af111de23285de9a9e29f7c7fae6401b6}{}\label{classObject_af111de23285de9a9e29f7c7fae6401b6}
+This method returns the relative distance to this object. This equals the magnitude of the relative position vector. \begin{DoxyReturn}{Returns}
+relative distance to this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Relative\+Position@{get\+Relative\+Position}}
+\index{get\+Relative\+Position@{get\+Relative\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Relative\+Position() const }{getRelativePosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Object\+::get\+Relative\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_ac7ecab5852daef8614add5422eb36838}{}\label{classObject_ac7ecab5852daef8614add5422eb36838}
+This method returns the relative position of this object. The time of this information is related to the time returned by \hyperlink{classObject_a83fc6b5fe56b15472b9d072bd6cc197b}{get\+Time\+Relative\+Position()}, but is not checked. So if you want to know the relevance of this position use this method. \begin{DoxyReturn}{Returns}
+relative position of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Time\+Global\+Pos\+Derived\+From\+See@{get\+Time\+Global\+Pos\+Derived\+From\+See}}
+\index{get\+Time\+Global\+Pos\+Derived\+From\+See@{get\+Time\+Global\+Pos\+Derived\+From\+See}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Time\+Global\+Pos\+Derived\+From\+See() const }{getTimeGlobalPosDerivedFromSee() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::get\+Time\+Global\+Pos\+Derived\+From\+See (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_abe9fa85b94c18242f856c5c6628077af}{}\label{classObject_abe9fa85b94c18242f856c5c6628077af}
+This method returns the time that the global position was calculated using a see message. \begin{DoxyReturn}{Returns}
+time of the global position of this object during the last see 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Time\+Global\+Position@{get\+Time\+Global\+Position}}
+\index{get\+Time\+Global\+Position@{get\+Time\+Global\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Time\+Global\+Position() const }{getTimeGlobalPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::get\+Time\+Global\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_a599ae480b2d1df43ff83265157a351c1}{}\label{classObject_a599ae480b2d1df43ff83265157a351c1}
+This method returns the time that corresponds to the global position of this object. \begin{DoxyReturn}{Returns}
+time of the global position of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Time\+Last\+Seen@{get\+Time\+Last\+Seen}}
+\index{get\+Time\+Last\+Seen@{get\+Time\+Last\+Seen}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Time\+Last\+Seen() const }{getTimeLastSeen() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::get\+Time\+Last\+Seen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_ae2c8eca388d024f1660e203aed3aa35a}{}\label{classObject_ae2c8eca388d024f1660e203aed3aa35a}
+This method returns the time that corresponds to the time this object was located in the last see message. \begin{DoxyReturn}{Returns}
+time of the last see message that was used to update this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Time\+Relative\+Position@{get\+Time\+Relative\+Position}}
+\index{get\+Time\+Relative\+Position@{get\+Time\+Relative\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Time\+Relative\+Position() const }{getTimeRelativePosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::get\+Time\+Relative\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_a83fc6b5fe56b15472b9d072bd6cc197b}{}\label{classObject_a83fc6b5fe56b15472b9d072bd6cc197b}
+This method returns the time that corresponds to the relative position of this object. \begin{DoxyReturn}{Returns}
+time of the relative position of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Object@{Object}}
+\subsubsection[{\texorpdfstring{get\+Type() const }{getType() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Object\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classObject_a16cba98d16d802e6858a3aee946f7231}{}\label{classObject_a16cba98d16d802e6858a3aee946f7231}
+This method returns the type of this object. \begin{DoxyReturn}{Returns}
+type of this object 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Global\+Position@{set\+Global\+Position}}
+\index{set\+Global\+Position@{set\+Global\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Global\+Position(\+Vec\+Position p, Time time)}{setGlobalPosition(VecPosition p, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Global\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{p, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_aef89da7e4ec7a846b056b8739c486ca4}{}\label{classObject_aef89da7e4ec7a846b056b8739c486ca4}
+This method sets the global position and the time this information was calculated. 
+\begin{DoxyParams}{Parameters}
+{\em p} & new global position \\
+\hline
+{\em time} & time global position was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Global\+Position\+Last\+See@{set\+Global\+Position\+Last\+See}}
+\index{set\+Global\+Position\+Last\+See@{set\+Global\+Position\+Last\+See}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Global\+Position\+Last\+See(\+Vec\+Position p, Time time)}{setGlobalPositionLastSee(VecPosition p, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Global\+Position\+Last\+See (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{p, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a65fa38852f3c0ba301dcfa812830c326}{}\label{classObject_a65fa38852f3c0ba301dcfa812830c326}
+This method sets the global position calculated using the last see message and the time of this see message. This opposed to the \char`\"{}normal\char`\"{} global position that is also updated when no see message has arrived in a new cycle. 
+\begin{DoxyParams}{Parameters}
+{\em p} & new global position \\
+\hline
+{\em time} & time global position was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Relative\+Position@{set\+Relative\+Position}}
+\index{set\+Relative\+Position@{set\+Relative\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Relative\+Position(double d\+Dist, Ang\+Deg d\+Ang, Time time)}{setRelativePosition(double dDist, AngDeg dAng, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Relative\+Position (
+\begin{DoxyParamCaption}
+\item[{double}]{d\+Dist, }
+\item[{{\bf Ang\+Deg}}]{ang, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_aa31b35b9ee29ee5886e164d19ba461b4}{}\label{classObject_aa31b35b9ee29ee5886e164d19ba461b4}
+This method sets the relative position and the time this information was received. The relative position is calculated using the given distance and the given (relative) angle. 
+\begin{DoxyParams}{Parameters}
+{\em d\+Dist} & relative distance to object \\
+\hline
+{\em ang} & relative angle to object \\
+\hline
+{\em time} & time relative position was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Relative\+Position@{set\+Relative\+Position}}
+\index{set\+Relative\+Position@{set\+Relative\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Relative\+Position(\+Vec\+Position v, Time time)}{setRelativePosition(VecPosition v, Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Relative\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{v, }
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a1d0f80823f4b2c077a3d91d8ba2b8851}{}\label{classObject_a1d0f80823f4b2c077a3d91d8ba2b8851}
+This method sets the relative position and the time this information was received using a vec\+Position. 
+\begin{DoxyParams}{Parameters}
+{\em p} & new relative position \\
+\hline
+{\em time} & time relative position was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the values were set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Time\+Global\+Pos\+Derived\+From\+See@{set\+Time\+Global\+Pos\+Derived\+From\+See}}
+\index{set\+Time\+Global\+Pos\+Derived\+From\+See@{set\+Time\+Global\+Pos\+Derived\+From\+See}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Time\+Global\+Pos\+Derived\+From\+See(\+Time time)}{setTimeGlobalPosDerivedFromSee(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Time\+Global\+Pos\+Derived\+From\+See (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a40b99a05ab37134539b6c52bb95999eb}{}\label{classObject_a40b99a05ab37134539b6c52bb95999eb}
+This method sets the time the global position was calculated using a see message. 
+\begin{DoxyParams}{Parameters}
+{\em time} & time global position was calculated with see message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the value was set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Time\+Global\+Position@{set\+Time\+Global\+Position}}
+\index{set\+Time\+Global\+Position@{set\+Time\+Global\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Time\+Global\+Position(\+Time time)}{setTimeGlobalPosition(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Time\+Global\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a47c32dc89a659bfd381c68ed57917afc}{}\label{classObject_a47c32dc89a659bfd381c68ed57917afc}
+This method sets the time the global position was calculated 
+\begin{DoxyParams}{Parameters}
+{\em time} & time global position was calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the value was set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Time\+Last\+Seen@{set\+Time\+Last\+Seen}}
+\index{set\+Time\+Last\+Seen@{set\+Time\+Last\+Seen}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Time\+Last\+Seen(\+Time time)}{setTimeLastSeen(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Time\+Last\+Seen (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a8eedc3dc09c2a67fe6192167f7d2aa60}{}\label{classObject_a8eedc3dc09c2a67fe6192167f7d2aa60}
+This method sets the time of the last see message in which this object was seen. 
+\begin{DoxyParams}{Parameters}
+{\em time} & time this object was last seen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the value was set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Time\+Relative\+Position@{set\+Time\+Relative\+Position}}
+\index{set\+Time\+Relative\+Position@{set\+Time\+Relative\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Time\+Relative\+Position(\+Time time)}{setTimeRelativePosition(Time time)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Time\+Relative\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Time}}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_a71656669e4ba8fb84363a33c375c7a83}{}\label{classObject_a71656669e4ba8fb84363a33c375c7a83}
+This method sets the time the relative position was received. 
+\begin{DoxyParams}{Parameters}
+{\em time} & time relative position was received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the value was set 
+\end{DoxyReturn}
+\index{Object@{Object}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Object@{Object}}
+\subsubsection[{\texorpdfstring{set\+Type(\+Object\+T o)}{setType(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{classObject_aec36935819c3c4f5050d73a3f2ebbfdb}{}\label{classObject_aec36935819c3c4f5050d73a3f2ebbfdb}
+This method sets the type of this object (i.\+e. O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+LL, F\+L\+A\+G\+\_\+\+L\+\_\+\+R\+\_\+T). 
+\begin{DoxyParams}{Parameters}
+{\em o} & ObjectT representing the type of this object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set. 
+\end{DoxyReturn}
+\index{Object@{Object}!show@{show}}
+\index{show@{show}!Object@{Object}}
+\subsubsection[{\texorpdfstring{show(ostream \&os=cout)=0}{show(ostream &os=cout)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Object\+::show (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classObject_abdfad2372e7ec5f9aa271a1677653778}{}\label{classObject_abdfad2372e7ec5f9aa271a1677653778}
+abstract function that should be defined in a subclass 
+
+Implemented in \hyperlink{classAgentObject_a0043cea8d237828930412eb3c2b84e32}{Agent\+Object}, \hyperlink{classBallObject_a294d8fb34c88d98a1ef2ed2d1c864a62}{Ball\+Object}, \hyperlink{classPlayerObject_a01d587f88139dddf2ca1b39a65523dd6}{Player\+Object}, and \hyperlink{classFixedObject_ad8771b36cc2073d4a9fe1879b2f91d06}{Fixed\+Object}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Object@{Object}!object\+Type@{object\+Type}}
+\index{object\+Type@{object\+Type}!Object@{Object}}
+\subsubsection[{\texorpdfstring{object\+Type}{objectType}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Object\+::object\+Type\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_a1ecdca38441a375acbd102de3060b972}{}\label{classObject_a1ecdca38441a375acbd102de3060b972}
+Type of this object \index{Object@{Object}!pos\+Global@{pos\+Global}}
+\index{pos\+Global@{pos\+Global}!Object@{Object}}
+\subsubsection[{\texorpdfstring{pos\+Global}{posGlobal}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Object\+::pos\+Global\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_a7b1e09877ae916b49f64b9a9e9a3e0d1}{}\label{classObject_a7b1e09877ae916b49f64b9a9e9a3e0d1}
+Global position in the field \index{Object@{Object}!pos\+Global\+Last\+See@{pos\+Global\+Last\+See}}
+\index{pos\+Global\+Last\+See@{pos\+Global\+Last\+See}!Object@{Object}}
+\subsubsection[{\texorpdfstring{pos\+Global\+Last\+See}{posGlobalLastSee}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Object\+::pos\+Global\+Last\+See\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_a49148cd616efbb888175bfa825dcd167}{}\label{classObject_a49148cd616efbb888175bfa825dcd167}
+Global position of last see msg \index{Object@{Object}!pos\+Relative@{pos\+Relative}}
+\index{pos\+Relative@{pos\+Relative}!Object@{Object}}
+\subsubsection[{\texorpdfstring{pos\+Relative}{posRelative}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Object\+::pos\+Relative\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_afc3fa9f935ff0e47ea8057f742ea623c}{}\label{classObject_afc3fa9f935ff0e47ea8057f742ea623c}
+Relative position of the object \index{Object@{Object}!time\+Global\+Pos\+Derived\+From\+See@{time\+Global\+Pos\+Derived\+From\+See}}
+\index{time\+Global\+Pos\+Derived\+From\+See@{time\+Global\+Pos\+Derived\+From\+See}!Object@{Object}}
+\subsubsection[{\texorpdfstring{time\+Global\+Pos\+Derived\+From\+See}{timeGlobalPosDerivedFromSee}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::time\+Global\+Pos\+Derived\+From\+See\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_a2f113089a45a792db77b03e16b8152a1}{}\label{classObject_a2f113089a45a792db77b03e16b8152a1}
+\hyperlink{classTime}{Time} pos derived from see msg \index{Object@{Object}!time\+Global\+Position@{time\+Global\+Position}}
+\index{time\+Global\+Position@{time\+Global\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{time\+Global\+Position}{timeGlobalPosition}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::time\+Global\+Position\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_a8892e8727938cdde9c00348848e39b53}{}\label{classObject_a8892e8727938cdde9c00348848e39b53}
+Server time of global position \index{Object@{Object}!time\+Last\+Seen@{time\+Last\+Seen}}
+\index{time\+Last\+Seen@{time\+Last\+Seen}!Object@{Object}}
+\subsubsection[{\texorpdfstring{time\+Last\+Seen}{timeLastSeen}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::time\+Last\+Seen\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_ac119901c38bac85c71027606f36cd38d}{}\label{classObject_ac119901c38bac85c71027606f36cd38d}
+\hyperlink{classTime}{Time} last see message has arrived \index{Object@{Object}!time\+Relative\+Position@{time\+Relative\+Position}}
+\index{time\+Relative\+Position@{time\+Relative\+Position}!Object@{Object}}
+\subsubsection[{\texorpdfstring{time\+Relative\+Position}{timeRelativePosition}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} Object\+::time\+Relative\+Position\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classObject_a0efe361db316649d7d40132b76ed8d41}{}\label{classObject_a0efe361db316649d7d40132b76ed8d41}
+Server time of relative position 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Objects_8h}{Objects.\+h}\item 
+src/\hyperlink{Objects_8cpp}{Objects.\+cpp}\end{DoxyCompactItemize}

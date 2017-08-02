@@ -1,0 +1,102 @@
+\hypertarget{SoccerTypes_8cpp}{}\section{src/\+Soccer\+Types.cpp File Reference}
+\label{SoccerTypes_8cpp}\index{src/\+Soccer\+Types.\+cpp@{src/\+Soccer\+Types.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Soccer\+Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Parse.\+h\char`\"{}}\\*
+Include dependency graph for Soccer\+Types.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SoccerTypes_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{SoccerTypes_8cpp_a17d812d03b85ce4b342d904271798fc8}{operator$<$$<$} (ostream \&os, \hyperlink{classTime}{Time} t)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{SoccerTypes_8cpp_a69d2ee771da45da549ef2bc21d4a7fa4}{Object\+Names} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+\begin{DoxyPre}
+{\bfseries File:}          \hyperlink{SoccerTypes_8cpp}{SoccerTypes.cpp}
+{\bfseries Project:}       Robocup Soccer Simulation Team: UvA Trilearn
+{\bfseries Authors:}       Jelle Kok
+{\bfseries Created:}       28/11/2000
+{\bfseries Last Revision:} $ID\$
+{\bfseries Contents:}      This file contains the different enumerations and
+               constants that are important in the Soccer Server.
+               Furthermore it contains the class \hyperlink{classSoccerCommand}{SoccerCommand} which is
+               used to denote the different possible soccer commands and
+               the class \hyperlink{classSoccerTypes}{SoccerTypes} that contains all kind of static
+               methods to translate text strings that are received from
+               the server into the soccer types (=enumerations) that
+               are defined here.  Finally it contains the \hyperlink{classTime}{Time} class which
+               holds a two-tuple that represents the time in the soccer server.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+
+
+\subsubsection*{{\bfseries Changes}}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+{\bfseries Date}             {\bfseries Author}          {\bfseries Comment}
+28/11/2000       Jelle Kok       Initial version created
+\end{DoxyPre}
+ 
+
+\subsection{Function Documentation}
+\index{Soccer\+Types.\+cpp@{Soccer\+Types.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Soccer\+Types.\+cpp@{Soccer\+Types.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&os, Time t)}{operator<<(ostream &os, Time t)}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{{\bf Time}}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{SoccerTypes_8cpp_a17d812d03b85ce4b342d904271798fc8}{}\label{SoccerTypes_8cpp_a17d812d03b85ce4b342d904271798fc8}
+Overloaded version of the C++ output operator for a \hyperlink{classTime}{Time} class. This operator makes it possible to use \hyperlink{classTime}{Time} objects in output statements (e.\+g. cout $<$$<$ t). The current cycle and the stopped time are printed in the format (t1,t2). 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to which information should be written \\
+\hline
+{\em v} & a \hyperlink{classTime}{Time} object which must be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+output stream containing (x,y) 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{Soccer\+Types.\+cpp@{Soccer\+Types.\+cpp}!Object\+Names@{Object\+Names}}
+\index{Object\+Names@{Object\+Names}!Soccer\+Types.\+cpp@{Soccer\+Types.\+cpp}}
+\subsubsection[{\texorpdfstring{Object\+Names}{ObjectNames}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Object\+Names\mbox{[}$\,$\mbox{]}}\hypertarget{SoccerTypes_8cpp_a69d2ee771da45da549ef2bc21d4a7fa4}{}\label{SoccerTypes_8cpp_a69d2ee771da45da549ef2bc21d4a7fa4}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+\textcolor{stringliteral}{"(b)"}, \textcolor{stringliteral}{"(g l)"}, \textcolor{stringliteral}{"(g r)"}, \textcolor{stringliteral}{"(g ?)"}, \textcolor{stringliteral}{"(l l)"}, \textcolor{stringliteral}{"(l r)"}, \textcolor{stringliteral}{"(l b)"}, \textcolor{stringliteral}{"(l t)"}, 
+\textcolor{stringliteral}{"(f l t)"},\textcolor{stringliteral}{"(f t l 50)"}, \textcolor{stringliteral}{"(f t l 40)"}, \textcolor{stringliteral}{"(f t l 30)"}, \textcolor{stringliteral}{"(f t l 20)"}, 
+\textcolor{stringliteral}{"(f t l 10)"}, \textcolor{stringliteral}{"(f t 0)"},\textcolor{stringliteral}{"(f c t)"},\textcolor{stringliteral}{"(f t r 10)"}, \textcolor{stringliteral}{"(f t r 20)"}, \textcolor{stringliteral}{"(f t r 30)"}, 
+\textcolor{stringliteral}{"(f t r 40)"},\textcolor{stringliteral}{"(f t r 50)"}, \textcolor{stringliteral}{"(f r t)"}, \textcolor{stringliteral}{"(f r t 30)"}, \textcolor{stringliteral}{"(f r t 20)"},\textcolor{stringliteral}{"(f r t 10)"},
+\textcolor{stringliteral}{"(f g r t)"} , \textcolor{stringliteral}{"(f r 0)"}, \textcolor{stringliteral}{"(f g r b)"} , \textcolor{stringliteral}{"(f r b 10)"}, \textcolor{stringliteral}{"(f r b 20)"},
+\textcolor{stringliteral}{"(f r b 30)"}, \textcolor{stringliteral}{"(f r b)"}   , \textcolor{stringliteral}{"(f b r 50)"}, \textcolor{stringliteral}{"(f b r 40)"}, \textcolor{stringliteral}{"(f b r 30)"},
+\textcolor{stringliteral}{"(f b r 20)"}, \textcolor{stringliteral}{"(f b r 10)"}, \textcolor{stringliteral}{"(f c b)"}   , \textcolor{stringliteral}{"(f b 0)"}   , \textcolor{stringliteral}{"(f b l 10)"},
+\textcolor{stringliteral}{"(f b l 20)"}, \textcolor{stringliteral}{"(f b l 30)"}, \textcolor{stringliteral}{"(f b l 40)"}, \textcolor{stringliteral}{"(f b l 50)"}, \textcolor{stringliteral}{"(f l b)"},
+\textcolor{stringliteral}{"(f l b 30)"}, \textcolor{stringliteral}{"(f l b 20)"}, \textcolor{stringliteral}{"(f l b 10)"}, \textcolor{stringliteral}{"(f g l b)"} , \textcolor{stringliteral}{"(f l 0)"},
+\textcolor{stringliteral}{"(f g l t)"} , \textcolor{stringliteral}{"(f l t 10)"}, \textcolor{stringliteral}{"(f l t 20)"}, \textcolor{stringliteral}{"(f l t 30)"}, \textcolor{stringliteral}{"(f p l t)"},
+\textcolor{stringliteral}{"(f p l c)"}, \textcolor{stringliteral}{"(f p l b)"},   \textcolor{stringliteral}{"(f p r t)"},  \textcolor{stringliteral}{"(f p r c)"},  \textcolor{stringliteral}{"(f p r b)"}, \textcolor{stringliteral}{"(f c)"} \}
+\end{DoxyCode}
+This constant defines the string names corresponding to the ObjectT names, defined in \hyperlink{SoccerTypes_8h}{Soccer\+Types.\+h}. Players are not added since they depend on the team name. Note that the order is important, since the names are in the same order as the ObjectT enumeration. 

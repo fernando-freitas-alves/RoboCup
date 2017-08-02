@@ -1,0 +1,83 @@
+\hypertarget{Formations_8h}{}\section{src/\+Formations.h File Reference}
+\label{Formations_8h}\index{src/\+Formations.\+h@{src/\+Formations.\+h}}
+{\ttfamily \#include \char`\"{}Soccer\+Types.\+h\char`\"{}}\\*
+Include dependency graph for Formations.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{Formations_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Formations_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPlayerTypeInfo}{Player\+Type\+Info}
+\item 
+class \hyperlink{classFormationTypeInfo}{Formation\+Type\+Info}
+\item 
+class \hyperlink{classFormations}{Formations}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}{\bfseries File:}          \hyperlink{Formations_8h}{Formations.h}
+{\bfseries Project:}       Robocup Soccer Simulation Team: UvA Trilearn
+{\bfseries Authors:}       Jelle Kok
+{\bfseries Created:}       05/02/2001
+{\bfseries Last Revision:} $ID\$
+{\bfseries Contents:}      Header file for different classes associated with
+               \hyperlink{classFormations}{Formations}.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+\begin{DoxyItemize}
+\item \hyperlink{classPlayerTypeInfo}{PlayerTypeInfo} contains the different information for
+one playertype (PT\_DEFENDER, PT\_ATTACKER, etc.). These
+should not be confused with the player\_types used in the
+soccerserver from version 7.xx.  The information consists
+of the attraction to the ball, minimal and maximal x
+coordinates, etc.
+\item \hyperlink{classFormationTypeInfo}{FormationTypeInfo} contains information for all the
+roles in one specific formation. This information
+consists of the current formation, the home position for
+all the roles, the player\_type (PT\_DEFENDER, PT\_ATTACKER,
+etc.) for all the roles and the information about all
+player\_types
+\item \hyperlink{classFormations}{Formations} itself. This class contains all the
+information of the different \hyperlink{classFormations}{Formations}. Furthermore it
+contains the current formation that is used and the role
+in the formation that is associated with the current
+agent.
+\end{DoxyItemize}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}This formation system is based on the formations used by
+the simple FC Portugal team, released in 2000.
+
+
+
+\subsubsection*{{\bfseries Changes}}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+{\bfseries Date}             {\bfseries Author}          {\bfseries Comment}
+05/02/2001       Jelle Kok       Initial version created
+\end{DoxyPre}
+ 

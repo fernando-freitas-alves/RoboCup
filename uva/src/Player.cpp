@@ -55,6 +55,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <string.h>
 #include <stdlib.h>
 
+#include <utility>
+#include "Utilities.h"
+
 extern Logger LogDraw;
 
 /*!This is the constructor the Player class and calls the constructor of the
@@ -101,8 +104,9 @@ Player::Player( ActHandler* act, WorldModel *wm, ServerSettings *ss,
   else
     sprintf( str, "(init %s (version %f))", strTeamName, dVersion );
   ACT->sendMessage( str );
-  
+
 }
+
 
 /*! This is the main loop of the agent. This method calls the update methods
     of the world model after it is indicated that new information has arrived.
@@ -122,8 +126,13 @@ void Player::mainLoop( )
   sprintf( str, "(clang (ver 8 8))" );
   ACT->sendMessage( str );
 
+  string msg;
+  pair<unsigned int, unsigned int> ballZone;
   while( bContLoop )                                 // as long as server alive
   {
+    ballZone = getBallZone(WM);
+    msg = "BallZone: [1] " + to_string(ballZone.first) + ", [2] " + to_string(ballZone.second);
+    Log.log(200,msg.c_str());
     Log.logWithTime( 3, "  start update_all" );
 //    Log.setHeader( WM->getCurrentCycle(), WM->getPlayerNumber() );
     Log.setHeader( WM->getCurrentCycle() );
@@ -136,7 +145,7 @@ void Player::mainLoop( )
       if( ( WM->isPenaltyUs( ) || WM->isPenaltyThem() ) )
         performPenalty();
       else if( WM->getPlayMode() == PM_FROZEN )
-        ACT->putCommandInQueue( turnBodyToObject( OBJECT_BALL )  ); 
+        ACT->putCommandInQueue( turnBodyToObject( OBJECT_BALL )  );
       else
       {
         switch( formations->getPlayerType( ) )        // determine right loop
@@ -199,9 +208,9 @@ void Player::mainLoop( )
       if( LogDraw.isInLogLevel( 700 ) )
         WM->logCoordInfo( 700 );
     }
- 
+
     Log.logWithTime( 604, "time for action: %f", timer.getElapsedTime()*1000 );
-           
+
     // wait for new information from the server cannot say
     // bContLoop=WM->wait... since bContLoop can be changed elsewhere
     if(  WM->waitForNewInformation() == false )
@@ -302,7 +311,7 @@ void Player::handleStdin( )
 #ifdef WIN32
     cin.getline( buf, MAX_MSG );
 #else
-    fgets( buf, MAX_MSG, stdin ); // does unblock with signal !!!!!
+    if (fgets( buf, MAX_MSG, stdin )) {}; // does unblock with signal !!!!!
 #endif
    printf( "after fgets: %s\n", buf );
    executeStringCommand( buf );
@@ -399,11 +408,11 @@ bool Player::executeStringCommand( char *str)
     case 'o':                              // count nr opp in cone
       x = Parse::parseFirstDouble( &str );
       y = Parse::parseFirstDouble( &str );
-      i = WM->getNrInSetInCone( OBJECT_SET_OPPONENTS, x, 
+      i = WM->getNrInSetInCone( OBJECT_SET_OPPONENTS, x,
                                 WM->getAgentGlobalPosition(),
-                                WM->getAgentGlobalPosition() + 
+                                WM->getAgentGlobalPosition() +
                                 VecPosition( y,
-                                             WM->getAgentGlobalNeckAngle(), 
+                                             WM->getAgentGlobalNeckAngle(),
                                              POLAR ) );
       printf( "%d opponents\n", i );
       return true;
@@ -526,12 +535,12 @@ bool Player::amIAgentToSaySomething( SoccerCommand socPri )
         ||
       (
        WM->getRelativeDistance( OBJECT_BALL ) < SS->getVisibleDistance() &&
-       WM->getTimeLastSeen( OBJECT_BALL ) == WM->getCurrentTime()  
+       WM->getTimeLastSeen( OBJECT_BALL ) == WM->getCurrentTime()
        )
       ||
       ( // pass ball
        WM->getRelativeDistance( OBJECT_BALL ) < SS->getMaximalKickDist() &&
-       posBallPred.getDistanceTo( posAgentPred ) > SS->getMaximalKickDist() 
+       posBallPred.getDistanceTo( posAgentPred ) > SS->getMaximalKickDist()
        )
       )
     return true;
@@ -669,7 +678,7 @@ void Player::makeBallInfo( VecPosition posBall, VecPosition velBall, int iDiff,
   return ;
 }
 
-/*! This method is called when a penalty kick has to be taken (for both the 
+/*! This method is called when a penalty kick has to be taken (for both the
   goalkeeper as the player who has to take the penalty. */
 void Player::performPenalty( )
 {
@@ -684,17 +693,17 @@ void Player::performPenalty( )
 
   // raise number of penalties by one when a penalty is taken
   if(
-    ( WM->getSide() == SIDE_LEFT && 
-      pmPrev != PM_PENALTY_SETUP_LEFT && 
+    ( WM->getSide() == SIDE_LEFT &&
+      pmPrev != PM_PENALTY_SETUP_LEFT &&
       WM->getPlayMode() == PM_PENALTY_SETUP_LEFT )
     ||
-    ( WM->getSide() == SIDE_RIGHT && 
-      pmPrev != PM_PENALTY_SETUP_RIGHT && 
+    ( WM->getSide() == SIDE_RIGHT &&
+      pmPrev != PM_PENALTY_SETUP_RIGHT &&
       WM->getPlayMode() == PM_PENALTY_SETUP_RIGHT ) )
    m_iPenaltyNr++;
 
   // start with player 11 and go downwards with each new penalty
-  // if we take penalty 
+  // if we take penalty
   if( WM->isPenaltyUs() && WM->getPlayerNumber() == (11 - (m_iPenaltyNr % 11)))
   {
      if( WM->getPlayMode() == PM_PENALTY_SETUP_LEFT ||
@@ -706,7 +715,7 @@ void Player::performPenalty( )
        if( pos.getDistanceTo( posAgent ) < 0.6 )
        {
          pos = posPenalty;
-         if(  fabs( VecPosition::normalizeAngle( 
+         if(  fabs( VecPosition::normalizeAngle(
                    (pos-posAgent).getDirection() - angBody ) ) > 20 )
            soc = turnBodyToPoint( pos );
        }
@@ -715,7 +724,7 @@ void Player::performPenalty( )
      else if( ( WM->getPlayMode() == PM_PENALTY_READY_LEFT ||
                 WM->getPlayMode() == PM_PENALTY_READY_RIGHT ||
                 WM->getPlayMode() == PM_PENALTY_TAKEN_LEFT ||
-                WM->getPlayMode() == PM_PENALTY_TAKEN_RIGHT 
+                WM->getPlayMode() == PM_PENALTY_TAKEN_RIGHT
                 )
               && WM->isBallKickable() )
      {
@@ -727,8 +736,8 @@ void Player::performPenalty( )
   else if( formations->getPlayerType() == PT_GOALKEEPER )
   {
     if( WM->getAgentViewAngle() != VA_NARROW )
-      ACT->putCommandInQueue( 
-		 SoccerCommand( CMD_CHANGEVIEW, VA_NARROW, VQ_HIGH ));
+      ACT->putCommandInQueue(
+         SoccerCommand( CMD_CHANGEVIEW, VA_NARROW, VQ_HIGH ));
 
     // is penalty them, stop it, otherwise go to outside field
     pos = posPenalty;
@@ -737,14 +746,14 @@ void Player::performPenalty( )
       pos = VecPosition( iSide*(52.5 - 2.0), 0.0 );
       if( SS->getPenAllowMultKicks() == false )
       {
-	if( WM->getPlayMode() == PM_PENALTY_TAKEN_LEFT ||
-	    WM->getPlayMode() == PM_PENALTY_TAKEN_RIGHT )
-	{
-	  if( WM->isBallCatchable( ) )
-	    soc = catchBall();
-	  else
-	    soc = intercept( true );
-	}
+    if( WM->getPlayMode() == PM_PENALTY_TAKEN_LEFT ||
+        WM->getPlayMode() == PM_PENALTY_TAKEN_RIGHT )
+    {
+      if( WM->isBallCatchable( ) )
+        soc = catchBall();
+      else
+        soc = intercept( true );
+    }
       }
       else if( pos.getDistanceTo( posAgent ) < 1.0 )
         soc = turnBodyToPoint( VecPosition( 0,0) ) ;
@@ -757,26 +766,26 @@ void Player::performPenalty( )
   else
   {
     pos = VecPosition( 5.0,
-                       VecPosition::normalizeAngle( 
+                       VecPosition::normalizeAngle(
                          iSide*(50 + 20*WM->getPlayerNumber())),
                        POLAR );
   }
 
 
-  if( soc.isIllegal() && 
+  if( soc.isIllegal() &&
       WM->getAgentGlobalPosition().getDistanceTo( pos ) < 0.8 )
   {
-    soc = turnBodyToPoint( posPenalty  );    
+    soc = turnBodyToPoint( posPenalty  );
   }
   else if( soc.isIllegal() )
   {
     soc = moveToPos( pos, 10);
   }
-  if( WM->getAgentStamina().getStamina() < 
+  if( WM->getAgentStamina().getStamina() <
       SS->getRecoverDecThr()*SS->getStaminaMax() + 500 &&
     soc.commandType == CMD_DASH)
     soc.dPower = 0;
-  
+
   ACT->putCommandInQueue( soc );
   ACT->putCommandInQueue( turnNeckToObject( OBJECT_BALL, soc ) );
 

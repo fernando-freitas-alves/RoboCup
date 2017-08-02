@@ -1,0 +1,67 @@
+#!/bin/bash
+echo Building UFABC Robotics RCSS
+LOG_FILE=build_log.txt
+
+> $LOG_FILE
+if [ $# != 0 ]; then
+    if [ "$1" == "-r" ] || [ "$2" == "-r" ]; then
+        echo Ending previous program process...
+        killall trilearn_player &> /dev/null
+        killall trilearn_coach &> /dev/null
+        # echo Restarting server...
+        # pgrep rcssserver | xargs kill -9 &> /dev/null
+        # rcssserver &> /dev/null &
+    fi
+    if [ "$1" == "-n" ] || [ "$2" == "-n" ]; then
+        echo Setting macros for scripts...
+        echo "################## aclocal ##################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        set -e
+        aclocal >> $LOG_FILE
+
+        echo Generating configuration script...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################## autoconf #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        autoconf >> $LOG_FILE
+
+        echo Generating make script...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################## automake #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        automake --add-missing >> $LOG_FILE
+
+        echo Configuring project based on computer...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# configure #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        ./configure >> $LOG_FILE
+    fi
+fi
+
+echo Making binaries...
+echo "" >> $LOG_FILE
+echo "" >> $LOG_FILE
+echo "" >> $LOG_FILE
+echo "################### make ###################" >> $LOG_FILE
+echo "" >> $LOG_FILE
+set -e
+make 2>&1 | tee -a $LOG_FILE
+
+echo Done.
+while true; do
+    read -p "Do you wish to start the program? [Y/n] " answer
+    case ${answer:0:1} in
+        y|Y|"")
+            ./start.sh
+            break
+        ;;
+        n|N) break;;
+    esac
+done

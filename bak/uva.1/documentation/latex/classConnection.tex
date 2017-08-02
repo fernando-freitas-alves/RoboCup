@@ -1,0 +1,174 @@
+\hypertarget{classConnection}{}\section{Connection Class Reference}
+\label{classConnection}\index{Connection@{Connection}}
+
+
+{\ttfamily \#include $<$Connection.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classConnection_a9de94289ca6259f94ef6aeba3b134a77}{Connection} ()
+\item 
+\hyperlink{classConnection_a516e1f95043699444b93f18c66bae135}{Connection} (const char $\ast$hostname, int port, int i\+Size)
+\item 
+\hyperlink{classConnection_a2e4352edf667bea83001569e9da8a24d}{$\sim$\+Connection} ()
+\item 
+bool \hyperlink{classConnection_a86f2e0e54431665344792b320822f5fd}{connect} (const char $\ast$host, int port)
+\item 
+void \hyperlink{classConnection_a714de28673587d857578e0688a149165}{disconnect} (void)
+\item 
+bool \hyperlink{classConnection_ab9e18d6cd27e0fccf418b339cd92dac6}{is\+Connected} (void) const 
+\item 
+int \hyperlink{classConnection_af07c0c3856f7e792468ea721db559b39}{message\+\_\+loop} (F\+I\+LE $\ast$in, F\+I\+LE $\ast$out)
+\item 
+int \hyperlink{classConnection_aee982599863402416879fcb6ba62aa3e}{receive\+Message} (char $\ast$msg, int maxsize)
+\item 
+bool \hyperlink{classConnection_aba5adce5ec0031c6cc057980538b06e8}{send\+Message} (const char $\ast$msg)
+\item 
+void \hyperlink{classConnection_af818a3027bec5ee2cc68515c58720daa}{show} (ostream os)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class creates creates a (socket) connection using a hostname and a port number. After the connection is created it is possible to send and receive messages from this connection. It is based on the client program supplied with the soccer server defined in client.\+c and created by Istuki Noda et al. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Connection@{Connection}!Connection@{Connection}}
+\index{Connection@{Connection}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{Connection()}{Connection()}}]{\setlength{\rightskip}{0pt plus 5cm}Connection\+::\+Connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_a9de94289ca6259f94ef6aeba3b134a77}{}\label{classConnection_a9de94289ca6259f94ef6aeba3b134a77}
+Default constructor. Only sets the maximum message size. \index{Connection@{Connection}!Connection@{Connection}}
+\index{Connection@{Connection}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{Connection(const char $\ast$hostname, int port, int i\+Size)}{Connection(const char *hostname, int port, int iSize)}}]{\setlength{\rightskip}{0pt plus 5cm}Connection\+::\+Connection (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{hostname, }
+\item[{int}]{port, }
+\item[{int}]{i\+Max\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_a516e1f95043699444b93f18c66bae135}{}\label{classConnection_a516e1f95043699444b93f18c66bae135}
+Constructor makes a connection with the server using the connect method. 
+\begin{DoxyParams}{Parameters}
+{\em hostname} & string representation of host machine (string or IP number) \\
+\hline
+{\em port} & port number for connection of the host machine \\
+\hline
+{\em i\+Max\+Size} & maximum message size that can be sent or received \\
+\hline
+\end{DoxyParams}
+\index{Connection@{Connection}!````~Connection@{$\sim$\+Connection}}
+\index{````~Connection@{$\sim$\+Connection}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{$\sim$\+Connection()}{~Connection()}}]{\setlength{\rightskip}{0pt plus 5cm}Connection\+::$\sim$\+Connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_a2e4352edf667bea83001569e9da8a24d}{}\label{classConnection_a2e4352edf667bea83001569e9da8a24d}
+Deconstructor closes the connection with the server 
+
+\subsection{Member Function Documentation}
+\index{Connection@{Connection}!connect@{connect}}
+\index{connect@{connect}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{connect(const char $\ast$host, int port)}{connect(const char *host, int port)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Connection\+::connect (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{host, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_a86f2e0e54431665344792b320822f5fd}{}\label{classConnection_a86f2e0e54431665344792b320822f5fd}
+This method sets up a connection with the server. 
+\begin{DoxyParams}{Parameters}
+{\em hostname} & string representation of host machine (string or IP number) \\
+\hline
+{\em port} & port number for connection of the host machine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether connection was made 
+\end{DoxyReturn}
+\index{Connection@{Connection}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{disconnect(void)}{disconnect(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Connection\+::disconnect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_a714de28673587d857578e0688a149165}{}\label{classConnection_a714de28673587d857578e0688a149165}
+This method closes the current socket connection. \index{Connection@{Connection}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{is\+Connected(void) const }{isConnected(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Connection\+::is\+Connected (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classConnection_ab9e18d6cd27e0fccf418b339cd92dac6}{}\label{classConnection_ab9e18d6cd27e0fccf418b339cd92dac6}
+This method determines whether the socket connection is connected. \begin{DoxyReturn}{Returns}
+bool indicating whether socket connection is available 
+\end{DoxyReturn}
+\index{Connection@{Connection}!message\+\_\+loop@{message\+\_\+loop}}
+\index{message\+\_\+loop@{message\+\_\+loop}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{message\+\_\+loop(\+F\+I\+L\+E $\ast$in, F\+I\+L\+E $\ast$out)}{message_loop(FILE *in, FILE *out)}}]{\setlength{\rightskip}{0pt plus 5cm}int Connection\+::message\+\_\+loop (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fpin, }
+\item[{F\+I\+LE $\ast$}]{fpout}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_af07c0c3856f7e792468ea721db559b39}{}\label{classConnection_af07c0c3856f7e792468ea721db559b39}
+This method always loops and waits for input. When input is received from fpin then this input is send to the server using the current connection. When message is received from the server, this message is sent to fpout. 
+\begin{DoxyParams}{Parameters}
+{\em fpin} & file pointer from which input is read (i.\+e. stdin ) \\
+\hline
+{\em fpout} & file pointer to which output should be directed (i.\+e. stdout) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 but only when error occured in reading input 
+\end{DoxyReturn}
+\index{Connection@{Connection}!receive\+Message@{receive\+Message}}
+\index{receive\+Message@{receive\+Message}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{receive\+Message(char $\ast$msg, int maxsize)}{receiveMessage(char *msg, int maxsize)}}]{\setlength{\rightskip}{0pt plus 5cm}int Connection\+::receive\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{int}]{maxsize}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_aee982599863402416879fcb6ba62aa3e}{}\label{classConnection_aee982599863402416879fcb6ba62aa3e}
+This method reads a message from the connection. When there is no message available, it blocks till it receives a message. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & string in which message is stored \\
+\hline
+{\em maxsize} & maximum size of the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1\+: error, 0\+: 0 bytes were read, 1 when read was succesfull 
+\end{DoxyReturn}
+\index{Connection@{Connection}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{send\+Message(const char $\ast$msg)}{sendMessage(const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Connection\+::send\+Message (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_aba5adce5ec0031c6cc057980538b06e8}{}\label{classConnection_aba5adce5ec0031c6cc057980538b06e8}
+This method sends a message to the server using the current connection. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & string which contains message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on succes, false in case of failure 
+\end{DoxyReturn}
+\index{Connection@{Connection}!show@{show}}
+\index{show@{show}!Connection@{Connection}}
+\subsubsection[{\texorpdfstring{show(ostream os)}{show(ostream os)}}]{\setlength{\rightskip}{0pt plus 5cm}void Connection\+::show (
+\begin{DoxyParamCaption}
+\item[{ostream}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnection_af818a3027bec5ee2cc68515c58720daa}{}\label{classConnection_af818a3027bec5ee2cc68515c58720daa}
+This method prints whether the connection is up or not. 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to which output should be directed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Connection_8h}{Connection.\+h}\item 
+src/\hyperlink{Connection_8cpp}{Connection.\+cpp}\end{DoxyCompactItemize}
