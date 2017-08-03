@@ -3,7 +3,7 @@
 ## define the program that has to be built and the related sources
 bin_PROGRAMS = trilearn_player trilearn_coach
 
-AM_CXXFLAGS=-std=c++17
+AM_CXXFLAGS=-std=c++1z
 
 SOURCES =         Connection.cpp \
         SenseHandler.cpp \
