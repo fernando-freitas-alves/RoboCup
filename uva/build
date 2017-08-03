@@ -14,12 +14,22 @@ if [ $# != 0 ]; then
     fi
     if [ "$1" == "-n" ] || [ "$2" == "-n" ]; then
         echo Setting macros for scripts...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
         echo "################## aclocal ##################" >> $LOG_FILE
         echo "" >> $LOG_FILE
         set -e
         aclocal >> $LOG_FILE
 
         echo Generating configuration script...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# autoreconf ################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        autoreconf -i >> $LOG_FILE
+
         echo "" >> $LOG_FILE
         echo "" >> $LOG_FILE
         echo "" >> $LOG_FILE
@@ -42,6 +52,14 @@ if [ $# != 0 ]; then
         echo "################# configure #################" >> $LOG_FILE
         echo "" >> $LOG_FILE
         ./configure >> $LOG_FILE
+
+        echo Cleaning last make...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# configure #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        make clean 2>&1 | tee -a $LOG_FILE
     fi
 fi
 

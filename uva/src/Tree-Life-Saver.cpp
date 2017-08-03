@@ -1,19 +1,22 @@
 //código em árvore
 //fiz em cpp pras coisas aparecerem destacadas pelo IDE. txt não faz isso
 
-void TreeAction ()
+void TreeAction()
 {
     pair <unsigned int, unsigned int> xyZone = getBallZone(WM);
-    if (WM->isBallInOurPossession ())
+
+    if (WM->isBallInOurPossession())
     {
         switch (ballZoneX)
         {
             case DEFENSE:
                 //pass
                 break;
+
             case MIDFIELD:
                 //pass
                 break;
+
             case ATTACK:
                 if (ballZoneY == MIDDLE)
                 {
@@ -23,6 +26,7 @@ void TreeAction ()
                 {
                     //pass
                 }
+
                 break;
         }
     }

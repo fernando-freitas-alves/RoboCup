@@ -1,8 +1,0 @@
-<map id="BasicCoach" name="BasicCoach">
-<area shape="rect" id="node2" href="$classHeteroPlayerSettings.html" title="HeteroPlayerSettings" alt="" coords="5,95,152,121"/>
-<area shape="rect" id="node3" href="$classWorldModel.html" title="WorldModel" alt="" coords="176,95,267,121"/>
-<area shape="rect" id="node4" href="$classTime.html" title="Time" alt="" coords="187,5,237,32"/>
-<area shape="rect" id="node5" href="$classServerSettings.html" title="ServerSettings" alt="" coords="291,95,399,121"/>
-<area shape="rect" id="node6" href="$classGenericValues.html" title="GenericValues" alt="" coords="301,5,408,32"/>
-<area shape="rect" id="node7" href="$classActHandler.html" title="ActHandler" alt="" coords="423,95,510,121"/>
-</map>
