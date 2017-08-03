@@ -13,6 +13,15 @@ if [ $# != 0 ]; then
         # rcssserver &> /dev/null &
     fi
     if [ "$1" == "-n" ] || [ "$2" == "-n" ]; then
+        echo Reconfiguring parameters based on actual version...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# autoreconf ################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        autoreconf --force --install >> $LOG_FILE
+        autoreconf -i >> $LOG_FILE
+
         echo Setting macros for scripts...
         echo "" >> $LOG_FILE
         echo "" >> $LOG_FILE
@@ -23,13 +32,6 @@ if [ $# != 0 ]; then
         aclocal >> $LOG_FILE
 
         echo Generating configuration script...
-        echo "" >> $LOG_FILE
-        echo "" >> $LOG_FILE
-        echo "" >> $LOG_FILE
-        echo "################# autoreconf ################" >> $LOG_FILE
-        echo "" >> $LOG_FILE
-        autoreconf -i >> $LOG_FILE
-
         echo "" >> $LOG_FILE
         echo "" >> $LOG_FILE
         echo "" >> $LOG_FILE
