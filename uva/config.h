@@ -11,7 +11,7 @@
 #define HAVE_FCNTL_H 1
 
 /* Define to 1 if you have the `floor' function. */
-#define HAVE_FLOOR 1
+/* #undef HAVE_FLOOR */
 
 /* Define to 1 if you have the `gethostbyname' function. */
 #define HAVE_GETHOSTBYNAME 1
@@ -35,10 +35,10 @@
 #define HAVE_NETDB_H 1
 
 /* Define to 1 if you have the `pow' function. */
-#define HAVE_POW 1
+/* #undef HAVE_POW */
 
 /* Define to 1 if you have the `rint' function. */
-#define HAVE_RINT 1
+/* #undef HAVE_RINT */
 
 /* Define to 1 if you have the `select' function. */
 #define HAVE_SELECT 1
@@ -47,7 +47,7 @@
 #define HAVE_SOCKET 1
 
 /* Define to 1 if you have the `sqrt' function. */
-#define HAVE_SQRT 1
+/* #undef HAVE_SQRT */
 
 /* Define to 1 if stdbool.h conforms to C99. */
 #define HAVE_STDBOOL_H 1
@@ -94,7 +94,8 @@
 /* Define to 1 if the system has the type `_Bool'. */
 #define HAVE__BOOL 1
 
-/* Define to the sub-directory where libtool stores uninstalled libraries. */
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */
