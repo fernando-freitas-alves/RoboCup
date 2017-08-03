@@ -3,7 +3,17 @@
 
 ################### make ###################
 
-/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+make  all-recursive
+make[1]: Entering directory `/home/ubuntu/workspace/uva'
 Making all in src
+<<<<<<< HEAD
 make[2]: Nothing to be done for `all'.
 make[2]: Nothing to be done for `all-am'.
+=======
+make[2]: Entering directory `/home/ubuntu/workspace/uva/src'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/ubuntu/workspace/uva/src'
+make[2]: Entering directory `/home/ubuntu/workspace/uva'
+make[2]: Leaving directory `/home/ubuntu/workspace/uva'
+make[1]: Leaving directory `/home/ubuntu/workspace/uva'
+>>>>>>> 288337b8c52704b56524ca311f460b7d34bdec1f
