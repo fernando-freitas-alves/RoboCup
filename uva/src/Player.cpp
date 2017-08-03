@@ -129,9 +129,10 @@ void Player::mainLoop()
 
     while (bContLoop)                                  // as long as server alive
     {
-        ballZone = getBallZone(WM);
-        msg = "BallZone: [1] " + to_string(ballZone.first) + ", [2] " + to_string(ballZone.second);
-        Log.log(200, msg.c_str());
+        // ballZone = getBallZone(WM);
+        // msg = "BallZone: [1] " + to_string(ballZone.first) + ", [2] " + to_string(ballZone.second);
+        // Log.log(200, msg.c_str());
+        
         Log.logWithTime(3, "  start update_all");
         //    Log.setHeader( WM->getCurrentCycle(), WM->getPlayerNumber() );
         Log.setHeader(WM->getCurrentCycle());

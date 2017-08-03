@@ -79,7 +79,8 @@ while true; do
     read -p "Do you wish to start the program? [Y/n] " answer
     case ${answer:0:1} in
         y|Y|"")
-            ./start.sh
+            ./start.sh 9
+            # ./start-2.sh 10
             break
         ;;
         n|N) break;;

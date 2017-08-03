@@ -76,7 +76,7 @@ SoccerCommand Player::deMeer5()
                 VecPosition posGoal(PITCH_LENGTH / 2.0,
                                     (-1 + 2 * (WM->getCurrentCycle() % 2)) *
                                     0.4 * SS->getGoalWidth());
-                soc = kickTo(posGoal, SS->getBallSpeedMax());
+                soc = kickTo(posGoal, 0*SS->getBallSpeedMax());
                 Log.log(100, "take kick off");
             }
 
@@ -87,8 +87,8 @@ SoccerCommand Player::deMeer5()
                 Log.log(100, "move to ball to take kick-off");
             }
 
-            ACT->putCommandInQueue(soc);
-            ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
+            // ACT->putCommandInQueue(soc);
+            // ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             return soc;
         }
 
@@ -107,6 +107,8 @@ SoccerCommand Player::deMeer5()
             ACT->putCommandInQueue(alignNeckWithBody());
         }
     }
+
+    // else if not kick off, ...
     else
     {
         formations->setFormation(FT_433_OFFENSIVE);
@@ -124,7 +126,7 @@ SoccerCommand Player::deMeer5()
         {
             VecPosition posGoal(PITCH_LENGTH / 2.0,
                                 (-1 + 2 * (WM->getCurrentCycle() % 2)) * 0.4 * SS->getGoalWidth());
-            soc = kickTo(posGoal, SS->getBallSpeedMax());
+            soc = kickTo(posGoal*0.1, 0);//0.01*SS->getBallSpeedMax());
             ACT->putCommandInQueue(soc);
             ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             Log.log(100, "kick ball");
@@ -143,14 +145,14 @@ SoccerCommand Player::deMeer5()
                 SS->getRecoverDecThr()*SS->getStaminaMax() + 200)
             {
                 soc.dPower = 30.0 * WM->getAgentStamina().getRecovery();
-                // ACT->putCommandInQueue(soc);
+                ACT->putCommandInQueue(soc);
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
 
             // (...) else if stamina is high, [DASH AS INTENDED]
             else
             {
-                // ACT->putCommandInQueue(soc);
+                ACT->putCommandInQueue(soc);
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
         }
