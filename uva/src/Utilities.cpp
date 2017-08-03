@@ -34,3 +34,36 @@ pair<unsigned int, unsigned int> getBallZone(WorldModel *WM)
 
     return make_pair(X, Y);
 }
+
+// float gradDesc(r,qi,qf,obj,d0,p0,zeta,eta,qmin,alpha,imax,jmax)
+// {
+//     i = 1;
+//     Q = qi;
+//     while i < imax
+//         qd = norm(Q(i,:)-qf);
+//         if qd < qmin
+//             break
+//         end
+//         Fa = Fatt(r,qf,Q(i,:),d0,zeta);
+//         Fr = Frep(r,obj,Q(i,:),p0,eta);
+//         t  = tau(r,Q(i,:),Fa,Fr);
+//         nt = norm(t);
+//         if nt ~= 0
+//             dq = Q(i,:) - qf;
+//             dq = abs(dq) / norm(dq);
+//             Q(i+1,:) = Q(i,:) + alpha * t' / nt .* dq.^3;
+// %             q(i+1,:) = q(i,:) + alpha * t' / nt;
+//         else
+//             Q(i+1,:) = Q(i,:);
+//         end
+//         i = i+1;
+//     end
+//     if i == imax
+//         warning('Max number of iterations reached.')
+//     end
+// %     Q = addGoal(qf,Q);
+//     Q = rmvneg(r,Q);
+//     Q = rmvrep(Q,qmin);
+//     Q = upsample(Q,qmin);
+//     Q = downsample(Q,jmax);
+// }

@@ -321,7 +321,7 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-AM_CXXFLAGS = -std=c++11
+AM_CXXFLAGS = -std=c++17
 SOURCES = Connection.cpp \
         SenseHandler.cpp \
         ActHandler.cpp \
