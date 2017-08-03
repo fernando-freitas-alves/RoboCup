@@ -5,8 +5,5 @@
 
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
 Making all in src
-g++ -DHAVE_CONFIG_H -I. -I..    -std=c++11 -g -O2 -MT PlayerTeams.o -MD -MP -MF .deps/PlayerTeams.Tpo -c -o PlayerTeams.o PlayerTeams.cpp
-mv -f .deps/PlayerTeams.Tpo .deps/PlayerTeams.Po
-/bin/sh ../libtool  --tag=CXX   --mode=link g++ -std=c++11 -g -O2   -o trilearn_player Connection.o SenseHandler.o ActHandler.o SoccerTypes.o Objects.o WorldModel.o WorldModelHighLevel.o WorldModelPredict.o WorldModelUpdate.o ServerSettings.o PlayerSettings.o GenericValues.o Formations.o Geometry.o Parse.o Logger.o BasicPlayer.o Player.o PlayerTeams.o main.o Utilities.o  -lpthread 
-libtool: link: g++ -std=c++11 -g -O2 -o trilearn_player Connection.o SenseHandler.o ActHandler.o SoccerTypes.o Objects.o WorldModel.o WorldModelHighLevel.o WorldModelPredict.o WorldModelUpdate.o ServerSettings.o PlayerSettings.o GenericValues.o Formations.o Geometry.o Parse.o Logger.o BasicPlayer.o Player.o PlayerTeams.o main.o Utilities.o -Wl,-bind_at_load  -lpthread
+make[2]: Nothing to be done for `all'.
 make[2]: Nothing to be done for `all-am'.

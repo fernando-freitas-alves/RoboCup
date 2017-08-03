@@ -165,7 +165,7 @@ SoccerCommand Player::deMeer5()
             {
                 soc = moveToPos(WM->getStrategicPosition(),
                                 PS->getPlayerWhenToTurnAngle());
-                // ACT->putCommandInQueue(soc);
+                ACT->putCommandInQueue(soc);
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
 
