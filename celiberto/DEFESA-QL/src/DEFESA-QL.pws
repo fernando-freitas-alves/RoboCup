@@ -1,0 +1,38 @@
+
+[executer]
+RunInTerminal=true
+
+[Project State]
+clean before build=false
+
+[File View]
+filter.file.unmatch=*.so *.o *.a *.la
+filter.file.ignore.hidden=0
+filter.dir.ignore.hidden=0
+
+[filenumbers]
+0=480
+1=170
+2=202
+3=349
+4=27
+
+[filemarkers]
+0=
+1=
+2=
+3=
+4=
+
+[filelist]
+0=/home/sysop/Futebol/DEFESA-QL/src/Player.cpp
+1=/home/sysop/Futebol/DEFESA-QL/src/PlayerTeams.cpp
+2=/home/sysop/Futebol/DEFESA-QL/src/QlearningZagueiro.h
+3=/home/sysop/Futebol/DEFESA-QL/src/QlearningGoleiro.h
+
+[Project Tree]
+0=0
+1=0:1
+
+[File Tree]
+0=0

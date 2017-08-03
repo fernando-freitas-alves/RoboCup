@@ -1,0 +1,33 @@
+#automake
+configure.ac: 5: `automake requires `AM_CONFIG_HEADER', not `AC_CONFIG_HEADER'
+
+
+sysop@sys:~/Futebol/hashGoleiro-QL$ make
+cd . && aclocal-1.4
+cd . && automake-1.4 --gnu Makefile
+cd . && autoconf
+configure.ac:11: error: possibly undefined macro: AC_PROG_LIBTOOL
+      If this token and others are legitimate, please use m4_pattern_allow.
+      See the Autoconf documentation.
+make: ** [configure] Erro 1
+
+
+config.status: creating Makefile
+config.status: executing default-1 commands
+cd . && autoheader
+cd . \
+          && CONFIG_FILES= CONFIG_HEADERS=config.h \
+             /bin/sh ./config.status
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing default-1 commands
+make  all-recursive
+make[1]: Entrando no diretório `/home/sysop/Futebol/hashGoleiro-QL'
+Making all in src
+make[2]: Entrando no diretório `/home/sysop/Futebol/hashGoleiro-QL/src'
+Makefile:221: *** Variável recursiva `SOURCES' faz referência a ela mesma (eventualmente).  Pare.
+make[2]: Saindo do diretório `/home/sysop/Futebol/hashGoleiro-QL/src'
+make[1]: ** [all-recursive] Erro 1
+make[1]: Saindo do diretório `/home/sysop/Futebol/hashGoleiro-QL'
+make: ** [all-recursive-am] Erro 2
+sysop@sys:~/Futebol/hashGoleiro-QL$

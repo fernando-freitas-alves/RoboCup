@@ -1,0 +1,50 @@
+make  all-recursive
+make[1]: Entering directory `/home/ubuntu/workspace/celiberto/ATAQUE-QL'
+Making all in src
+make[2]: Entering directory `/home/ubuntu/workspace/celiberto/ATAQUE-QL/src'
+g++ -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT ActHandler.o -MD -MP -MF .deps/ActHandler.Tpo -c -o ActHandler.o ActHandler.cpp
+ActHandler.cpp: In function ‘void sigalarmHandler(int)’:
+ActHandler.cpp:70:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Log.logFromSignal( 2, "alarm handler!!" );
+                                           ^
+ActHandler.cpp: In member function ‘bool ActHandler::sendCommands()’:
+ActHandler.cpp:123:63: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     Log.logFromSignal( 2, " already sent message; don't send" );
+                                                               ^
+ActHandler.cpp:131:77: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     Log.logFromSignal( 2, " previous message not processed yet; don't send" );
+                                                                             ^
+ActHandler.cpp:145:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     Log.logFromSignal( 2, " no primary action in queue" );
+                                                         ^
+ActHandler.cpp:152:71: error: ‘strlen’ was not declared in this scope
+                                          &strCommand[strlen(strCommand)], SS );
+                                                                       ^
+ActHandler.cpp:160:49: error: ‘strcpy’ was not declared in this scope
+   strcpy( strComm, WM->getCommunicationString() );
+                                                 ^
+ActHandler.cpp:161:23: error: ‘strlen’ was not declared in this scope
+   if( strlen( strComm ) != 0 )
+                       ^
+ActHandler.cpp:164:36: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     WM->setCommunicationString( "" );
+                                    ^
+ActHandler.cpp:172:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     Log.logFromSignal( 2, " send queued action to server: %s", strCommand);
+                                                                          ^
+ActHandler.cpp:176:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     Log.logFromSignal( 2, " no action in queue??" );
+                                                   ^
+ActHandler.cpp: In member function ‘bool ActHandler::sendMessage(char*)’:
+ActHandler.cpp:269:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Log.logFromSignal( 2, " send message to server and wait: %s", str);
+                                                                    ^
+ActHandler.cpp: In member function ‘bool ActHandler::sendMessageDirect(char*)’:
+ActHandler.cpp:299:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Log.logFromSignal( 2, " send message to server directly: %s", str);
+                                                                    ^
+make[2]: *** [ActHandler.o] Error 1
+make[2]: Leaving directory `/home/ubuntu/workspace/celiberto/ATAQUE-QL/src'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/home/ubuntu/workspace/celiberto/ATAQUE-QL'
+make: *** [all] Error 2

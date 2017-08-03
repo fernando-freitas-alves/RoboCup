@@ -1,0 +1,49 @@
+
+[executer]
+RunInTerminal=true
+
+[Project State]
+clean before build=false
+
+[filenumbers]
+0=125
+1=432
+2=198
+3=192
+4=553
+5=32
+6=189
+7=552
+8=32
+
+[filemarkers]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+
+[File View]
+filter.file.unmatch=*.so *.o *.a *.la
+filter.file.ignore.hidden=0
+filter.dir.ignore.hidden=0
+
+[filelist]
+0=/home/sysop/Futebol/ATAQUE-QL/src/BasicPlayer.h
+1=/home/sysop/Futebol/ATAQUE-QL/src/SoccerTypes.h
+2=/home/sysop/Futebol/ATAQUE-QL/src/QlearningAtacante2.h
+3=/home/sysop/Futebol/ATAQUE-QL/src/QlearningAtacante1.h
+4=/home/sysop/Futebol/ATAQUE-QL/src/Player.cpp
+5=/home/sysop/Futebol/ATAQUE-QL/src/PlayerTeams.cpp
+
+[Project Tree]
+0=0
+1=0:0
+2=0:1
+
+[File Tree]
+0=0

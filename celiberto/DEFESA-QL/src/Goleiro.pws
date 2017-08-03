@@ -1,0 +1,40 @@
+
+[executer]
+RunInTerminal=true
+
+[Project State]
+clean before build=false
+
+[filenumbers]
+0=153
+1=1601
+2=126
+3=257
+4=10
+
+[filemarkers]
+0=
+1=
+2=
+3=
+4=
+
+[File View]
+filter.file.unmatch=*.so *.o *.a *.la
+filter.file.ignore.hidden=0
+filter.dir.ignore.hidden=0
+
+[filelist]
+0=/home/sysop/Futebol/Goleiro-Ql/src/BasicPlayer.h
+1=/home/sysop/Futebol/Goleiro-Ql/src/BasicPlayer.cpp
+2=/home/sysop/Futebol/Goleiro-Ql/src/Player.h
+3=/home/sysop/Futebol/Goleiro-Ql/src/Player.cpp
+4=/home/sysop/Futebol/Goleiro-Ql/src/PlayerTeams.cpp
+
+[Project Tree]
+0=0
+1=0:0
+2=0:1
+
+[File Tree]
+0=0
