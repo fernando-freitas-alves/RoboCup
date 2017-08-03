@@ -64,18 +64,23 @@ SoccerCommand Player::deMeer5()
     VecPosition   posBall  = WM->getBallPos();
     int           iTmp;
 
+    // if is before kick off, ...
     if (WM->isBeforeKickOff())
     {
-        if (WM->isKickOffUs() && WM->getPlayerNumber() == 9)   // 9 takes kick
+        // if our team has the ball for kick off and PLAYER 9 is in the loop, ...
+        if (WM->isKickOffUs() && WM->getPlayerNumber() == 9)
         {
+            // (...) if kick the ball is allowable, [KICK BALL W/ MAX SPEED]
             if (WM->isBallKickable())
             {
                 VecPosition posGoal(PITCH_LENGTH / 2.0,
                                     (-1 + 2 * (WM->getCurrentCycle() % 2)) *
                                     0.4 * SS->getGoalWidth());
-                soc = kickTo(posGoal, SS->getBallSpeedMax());   // kick maximal
+                soc = kickTo(posGoal, SS->getBallSpeedMax());
                 Log.log(100, "take kick off");
             }
+
+            // (...) else, [MOVE TO THE BALL]
             else
             {
                 soc = intercept(false);
@@ -87,13 +92,16 @@ SoccerCommand Player::deMeer5()
             return soc;
         }
 
-        if (formations->getFormation() != FT_INITIAL || // not in kickoff formation
+        // if not in kick off formation, [GO TO kick_off FORMATION]
+        if (formations->getFormation() != FT_INITIAL ||
             posAgent.getDistanceTo(WM->getStrategicPosition()) > 2.0)
         {
-            formations->setFormation(FT_INITIAL);         // go to kick_off formation
+            formations->setFormation(FT_INITIAL);
             ACT->putCommandInQueue(soc = teleportToPos(WM->getStrategicPosition()));
         }
-        else                                            // else turn to center
+
+        // else, [TURN BODY TO MIDDLE CENTER]
+        else
         {
             ACT->putCommandInQueue(soc = turnBodyToPoint(VecPosition(0, 0), 0));
             ACT->putCommandInQueue(alignNeckWithBody());
@@ -104,65 +112,80 @@ SoccerCommand Player::deMeer5()
         formations->setFormation(FT_433_OFFENSIVE);
         soc.commandType = CMD_ILLEGAL;
 
+        // if ball pos unknown, [SEARCH BALL]
         if (WM->getConfidence(OBJECT_BALL) < PS->getBallConfThr())
         {
-            ACT->putCommandInQueue(soc = searchBall());     // if ball pos unknown
-            ACT->putCommandInQueue(alignNeckWithBody());    // search for it
+            ACT->putCommandInQueue(soc = searchBall());
+            ACT->putCommandInQueue(alignNeckWithBody());
         }
-        else if (WM->isBallKickable())                    // if kickable
+
+        // else if ball is kickable, [KICK BALL W/ MAX SPEED]
+        else if (WM->isBallKickable())
         {
             VecPosition posGoal(PITCH_LENGTH / 2.0,
                                 (-1 + 2 * (WM->getCurrentCycle() % 2)) * 0.4 * SS->getGoalWidth());
-            soc = kickTo(posGoal, SS->getBallSpeedMax());   // kick maxima
+            soc = kickTo(posGoal, SS->getBallSpeedMax());
             ACT->putCommandInQueue(soc);
             ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             Log.log(100, "kick ball");
         }
+
+        // else if fastest to ball, ...
         else if (WM->getFastestInSetTo(OBJECT_SET_TEAMMATES, OBJECT_BALL, &iTmp)
                  == WM->getAgentObjectType()  && !WM->isDeadBallThem())
         {
-            // if fastest to ball
             Log.log(100, "I am fastest to ball; can get there in %d cycles", iTmp);
-            soc = intercept(false);                        // intercept the ball
+            soc = intercept(false); // action: intercept the ball
 
-            if (soc.commandType == CMD_DASH &&             // if stamina low
+            // (...) if stamina is low, [DASH SLOW]
+            if (soc.commandType == CMD_DASH &&
                 WM->getAgentStamina().getStamina() <
                 SS->getRecoverDecThr()*SS->getStaminaMax() + 200)
             {
-                soc.dPower = 30.0 * WM->getAgentStamina().getRecovery(); // dash slow
-                ACT->putCommandInQueue(soc);
+                soc.dPower = 30.0 * WM->getAgentStamina().getRecovery();
+                // ACT->putCommandInQueue(soc);
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
-            else                                           // if stamina high
+
+            // (...) else if stamina is high, [DASH AS INTENDED]
+            else
             {
-                ACT->putCommandInQueue(soc);                 // dash as intended
+                // ACT->putCommandInQueue(soc);
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
         }
+
+        // else if not near strategic pos, ...
         else if (posAgent.getDistanceTo(WM->getStrategicPosition()) >
                  1.5 + fabs(posAgent.getX() - posBall.getX()) / 10.0)
-            // if not near strategic pos
         {
-            if (WM->getAgentStamina().getStamina() >     // if stamina high
+            // (...) if stamina high, [MOVE TO STRATEGIC POS]
+            if (WM->getAgentStamina().getStamina() >
                 SS->getRecoverDecThr()*SS->getStaminaMax() + 800)
             {
                 soc = moveToPos(WM->getStrategicPosition(),
                                 PS->getPlayerWhenToTurnAngle());
-                ACT->putCommandInQueue(soc);              // move to strategic pos
+                // ACT->putCommandInQueue(soc);
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
-            else                                        // else watch ball
+
+            // (...) else, [WATCH THE BALL]
+            else
             {
                 ACT->putCommandInQueue(soc = turnBodyToObject(OBJECT_BALL));
                 ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             }
         }
-        else if (fabs(WM->getRelativeAngle(OBJECT_BALL)) > 1.0)      // watch ball
+
+        // else if ball is watchable, [WATCH THE BALL]
+        else if (fabs(WM->getRelativeAngle(OBJECT_BALL)) > 1.0)
         {
             ACT->putCommandInQueue(soc = turnBodyToObject(OBJECT_BALL));
             ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
         }
-        else                                         // nothing to do
+
+        // else, [NOTHING TO DO]
+        else
             ACT->putCommandInQueue(SoccerCommand(CMD_TURNNECK, 0.0));
     }
 
