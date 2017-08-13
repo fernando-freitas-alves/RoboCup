@@ -46,6 +46,7 @@
 */
 
 #include "Player.h"
+#include "Utilities.h"
 
 /*! This method is the first complete simple team and defines the actions taken
     by all the players on the field (excluding the goalie). It is based on the
@@ -63,7 +64,7 @@ SoccerCommand Player::deMeer5()
     VecPosition   posAgent = WM->getAgentGlobalPosition();
     VecPosition   posBall  = WM->getBallPos();
     int           iTmp;
-
+    
     // if is before kick off, ...
     if (WM->isBeforeKickOff())
     {
@@ -91,7 +92,7 @@ SoccerCommand Player::deMeer5()
             // ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             return soc;
         }
-
+//if (WM->getPlayerNumber() == 1 && WM->getSide() == SIDE_RIGHT) { /*printf("\r\nno. 1\r\n"); */  ACT->putCommandInQueue(soc = teleportToPos(VecPosition(20,0))); } else {
         // if not in kick off formation, [GO TO kick_off FORMATION]
         if (formations->getFormation() != FT_INITIAL ||
             posAgent.getDistanceTo(WM->getStrategicPosition()) > 2.0)
@@ -106,10 +107,12 @@ SoccerCommand Player::deMeer5()
             ACT->putCommandInQueue(soc = turnBodyToPoint(VecPosition(0, 0), 0));
             ACT->putCommandInQueue(alignNeckWithBody());
         }
+//}
     }
 
     // else if not kick off, ...
     else
+if (WM->getCurrentCycle() % 1 == 0)// && !(WM->getPlayerNumber() == 1 && WM->getSide() == SIDE_RIGHT))
     {
         formations->setFormation(FT_433_OFFENSIVE);
         soc.commandType = CMD_ILLEGAL;
@@ -124,9 +127,52 @@ SoccerCommand Player::deMeer5()
         // else if ball is kickable, [KICK BALL W/ MAX SPEED]
         else if (WM->isBallKickable())
         {
-            VecPosition posGoal(PITCH_LENGTH / 2.0,
-                                (-1 + 2 * (WM->getCurrentCycle() % 2)) * 0.4 * SS->getGoalWidth());
-            soc = kickTo(posGoal*0.1, 0);//0.01*SS->getBallSpeedMax());
+            // VecPosition posGoal(PITCH_LENGTH / 2.0,
+            //                     (-1 + 2 * (WM->getCurrentCycle() % 2)) * 0.4 * SS->getGoalWidth());
+            // soc = kickTo(posGoal, SS->getBallSpeedMax());
+            double conf =  0.5, // Minimum confidence
+                   da0  = 20,   // Region of influence of attractive potential
+                   dr0  = 10,   // Region of influence of repulsive potential (obstacles)
+                   ka   = 12,   // Influence strength of attractive potential
+                   kr   = 12,   // Influence strength of repulsive potential (obstacles)
+                   k    =  1,   // Step size of iteration
+                   Fmin =  8;   // Minimum force
+            pair <uint, VecPosition> gd = gradDesc(this, WM, conf, da0, dr0, ka, kr, k, Fmin);
+                                             // PS->getPlayerConfThr());
+            switch (gd.first)
+            {
+                case 0:
+                {
+                    printf("\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    printf("\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    printf("\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    printf("\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    printf("\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    printf("\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+                    ObjectT clTm = getClosestInFieldInSetTo(WM, OBJECT_SET_TEAMMATES, WM->getAgentObjectType(), NULL, 0.5);
+                    printf("\r\nClosest obj: %d", clTm);
+                    VecPosition posClTm = WM->getGlobalPosition(clTm);
+                    if (WM->isInField(posClTm, 0))
+                    {
+                        printf("\r\n IS IN FIELD");
+                        printf("\r\nobj:\t\t%d", clTm - OBJECT_TEAMMATE_1 + 1);
+                        printf("\r\npos:\t\t"); posClTm.show();
+                        soc = directPass(posClTm, PASS_FAST);
+                        break;
+                    }
+                    else printf("\r\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }
+                case 1:
+                {
+                    printf("\r\nKicking...");
+                    VecPosition posTarget = gd.second;
+                    printf("\r\nfrom pos:\t"); WM->getGlobalPosition(WM->getAgentObjectType()).show();
+                    printf("to pos:\t\t"); posTarget.show();
+                    soc = kickTo(posTarget, 0);//0.01*SS->getBallSpeedMax());
+                    // soc = kickBallCloseToBody(angle, 1);
+                    // break;
+                }
+            }
             ACT->putCommandInQueue(soc);
             ACT->putCommandInQueue(turnNeckToObject(OBJECT_BALL, soc));
             Log.log(100, "kick ball");

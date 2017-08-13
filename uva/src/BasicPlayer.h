@@ -127,11 +127,13 @@ class BasicPlayer
         SoccerCommand   intercept(bool          isGoalie);
         SoccerCommand   dribble(AngDeg        ang,
                                 DribbleT      d);
+    // public:
         SoccerCommand   directPass(VecPosition   pos,
                                    PassT         passType);
         SoccerCommand   leadingPass(ObjectT       o,
                                     double        dDist,
                                     DirectionT    dir = DIR_NORTH);
+    // protected:
         SoccerCommand   throughPass(ObjectT       o,
                                     VecPosition   posEnd,
                                     AngDeg        *angMax = NULL);

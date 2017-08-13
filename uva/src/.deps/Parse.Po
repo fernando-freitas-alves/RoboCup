@@ -1,75 +1,58 @@
-Parse.o: Parse.cpp /usr/include/stdc-predef.h Parse.h \
- /usr/include/ctype.h /usr/include/features.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/xlocale.h \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
- /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
- /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
- /usr/include/x86_64-linux-gnu/bits/inf.h \
- /usr/include/x86_64-linux-gnu/bits/nan.h \
- /usr/include/x86_64-linux-gnu/bits/mathdef.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h /usr/include/string.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h
-
-/usr/include/stdc-predef.h:
+Parse.o: Parse.cpp Parse.h /usr/include/ctype.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_symbol_aliasing.h \
+  /usr/include/sys/_posix_availability.h /usr/include/runetype.h \
+  /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/i386/_types.h \
+  /usr/include/sys/_pthread/_pthread_types.h \
+  /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_ct_rune_t.h \
+  /usr/include/sys/_types/_rune_t.h /usr/include/sys/_types/_wchar_t.h \
+  /usr/include/sys/_types/_wint_t.h /usr/include/math.h \
+  /usr/include/Availability.h /usr/include/AvailabilityInternal.h \
+  /usr/include/string.h /usr/include/sys/_types/_null.h \
+  /usr/include/sys/_types/_ssize_t.h /usr/include/strings.h
 
 Parse.h:
 
 /usr/include/ctype.h:
 
-/usr/include/features.h:
+/usr/include/sys/cdefs.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/usr/include/runetype.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/usr/include/_types.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/sys/_types.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/include/machine/_types.h:
 
-/usr/include/endian.h:
+/usr/include/i386/_types.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
+/usr/include/sys/_pthread/_pthread_types.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/usr/include/sys/_types/_size_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+/usr/include/sys/_types/_ct_rune_t.h:
 
-/usr/include/xlocale.h:
+/usr/include/sys/_types/_rune_t.h:
+
+/usr/include/sys/_types/_wchar_t.h:
+
+/usr/include/sys/_types/_wint_t.h:
 
 /usr/include/math.h:
 
-/usr/include/x86_64-linux-gnu/bits/huge_val.h:
+/usr/include/Availability.h:
 
-/usr/include/x86_64-linux-gnu/bits/huge_valf.h:
-
-/usr/include/x86_64-linux-gnu/bits/huge_vall.h:
-
-/usr/include/x86_64-linux-gnu/bits/inf.h:
-
-/usr/include/x86_64-linux-gnu/bits/nan.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathdef.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+/usr/include/AvailabilityInternal.h:
 
 /usr/include/string.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
+/usr/include/sys/_types/_null.h:
 
-/usr/include/x86_64-linux-gnu/bits/string3.h:
+/usr/include/sys/_types/_ssize_t.h:
+
+/usr/include/strings.h:

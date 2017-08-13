@@ -1,0 +1,126 @@
+******************************************************************
+ soccerwindow2 5.1.0
+ Copyright: (C) 2005 - 2011. Hidehisa Akiyama
+ All rights reserved.
+******************************************************************
+
+Usage: soccerwindow2 [options ... ] [<GameLogFile>]
+
+ System Options:
+  --help [ -h ]        print this message. 
+  --version [ -v ]     print version. 
+
+ Monitor Client Options:
+  --connect [ -c ] (=on)                                start as a soccer 
+                                                        monitor. 
+  --host <Value> (="127.0.0.1")                         set host name to be 
+                                                        connected. 
+  --port <Value> (=6000)                                set port number for the 
+                                                        monitor client. 
+  --client-version <Value> (=4)                         set a monitor client 
+                                                        protocol version. 
+  --wait-seconds <Value> (=5)                           set maximal seconds to 
+                                                        wait a message from 
+                                                        rcssserver. 
+  --auto-quit-mode (=off)                               enable automatic quit 
+                                                        after game end. 
+  --kill-server (=off)                                  kill rcssserver when 
+                                                        soccerwindow2 is quit. 
+  --server-pid <Value> (=0)                             set rcssserver process 
+                                                        ID to kill it. 
+  --server-path <Value> (="rcssserver server::coach=1") set a rcssserver command 
+                                                        line. 
+  --time-shift-replay <Value> (=true)                   enable time shift replay 
+                                                        mode. 
+
+ Log Player Options:
+  --game-log [ -l ] <Value> (="") set the path to Game Log file(.rcg) to be 
+                                  loaded. 
+  --game-log-dir <Value> (="")    set a default path where game log files exist. 
+  --auto-loop-mode (=off)         enable automatic replay loop. 
+  --timer-interval <Value> (=100) set the logplayer timer interval [msec]. 
+
+ Window Options:
+  --geometry <Value> (="")         specifies the window geometry ([WxH][+X+Y]). 
+                                   e.g. --geometry=1024x768+1+1 
+  --maximize (=off)                start with a maximized frame. 
+  --full-screen (=off)             start with a full screen frame. 
+  --canvas-size <Value> (="")      specifies the canvas size(WxH). e.g. 
+                                   --canvas-size=1024x768 
+  --tool-bar-area <Value> (="top") specify the initial tool bar position 
+                                   {top,bottom,left,right}. 
+  --hide-menu-bar (=off)           start without a menu bar (available only by 
+                                   Qt3 version). 
+  --hide-tool-bar (=off)           start without a tool bar. 
+  --hide-status-bar (=off)         start without a status bar. 
+
+ View Options:
+  --anonymous-mode (=off)          hide team names. 
+  --paint-style <Value> (="")      set a paint style {default,rcssmonitor}. 
+  --field-grass-type <Value> (="") set a field grass type {mono,lines,checker}. 
+  --keepaway-mode (=off)           start as a keepaway mode monitor. 
+  --show-score-board (=on)         show score board. 
+  --hide-score-board (=off)        hide score board. 
+  --show-team-graphic (=on)        show team graphic. 
+  --hide-team-grahip (=off)        hide team graphic. 
+  --anti-aliasing <Value> (=true)  set an anti-aliasing draw mode (only for Qt4 
+                                   version). 
+  --gradient <Value> (=false)      set a gradient draw mode (only for Qt4 
+                                   version). 
+  --reverse-side (=off)            reverse left<->right. 
+  --player-reverse-draw (=off)     reverse the player draw order. 
+  --show-player-number (=on)       show player's uniform number. 
+  --hide-player-number (=off)      hide player's uniform number. 
+  --show-player-type (=off)        show player's heterogeneous type ID. 
+  --hide-player-type (=on)         hide player's heterogeneous type ID. 
+  --show-view-area (=on)           show player's view area. 
+  --hide-view-area (=off)          show player's view area. 
+  --show-pointto (=on)             show player's pointto information. 
+  --hide-pointto (=off)            hide player's pointto information. 
+  --show-attentionto (=off)        show player's attentionto information. 
+  --hide-attentionto (=on)         hide player's attentionto information. 
+  --show-stamina (=on)             show player's stamina. 
+  --hide-stamina (=off)            hide player's stamina. 
+  --show-stamina-capacity (=off)   show player's stamina capacity. 
+  --hide-stamina-capacity (=on)    hide player's stamina capacity. 
+  --show-card (=on)                show player's card status. 
+  --hide-card (=off)               hide player's card status. 
+  --enlarge-mode (=on)             show enlarged objects. 
+  --ball-size <Value> (=0.35)      set a ball radius in enlarge mode. 
+  --player-size <Value> (=0)       set a fixed player radius in enlarge mode. 
+
+ Debug Server Options:
+  --debug-server-mode [ -d ] (=on)    start as a debug server. 
+  --debug-server-port <Value> (=6032) set port number for the debug server. 
+  --debug-log-dir <Value> (="")       set the default log file location. 
+
+ Debug View Options:
+  --show-debug-view (=on)            show debug view information. 
+  --hide-debug-view (=off)           hide debug view information. 
+  --show-debug-view-ball (=on)       show debug view ball information. 
+  --hide-debug-view-ball (=off)      hide debug view ball information. 
+  --show-debug-view-self (=on)       show debug view self information. 
+  --hide-debug-view-self (=off)      hide debug view self information. 
+  --show-debug-view-teammates (=on)  show debug view teammate information. 
+  --hide-debug-view-teammates (=off) hide debug view teammate information. 
+  --show-debug-view-opponents (=on)  show debug view opponent information. 
+  --hide-debug-view-opponents (=off) hide debug view opponent information. 
+  --show-debug-view-comment (=on)    show debug view comment information. 
+  --hide-debug-view-comment (=off)   hide debug view comment information. 
+  --show-debug-view-shape (=on)      show debug view shape information. 
+  --hide-debug-view-shape (=off)     hide debug view shape information. 
+  --show-debug-view-target (=on)     show debug view target information. 
+  --hide-debug-view-target (=off)    hide debug view target information. 
+  --show-debug-view-message (=on)    show debug view message information. 
+  --hide-debug-view-message (=off)   hide debug view message information. 
+  --show-debug-log-objects (=on)     show misc data in debug log files. 
+  --hide-debug-log-objects (=off)    hide misc data in debug log files. 
+
+ Image Save Options:
+  --auto-image-save (=off)                automatically saved image and quit 
+                                          application. 
+  --image-save-dir <Value> (="")          set a default path where image files 
+                                          are saved. 
+  --image-name-prefix <Value> (="image-") set a default prefix of the image file 
+                                          name. 
+  --image-save-format <Value> (="PNG")    set a default image format type. 
