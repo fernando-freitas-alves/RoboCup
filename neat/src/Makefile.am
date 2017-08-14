@@ -6,6 +6,10 @@ bin_PROGRAMS = trilearn_player trilearn_coach
 AM_CXXFLAGS=-std=c++1y -stdlib=libc++ -mmacosx-version-min=10.9
 AM_LDFLAGS=-lboost_system$(BOOST_LIB_SUFFIX)
 # AM_CPPFLAGS=-I$NEAT
+AM_CPPFLAGS=-I/usr/local/include -pthread
+AM_LDFLAGS+=-L/usr/local/lib `pkg-config --libs grpc++ grpc`       \
+            -lgrpc++_reflection \
+            -lprotobuf -lpthread -ldl
 
 SOURCES =         Connection.cpp \
         SenseHandler.cpp \
@@ -73,7 +77,25 @@ trilearn_player_SOURCES = ${SOURCES}    \
         NEAT/Traits.cpp \
         NEAT/Traits.h \
         NEAT/Utils.cpp \
-        NEAT/Utils.h #\
+        NEAT/Utils.h \
+        pbrpc/ControllerRPC.hh \
+        pbrpc/ControllerRPC.hh.gch \
+        pbrpc/MethodRPC.hh \
+        pbrpc/MethodRPC.hh.gch \
+        pbrpc/ServiceManager.cc \
+        pbrpc/ServiceManager.hh \
+        pbrpc/ServiceManager.hh.gch \
+        pbrpc/ServiceRPC.hh \
+        pbrpc/ServiceRPC.hh.gch \
+        pbrpc/config.h \
+        pbrpc/config.h.gch \
+        pbrpc/pbrpc.pb.cc \
+        pbrpc/pbrpc.pb.h \
+        pbrpc/pbrpc.pb.h.gch \
+        pbrpc/pbrpc.proto \
+        pbrpc/pbrpc_export.h \
+        pbrpc/pbrpc_export.h.gch
+ #\
         # rpc/detail/all.h \
         # rpc/detail/any.h \
         # rpc/detail/async_writer.h \

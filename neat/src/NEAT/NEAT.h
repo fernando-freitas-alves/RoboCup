@@ -4,7 +4,8 @@
 #include "Parameters.h"
 #include "Population.h"
 #include "NeuralNetwork.h"
-// #include "../rpc/client.h"
+// #include <rpc/client.h>
+// #include "pbrpc/ServiceManager.hh"
 
 #include <chrono>
 #include <fstream>
@@ -20,8 +21,11 @@ using namespace std;
 using namespace std::this_thread;     // sleep_for, sleep_until
 using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
 using std::chrono::system_clock;
+// using namespace pbrpc;
+// using namespace rpc;
 
 extern bool updateGen;
+// extern ServiceManager srvMan;
 
 #define len(x) x.size()
 

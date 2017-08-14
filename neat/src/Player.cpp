@@ -128,7 +128,7 @@ void Player::mainLoop()
     string msg;
     pair<unsigned int, unsigned int> ballZone;
 
-    // bool firstrun = true;
+    bool firstrun = true;
     // NEAT_close();
     const char * side = WM->getSide() == SIDE_RIGHT ? "RIGHT" : "LEFT ";
     string ID = side + to_string(WM->getPlayerNumber());
@@ -152,8 +152,23 @@ void Player::mainLoop()
             for(size_t i = 0; i < len(specie->m_Individuals); i++)
             {
                 Genome *individual = &specie->m_Individuals[i];
-                if (WM->getPlayerNumber() == k++)
+                if (1)//WM->getPlayerNumber() == k++)
                 {
+                            // // (...) calculates the fitness of the last action of that Individual in the World
+                            // if (WM->getSide() != SIDE_RIGHT) //!(WM->getPlayerNumber() == 1 && WM->getSide() == SIDE_RIGHT))
+                            // if (!firstrun)
+                            // // if (updateGen)
+                            // {
+                            //     // EVALUATION FUNCTION
+                            //     // Calculates the fitness
+                            //     printf("\n\n\n####################################################\n");
+                            //     printf("## %s %2d ########################################\n\n", side, WM->getPlayerNumber());
+                            //     double fitness = evaluateWorldState(WM);
+                            //     individual->SetFitness(fitness);
+                            //     // Ends population
+                            //     NEAT_end(population);
+                            // }
+                            // firstrun = false;
                     // ballZone = getBallZone(WM);
                     // msg = "BallZone: [1] " + to_string(ballZone.first) + ", [2] " + to_string(ballZone.second);
                     // Log.log(200, msg.c_str());
@@ -236,10 +251,11 @@ void Player::mainLoop()
                             }
 
                             // (...) calculates the fitness of the last action of that Individual in the World
+                            if (1)
                             // if (WM->getSide() != SIDE_RIGHT) //!(WM->getPlayerNumber() == 1 && WM->getSide() == SIDE_RIGHT))
                             // if (!firstrun)
                             // if (updateGen)
-                            // {
+                            {
                                 // EVALUATION FUNCTION
                                 // Calculates the fitness
                                 printf("\n\n\n####################################################\n");
@@ -248,7 +264,7 @@ void Player::mainLoop()
                                 individual->SetFitness(fitness);
                                 // Ends population
                                 NEAT_end(population);
-                            // }
+                            }
                             // firstrun = false;
                         }
                     }

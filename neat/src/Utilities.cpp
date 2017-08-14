@@ -253,18 +253,30 @@ double evaluateWorldState(WorldModel *WM)
     static int lastGoalDiff = 0;
     if (lastGoalDiff != WM->getGoalDiff())
     {
-        fitness += 10*sign(WM->getGoalDiff() - lastGoalDiff);
+        fitness += 30*sign(WM->getGoalDiff() - lastGoalDiff);
         lastGoalDiff = WM->getGoalDiff();
     }
     static bool wasInOurPossesion = false;
     if (wasInOurPossesion != WM->isBallInOurPossesion())
     {
         if (wasInOurPossesion)
-             fitness += -5;
+             fitness += -10;
         else fitness += 2;// 2*bool2sign(WM->isBallInOurPossesion());
         wasInOurPossesion = WM->isBallInOurPossesion();
     }
-    fitness -= WM->isBallHeadingToGoal();
+    // fitness += 2*bool2sign(WM->isBallInOurPossesion());
+    fitness += -2*bool2sign(WM->isBallHeadingToGoal());
+    fitness += -WM->getAgentTiredNess();
+    static double lastStamina = 0,
+               currentStamina = WM->getAgentStamina().getStamina();
+    if (lastStamina != currentStamina)
+    {
+        if (lastStamina > 0)
+            fitness += 20*(currentStamina - lastStamina)/lastStamina;
+        lastStamina = currentStamina;
+    }
+    fitness += 4*(1 - WM->getRelDistanceOpponentGoal()/sqrt(pow((PITCH_LENGTH),2)+pow((PITCH_WIDTH),2)));
+    fitness += 100;
     printf("\nFITNESS: %f", fitness);
     return fitness;
 }

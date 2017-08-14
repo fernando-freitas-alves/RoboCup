@@ -52,7 +52,8 @@
 #include"BasicCoach.h"
 #include"Parse.h"
 
-// #include "rpc/server.h"
+// #include <rpc/server.h>
+// #include "pbrpc/ServiceManager.hh"
 
 #include<string.h>   // strcpy
 #ifdef WIN32
@@ -62,13 +63,24 @@
 #endif
 #include<stdlib.h>   // exit
 
+using namespace std;
+// using namespace rpc;
+// using namespace pbrpc;
+
 extern Logger Log; /*!< This is a reference to the Logger to write log info to*/
 void printOptions();
 
-void test()
-{
-    printf("\nTESTING...");
-}
+// void test()
+// {
+//     printf("\nTESTING...");
+// }
+
+// string handle_pbrpc(const char *data, const size_t len)
+// {
+//     string ret;
+//     srvMan.handleRPC(data, len, ret);
+//     return ret;
+// }
 
 /*! This is the main function and creates and links all the different
     classes.  First it reads in all the parameters from the command
@@ -77,9 +89,13 @@ void test()
     Player class is called. */
 int main(int argc, char *argv[])
 {
-    // Creating a server that listens on port 8080
-    // rpc::server srv(8080);
-    // srv.bind("test", &test);
+    // srv.regService(&test);
+
+    // server srv(constants::DEFAULT_PORT); //8080);
+    // // srv.bind("test", &test);
+    // srv.bind("echo", [](std::string const& s) {
+    //     return s;
+    // });
     // srv.run();
 
 #ifdef WIN32

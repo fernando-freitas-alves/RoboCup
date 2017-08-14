@@ -6,13 +6,19 @@ string NEAT_block_filePath = "NEAT_running.lock";
 FILE* bFile = NULL;
 bool updateGen = false;
 // rpc::client client("127.0.0.1", 8080);
+// ServiceManager srvMan;
 
 // Initiatialize Paramertres
 void NEAT_init(string ID)
 {
-    // NEAT_filePath = "last_population_" + ID + ".txt";
-    NEAT_filePath = "last_population.txt";
+    NEAT_filePath = "last_population_" + ID + ".txt";
+    // NEAT_filePath = "last_population.txt";
     // client.call("test").as<void>();
+    // client c("localhost", constants::DEFAULT_PORT);
+    // string result(c.call("echo", "123abc").as<string>());
+    // printf("\n\n############\n\nresult: %s\n\n############\n\n", result.c_str());
+
+    // srvMan.regService(Service *service);
 }
 
 // Initiatialize Population
@@ -92,20 +98,20 @@ Population getPopulation(const string &filePath)
         // Before everything though, we create an object which holds all parameters used by NEAT
         // This is usually the point where all custom values for the parameters are set
         Parameters params;
-        params.PopulationSize = 10; // population size set to 10 individuals (default value is 300)
+        params.PopulationSize = 1; // population size set to 10 individuals (default value is 300)
 
         // Now creates a Genome (individual seed)
         // It has with 3 inputs and 2 outputs
         // Also, if the number of inputs you're going to use in your project is n, you need to write n+1 in the constructor. Always add one extra input. The last input is always used as bias and also when you activate the network always set the last input to 1.0 (or any other constant non-zero value)
         // The type of activation function of the outputs and hidden neurons is also set. Hidden neurons are optional
         Genome genome(0,                // ID (can be anything at this point)
-                      2*2*1+1, // 2*2*11+1,          // number of input  layers based on all players and ball (x,y) positions
-                      5,                // number of hidden layers
-                      5,                // number of output layers based on codification of possible action commands for an agent
+                      2*2*11+2, // 2*2*11+1,          // number of input  layers based on all players and ball (x,y) positions
+                      10,                // number of hidden layers
+                      7,                // number of output layers based on codification of possible action commands for an agent
                       false,            // enables to connect hidden neurons
                       UNSIGNED_SIGMOID, // sigmoidal activation function
                       UNSIGNED_SIGMOID, // sigmoidal activation function
-                      1,                // enables to add hidden layers
+                      0,                // enables to add hidden layers
                       params);          // parameters
 
         // After the genome is created, creates the population
