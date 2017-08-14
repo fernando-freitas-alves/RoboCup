@@ -1,0 +1,9 @@
+
+
+
+################### make ###################
+
+[00m[37m/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+[00m[37mMaking all in src
+[00m[37m[36mmake[2]: Nothing to be done for `all'.
+[00m

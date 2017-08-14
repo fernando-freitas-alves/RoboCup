@@ -1,0 +1,668 @@
+\hypertarget{classSoccerTypes}{}\section{Soccer\+Types Class Reference}
+\label{classSoccerTypes}\index{Soccer\+Types@{Soccer\+Types}}
+
+
+{\ttfamily \#include $<$Soccer\+Types.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{classSoccerTypes_a5f32d677c6400f8b19b3edb19fa32283}{get\+Object\+Str} (char $\ast$str\+Buf, \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o, const char $\ast$str\+Te=N\+U\+LL)
+\item 
+static \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classSoccerTypes_a6bd31e435a9d55a8654adc8630a2484a}{get\+Object\+From\+Str} (char $\ast$$\ast$str, bool $\ast$\hyperlink{classSoccerTypes_a35b0354996d20c68c047162d14359f24}{is\+Goalie}, const char $\ast$str\+Team)
+\item 
+static bool \hyperlink{classSoccerTypes_addc22247cfbaacd256e68b16427de975}{is\+In\+Set} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o, \hyperlink{SoccerTypes_8h_a30481b85f5315bc8f0d7a9e0468ea81f}{Object\+SetT} o\+\_\+s, \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} object\+Goalie=\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77ca4256d12157ba1b277fcd6c5b1ada9d08}{O\+B\+J\+E\+C\+T\+\_\+\+T\+E\+A\+M\+M\+A\+T\+E\+\_\+1})
+\item 
+static bool \hyperlink{classSoccerTypes_ad47af414002fdfff182f2d9c8ec877f1}{is\+Player\+Type\+In\+Set} (\hyperlink{SoccerTypes_8h_a88daf580b042467ccd4098107cffc718}{PlayerT} p, \hyperlink{SoccerTypes_8h_afbb545db37d2371bdcf6936de7504d00}{Player\+SetT} p\+\_\+s)
+\item 
+static bool \hyperlink{classSoccerTypes_a5d3e343c52d9d2fd3d7d3c8ad7c698c9}{is\+Flag} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_af50cc869d335bbd3b7409b25fe5c937a}{is\+Line} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_aedb013f6f28627bfcd967df008045874}{is\+Goal} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classSoccerTypes_adba75e01e97f08cd24421e3a84f58add}{get\+Own\+Goal} (\hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s)
+\item 
+static \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classSoccerTypes_a607e44094be87badb3c55ab2e920e0bc}{get\+Goal\+Opponent} (\hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s)
+\item 
+static bool \hyperlink{classSoccerTypes_a2451e7b0cec7daa0fdfd2867967e1fd1}{is\+Ball} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_ae712af370baa2f7fdcb0916d6ab59d29}{is\+Teammate} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_aeda4e30db06751a19832b2ceba20ede5}{is\+Opponent} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_a35b0354996d20c68c047162d14359f24}{is\+Goalie} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_a7a8b2cadc840bb68e33d68be12b07021}{is\+Player} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static bool \hyperlink{classSoccerTypes_a64d7793f1d82a653ddb1d3ac710e3b5a}{is\+Known\+Player} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static int \hyperlink{classSoccerTypes_ac5b6caa8a907df9c60367815eac2de44}{get\+Index} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o)
+\item 
+static \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classSoccerTypes_a522841af2b3256f24870c2937d5f08cb}{get\+Teammate\+Object\+From\+Index} (int i\+Index)
+\item 
+static \hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} \hyperlink{classSoccerTypes_a337d1985e07aec6f1ed07635c0f4f157}{get\+Opponent\+Object\+From\+Index} (int i\+Index)
+\item 
+static \hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classSoccerTypes_ae807c95a96e03c94bc72b8dfb9d925ca}{get\+Global\+Position\+Flag} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o, \hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s, double d\+Goal\+Width=14.\+02)
+\item 
+static \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{classSoccerTypes_a06cd3ff3d711f5973dd6cb346a10c5ef}{get\+Global\+Angle\+Line} (\hyperlink{SoccerTypes_8h_ad4b701fa66e7d26c054ed15b7820c77c}{ObjectT} o, \hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s)
+\item 
+static \hyperlink{SoccerTypes_8h_a471f1cfaf71f78e444ff420bb6646815}{Play\+ModeT} \hyperlink{classSoccerTypes_aa36ce5ecff3ba4298ab09dab817a1a3a}{get\+Play\+Mode\+From\+Str} (char $\ast$str)
+\item 
+static \hyperlink{SoccerTypes_8h_a471f1cfaf71f78e444ff420bb6646815}{Play\+ModeT} \hyperlink{classSoccerTypes_a6aaf3a7d2f3095ce339ace6e431e9dd4}{get\+Play\+Mode\+From\+Referee\+Message} (\hyperlink{SoccerTypes_8h_abb5fa6e95f3a11e041200e983b2c2e4c}{Referee\+MessageT} rm)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_af7d37af26b013107a1067754e56b879c}{get\+Play\+Mode\+Str} (\hyperlink{SoccerTypes_8h_a471f1cfaf71f78e444ff420bb6646815}{Play\+ModeT} p)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_a417b8d47a0b9cd1d5f2f600d87e003d4}{get\+Referee\+Message\+Str} (\hyperlink{SoccerTypes_8h_abb5fa6e95f3a11e041200e983b2c2e4c}{Referee\+MessageT} r)
+\item 
+static \hyperlink{SoccerTypes_8h_abb5fa6e95f3a11e041200e983b2c2e4c}{Referee\+MessageT} \hyperlink{classSoccerTypes_a5d9c0abf0d9a0a0a3467271b11213b5d}{get\+Referee\+Message\+From\+Str} (char $\ast$str)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_a9c90b74496a950dc11008a24a2b4471b}{get\+View\+Angle\+Str} (\hyperlink{SoccerTypes_8h_ade95094b8e117801bea82ec390cccf64}{View\+AngleT} v)
+\item 
+static \hyperlink{SoccerTypes_8h_ade95094b8e117801bea82ec390cccf64}{View\+AngleT} \hyperlink{classSoccerTypes_a279fd0046e772250c94b3de03c9cf07c}{get\+View\+Angle\+From\+Str} (char $\ast$str)
+\item 
+static \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{classSoccerTypes_a75a2e4f0e8a9d13e79049d16e0334789}{get\+Half\+View\+Angle\+Value} (\hyperlink{SoccerTypes_8h_ade95094b8e117801bea82ec390cccf64}{View\+AngleT} va)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_a9fdc4594b395c2fca8299f5d27a1be2e}{get\+View\+Quality\+Str} (\hyperlink{SoccerTypes_8h_a5ae52e4e8062de90b118eacb03e99906}{View\+QualityT} v)
+\item 
+static \hyperlink{SoccerTypes_8h_a5ae52e4e8062de90b118eacb03e99906}{View\+QualityT} \hyperlink{classSoccerTypes_aa090cfc7509655fec9499b5bbe978edb}{get\+View\+Quality\+From\+Str} (char $\ast$str)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_a184bfac5cbaf2faf45077b0eae2c67e2}{get\+Command\+Str} (\hyperlink{SoccerTypes_8h_ac986daf8a835e88572b79bcb63f5bbd5}{CommandT} com)
+\item 
+static bool \hyperlink{classSoccerTypes_aee7fadf2b1a83daa0f5c00a1713d3b9e}{is\+Primary\+Command} (\hyperlink{SoccerTypes_8h_ac986daf8a835e88572b79bcb63f5bbd5}{CommandT} com)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_a2164196d89209e3d91f3c014d3c4affd}{get\+Side\+Str} (\hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} s)
+\item 
+static \hyperlink{SoccerTypes_8h_a8e9b8119c00121a197203aca01d5b090}{SideT} \hyperlink{classSoccerTypes_a9f7070f4790003b7775a6ffcd12e1352}{get\+Side\+From\+Str} (char $\ast$str)
+\item 
+static const char $\ast$ \hyperlink{classSoccerTypes_a0ecbebb96c02a8f7e28678458ec550e2}{get\+Ball\+Status\+Str} (\hyperlink{SoccerTypes_8h_aaeea770261a090c519643331173a327f}{Ball\+StatusT} bs)
+\item 
+static \hyperlink{SoccerTypes_8h_aaeea770261a090c519643331173a327f}{Ball\+StatusT} \hyperlink{classSoccerTypes_ae05c4b5a1789d3372f444b60c0f1f389}{get\+Ball\+Status\+From\+Str} (char $\ast$str)
+\item 
+static \hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{classSoccerTypes_ab89399779d83b23ccf1d01d8d46f5c3b}{get\+Angle\+From\+Direction} (\hyperlink{SoccerTypes_8h_a8e832a4ec6c67d3151112ed1e1c67752}{DirectionT} dir)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class \hyperlink{classSoccerTypes}{Soccer\+Types} contains different methods to work with the different enumerations defined in \hyperlink{SoccerTypes_8h}{Soccer\+Types.\+h}. It is possible to convert soccertypes to strings and strings to soccertypes. It is also possible to get more specific information about some of the soccertypes. All methods are static so it is possible to call the methods without instantiating the class. 
+
+\subsection{Member Function Documentation}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Angle\+From\+Direction@{get\+Angle\+From\+Direction}}
+\index{get\+Angle\+From\+Direction@{get\+Angle\+From\+Direction}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Angle\+From\+Direction(\+Direction\+T dir)}{getAngleFromDirection(DirectionT dir)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Soccer\+Types\+::get\+Angle\+From\+Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf DirectionT}}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_ab89399779d83b23ccf1d01d8d46f5c3b}{}\label{classSoccerTypes_ab89399779d83b23ccf1d01d8d46f5c3b}
+This method returns the angle value corresponding to the direction \textquotesingle{}dir\textquotesingle{}. \index{Soccer\+Types@{Soccer\+Types}!get\+Ball\+Status\+From\+Str@{get\+Ball\+Status\+From\+Str}}
+\index{get\+Ball\+Status\+From\+Str@{get\+Ball\+Status\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Ball\+Status\+From\+Str(char $\ast$str)}{getBallStatusFromStr(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ball\+StatusT} Soccer\+Types\+::get\+Ball\+Status\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_ae05c4b5a1789d3372f444b60c0f1f389}{}\label{classSoccerTypes_ae05c4b5a1789d3372f444b60c0f1f389}
+This method returns the Ball\+Status from the string that is passed as the first argument. 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to a string that contains ball status info at index 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ball\+Status of string representation, B\+S\+\_\+\+I\+L\+L\+E\+G\+AL if it is not known 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Ball\+Status\+Str@{get\+Ball\+Status\+Str}}
+\index{get\+Ball\+Status\+Str@{get\+Ball\+Status\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Ball\+Status\+Str(\+Ball\+Status\+T bs)}{getBallStatusStr(BallStatusT bs)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+Ball\+Status\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf Ball\+StatusT}}]{bs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a0ecbebb96c02a8f7e28678458ec550e2}{}\label{classSoccerTypes_a0ecbebb96c02a8f7e28678458ec550e2}
+This method returns the string representation of the Ball\+Status as is used in the Robocup Soccer Simulation (in\+\_\+field, goal\+\_\+left, goal\+\_\+right or out\+\_\+of\+\_\+field). 
+\begin{DoxyParams}{Parameters}
+{\em bs} & Ball\+Status which should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string (enough memory should be allocated) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Command\+Str@{get\+Command\+Str}}
+\index{get\+Command\+Str@{get\+Command\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Command\+Str(\+Command\+T com)}{getCommandStr(CommandT com)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+Command\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf CommandT}}]{com}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a184bfac5cbaf2faf45077b0eae2c67e2}{}\label{classSoccerTypes_a184bfac5cbaf2faf45077b0eae2c67e2}
+This method returns the string representation of a CommandT as is used in the Robocup Soccer Simulation 
+\begin{DoxyParams}{Parameters}
+{\em com} & CommandT that should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string (enough memory should be allocated) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Global\+Angle\+Line@{get\+Global\+Angle\+Line}}
+\index{get\+Global\+Angle\+Line@{get\+Global\+Angle\+Line}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Global\+Angle\+Line(\+Object\+T o, Side\+T s)}{getGlobalAngleLine(ObjectT o, SideT s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Soccer\+Types\+::get\+Global\+Angle\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o, }
+\item[{{\bf SideT}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a06cd3ff3d711f5973dd6cb346a10c5ef}{}\label{classSoccerTypes_a06cd3ff3d711f5973dd6cb346a10c5ef}
+This method returns the global angle of a lines on the field. The global angle differs for the left and right side. For both teams the line behind the opponent goal is seen with global angle 0. Only for the left team this is the right line and for the right team this is the left line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & one of the four line objects \\
+\hline
+{\em s} & side on which the team was started \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ang\+Deg global angle of this line. 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Global\+Position\+Flag@{get\+Global\+Position\+Flag}}
+\index{get\+Global\+Position\+Flag@{get\+Global\+Position\+Flag}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Global\+Position\+Flag(\+Object\+T o, Side\+T s, double d\+Goal\+Width=14.\+02)}{getGlobalPositionFlag(ObjectT o, SideT s, double dGoalWidth=14.02)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Soccer\+Types\+::get\+Global\+Position\+Flag (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o, }
+\item[{{\bf SideT}}]{s, }
+\item[{double}]{d\+Goal\+Width = {\ttfamily 14.02}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_ae807c95a96e03c94bc72b8dfb9d925ca}{}\label{classSoccerTypes_ae807c95a96e03c94bc72b8dfb9d925ca}
+This method returns the global position on the field of a flag (a goal is also a flag). Since the global positions for both teams differ, the side of the agent team is also needed. Note that the global positions of the flags will not change in the second half. 
+\begin{DoxyParams}{Parameters}
+{\em o} & flag of which global position should be determined \\
+\hline
+{\em s} & side of your team. \\
+\hline
+{\em d\+Goal\+Width} & for some flags the goal\+Width is necessary (default 14.\+02) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classVecPosition}{Vec\+Position} representing the global position. x and y value are both Unknown\+Double\+Value when o is not a flag or goal. 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Goal\+Opponent@{get\+Goal\+Opponent}}
+\index{get\+Goal\+Opponent@{get\+Goal\+Opponent}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Goal\+Opponent(\+Side\+T s)}{getGoalOpponent(SideT s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Soccer\+Types\+::get\+Goal\+Opponent (
+\begin{DoxyParamCaption}
+\item[{{\bf SideT}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a607e44094be87badb3c55ab2e920e0bc}{}\label{classSoccerTypes_a607e44094be87badb3c55ab2e920e0bc}
+This method returns the object representing the opponent goal 
+\begin{DoxyParams}{Parameters}
+{\em s} & own side\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object of the goal opponent, O\+B\+J\+E\+C\+T\+\_\+\+I\+L\+L\+E\+G\+AL when s is S\+I\+D\+E\+\_\+\+I\+L\+L\+E\+G\+AL 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Half\+View\+Angle\+Value@{get\+Half\+View\+Angle\+Value}}
+\index{get\+Half\+View\+Angle\+Value@{get\+Half\+View\+Angle\+Value}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Half\+View\+Angle\+Value(\+View\+Angle\+T va)}{getHalfViewAngleValue(ViewAngleT va)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Soccer\+Types\+::get\+Half\+View\+Angle\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+AngleT}}]{va}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a75a2e4f0e8a9d13e79049d16e0334789}{}\label{classSoccerTypes_a75a2e4f0e8a9d13e79049d16e0334789}
+This method returns the half angle value that belongs to the View\+Angle that is given as the first argument (V\+A\+\_\+\+N\+A\+R\+R\+OW, V\+A\+\_\+\+N\+O\+R\+M\+AL or V\+A\+\_\+\+W\+I\+DE). The half view angle is returned since this makes it easier to check whether an object lies in the view cone (the global relative angle must be smaller than the half view angle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em va} & view angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+angle denoting the half of the corresponding view angle 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Index(\+Object\+T o)}{getIndex(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}int Soccer\+Types\+::get\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_ac5b6caa8a907df9c60367815eac2de44}{}\label{classSoccerTypes_ac5b6caa8a907df9c60367815eac2de44}
+This method returns the index of an object relative to the first object in that set. The index is always 1 smaller than its number, so O\+B\+J\+E\+C\+T\+\_\+\+O\+P\+P\+O\+N\+E\+N\+T\+\_\+1 will become 0. This can be used for indexing an array of objects. 
+\begin{DoxyParams}{Parameters}
+{\em o} & ObjectT type of object of which the index has to be calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of object or -\/1 when o was not a correct object 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Object\+From\+Str@{get\+Object\+From\+Str}}
+\index{get\+Object\+From\+Str@{get\+Object\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Object\+From\+Str(char $\ast$$\ast$str, bool $\ast$is\+Goalie, const char $\ast$str\+Team)}{getObjectFromStr(char **str, bool *isGoalie, const char *strTeam)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Soccer\+Types\+::get\+Object\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{str, }
+\item[{bool $\ast$}]{is\+Goalie, }
+\item[{const char $\ast$}]{str\+My\+Team\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a6bd31e435a9d55a8654adc8630a2484a}{}\label{classSoccerTypes_a6bd31e435a9d55a8654adc8630a2484a}
+This method returns an ObjectT that corresponds to the string passed as the first argument. The string representation equals the representation used in the Soccer Server. Format is with parenthesis, so possible arguments for str are (ball), (p Team\+\_\+L 1), etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string containing string representation of object \\
+\hline
+{\em is\+Goalie} & bool representing the fact whether object is a goalie \\
+\hline
+{\em str\+My\+Team\+Name} & in case of player or opponent object, own teamname has to be matched, when it matches it is teammate otherwise opponent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return the corresponding ObjectT, O\+B\+J\+E\+C\+T\+\_\+\+I\+L\+L\+E\+G\+AL in case of error 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Object\+Str@{get\+Object\+Str}}
+\index{get\+Object\+Str@{get\+Object\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Object\+Str(char $\ast$str\+Buf, Object\+T o, const char $\ast$str\+Te=\+N\+U\+L\+L)}{getObjectStr(char *strBuf, ObjectT o, const char *strTe=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Soccer\+Types\+::get\+Object\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Buf, }
+\item[{{\bf ObjectT}}]{o, }
+\item[{const char $\ast$}]{str\+Team\+Name = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a5f32d677c6400f8b19b3edb19fa32283}{}\label{classSoccerTypes_a5f32d677c6400f8b19b3edb19fa32283}
+This method returns the string that corresponds to a specific object. This string name is exactly the same as the (short) name of the Robo\+Cup Simulation. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Buf} & is the string in which the string representation is stored \\
+\hline
+{\em o} & ObjectT that has to be converted to the string representation \\
+\hline
+{\em str\+Team\+Name} & teamname that should be placed in case of player object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to str\+Buf, which contains the string representation 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Opponent\+Object\+From\+Index@{get\+Opponent\+Object\+From\+Index}}
+\index{get\+Opponent\+Object\+From\+Index@{get\+Opponent\+Object\+From\+Index}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Opponent\+Object\+From\+Index(int i\+Index)}{getOpponentObjectFromIndex(int iIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Soccer\+Types\+::get\+Opponent\+Object\+From\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a337d1985e07aec6f1ed07635c0f4f157}{}\label{classSoccerTypes_a337d1985e07aec6f1ed07635c0f4f157}
+This method returns the object type of an opponent with index i\+Index. When i\+Index equals 9 for example O\+B\+J\+E\+C\+T\+\_\+\+O\+P\+P\+O\+N\+E\+N\+T\+\_\+10 is returned. 
+\begin{DoxyParams}{Parameters}
+{\em i\+Index} & index of opponent range is \mbox{[}0..10\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object type corresponding to this index 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Own\+Goal@{get\+Own\+Goal}}
+\index{get\+Own\+Goal@{get\+Own\+Goal}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Own\+Goal(\+Side\+T s)}{getOwnGoal(SideT s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Soccer\+Types\+::get\+Own\+Goal (
+\begin{DoxyParamCaption}
+\item[{{\bf SideT}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_adba75e01e97f08cd24421e3a84f58add}{}\label{classSoccerTypes_adba75e01e97f08cd24421e3a84f58add}
+This method returns the object representing the own goal 
+\begin{DoxyParams}{Parameters}
+{\em s} & own side \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object of the own goal, O\+B\+J\+E\+C\+T\+\_\+\+I\+L\+L\+E\+G\+AL when s is S\+I\+D\+E\+\_\+\+I\+L\+L\+E\+G\+AL 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Play\+Mode\+From\+Referee\+Message@{get\+Play\+Mode\+From\+Referee\+Message}}
+\index{get\+Play\+Mode\+From\+Referee\+Message@{get\+Play\+Mode\+From\+Referee\+Message}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Play\+Mode\+From\+Referee\+Message(\+Referee\+Message\+T rm)}{getPlayModeFromRefereeMessage(RefereeMessageT rm)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Play\+ModeT} Soccer\+Types\+::get\+Play\+Mode\+From\+Referee\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Referee\+MessageT}}]{rm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a6aaf3a7d2f3095ce339ace6e431e9dd4}{}\label{classSoccerTypes_a6aaf3a7d2f3095ce339ace6e431e9dd4}
+This method returns the play mode from the referee message. 
+\begin{DoxyParams}{Parameters}
+{\em rm} & Referee\+Message that contains the play mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Play\+ModeT of Referee\+Message, P\+M\+\_\+\+I\+L\+L\+E\+G\+AL if it is not recognized 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Play\+Mode\+From\+Str@{get\+Play\+Mode\+From\+Str}}
+\index{get\+Play\+Mode\+From\+Str@{get\+Play\+Mode\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Play\+Mode\+From\+Str(char $\ast$str)}{getPlayModeFromStr(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Play\+ModeT} Soccer\+Types\+::get\+Play\+Mode\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_aa36ce5ecff3ba4298ab09dab817a1a3a}{}\label{classSoccerTypes_aa36ce5ecff3ba4298ab09dab817a1a3a}
+This method returns the play mode associated with a string. 
+\begin{DoxyParams}{Parameters}
+{\em str} & representing the play mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Play\+ModeT of string, P\+M\+\_\+\+I\+L\+L\+E\+G\+AL if it is not recognized 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Play\+Mode\+Str@{get\+Play\+Mode\+Str}}
+\index{get\+Play\+Mode\+Str@{get\+Play\+Mode\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Play\+Mode\+Str(\+Play\+Mode\+T p)}{getPlayModeStr(PlayModeT p)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+Play\+Mode\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf Play\+ModeT}}]{pm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_af7d37af26b013107a1067754e56b879c}{}\label{classSoccerTypes_af7d37af26b013107a1067754e56b879c}
+This method returns the string representation of a Play\+ModeT as is used in the Robocup Soccer Simulation and also said by the referee. 
+\begin{DoxyParams}{Parameters}
+{\em pm} & Play\+ModeT which should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string (enough memory has to be allocated) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Referee\+Message\+From\+Str@{get\+Referee\+Message\+From\+Str}}
+\index{get\+Referee\+Message\+From\+Str@{get\+Referee\+Message\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Referee\+Message\+From\+Str(char $\ast$str)}{getRefereeMessageFromStr(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Referee\+MessageT} Soccer\+Types\+::get\+Referee\+Message\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a5d9c0abf0d9a0a0a3467271b11213b5d}{}\label{classSoccerTypes_a5d9c0abf0d9a0a0a3467271b11213b5d}
+This method returns the referee message from the string that is passed. 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to a string with the referee message starting at index 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referee\+MessageT of string representation, R\+E\+F\+C\+\_\+\+I\+L\+L\+E\+G\+AL if it fails 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Referee\+Message\+Str@{get\+Referee\+Message\+Str}}
+\index{get\+Referee\+Message\+Str@{get\+Referee\+Message\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Referee\+Message\+Str(\+Referee\+Message\+T r)}{getRefereeMessageStr(RefereeMessageT r)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+Referee\+Message\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf Referee\+MessageT}}]{rm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a417b8d47a0b9cd1d5f2f600d87e003d4}{}\label{classSoccerTypes_a417b8d47a0b9cd1d5f2f600d87e003d4}
+This method returns the string representation of a Referee\+MessageT as is used in the Robocup Soccer Simulation and said by the referee. 
+\begin{DoxyParams}{Parameters}
+{\em pm} & Referee\+MessageT which should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string (enough memory should be allocated) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Side\+From\+Str@{get\+Side\+From\+Str}}
+\index{get\+Side\+From\+Str@{get\+Side\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Side\+From\+Str(char $\ast$str)}{getSideFromStr(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SideT} Soccer\+Types\+::get\+Side\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a9f7070f4790003b7775a6ffcd12e1352}{}\label{classSoccerTypes_a9f7070f4790003b7775a6ffcd12e1352}
+This method returns the SideT from the string that is passed as the first argument. 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to a string that contains side info string at index 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SideT of string representation, S\+I\+D\+E\+\_\+\+I\+L\+L\+E\+G\+AL if it is not known 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Side\+Str@{get\+Side\+Str}}
+\index{get\+Side\+Str@{get\+Side\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Side\+Str(\+Side\+T s)}{getSideStr(SideT s)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+Side\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf SideT}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a2164196d89209e3d91f3c014d3c4affd}{}\label{classSoccerTypes_a2164196d89209e3d91f3c014d3c4affd}
+This method returns the string representation of a SideT as is used in the Robocup Soccer Simulation (r or l). 
+\begin{DoxyParams}{Parameters}
+{\em s} & SideT which should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+Teammate\+Object\+From\+Index@{get\+Teammate\+Object\+From\+Index}}
+\index{get\+Teammate\+Object\+From\+Index@{get\+Teammate\+Object\+From\+Index}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+Teammate\+Object\+From\+Index(int i\+Index)}{getTeammateObjectFromIndex(int iIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ObjectT} Soccer\+Types\+::get\+Teammate\+Object\+From\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a522841af2b3256f24870c2937d5f08cb}{}\label{classSoccerTypes_a522841af2b3256f24870c2937d5f08cb}
+This method returns the object type of a teammate with index i\+Index. When i\+Index equals 3 for example O\+B\+J\+E\+C\+T\+\_\+\+T\+E\+A\+M\+M\+A\+T\+E\+\_\+4 is returned. 
+\begin{DoxyParams}{Parameters}
+{\em i\+Index} & index of teammate range is \mbox{[}0..10\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object type corresponding to this index 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+View\+Angle\+From\+Str@{get\+View\+Angle\+From\+Str}}
+\index{get\+View\+Angle\+From\+Str@{get\+View\+Angle\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+View\+Angle\+From\+Str(char $\ast$str)}{getViewAngleFromStr(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View\+AngleT} Soccer\+Types\+::get\+View\+Angle\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a279fd0046e772250c94b3de03c9cf07c}{}\label{classSoccerTypes_a279fd0046e772250c94b3de03c9cf07c}
+This method returns et the view angle from the specified string 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to a string that contains view angle string at index 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View\+AngleT of string, V\+A\+\_\+\+I\+L\+L\+E\+G\+AL if it is not recognized 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+View\+Angle\+Str@{get\+View\+Angle\+Str}}
+\index{get\+View\+Angle\+Str@{get\+View\+Angle\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+View\+Angle\+Str(\+View\+Angle\+T v)}{getViewAngleStr(ViewAngleT v)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+View\+Angle\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+AngleT}}]{va}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a9c90b74496a950dc11008a24a2b4471b}{}\label{classSoccerTypes_a9c90b74496a950dc11008a24a2b4471b}
+This method returns the string representation of a View\+AngleT as is used in the Robocup Soccer Simulation 
+\begin{DoxyParams}{Parameters}
+{\em va} & View\+AngleT which should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string (enough memory should be allocatd) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+View\+Quality\+From\+Str@{get\+View\+Quality\+From\+Str}}
+\index{get\+View\+Quality\+From\+Str@{get\+View\+Quality\+From\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+View\+Quality\+From\+Str(char $\ast$str)}{getViewQualityFromStr(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View\+QualityT} Soccer\+Types\+::get\+View\+Quality\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_aa090cfc7509655fec9499b5bbe978edb}{}\label{classSoccerTypes_aa090cfc7509655fec9499b5bbe978edb}
+This method returns the view quality from the string that is passed as the first argument 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to a string that contains view quality string at index 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View\+QualityT of string, V\+Q\+\_\+\+I\+L\+L\+E\+G\+AL if it is not known 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!get\+View\+Quality\+Str@{get\+View\+Quality\+Str}}
+\index{get\+View\+Quality\+Str@{get\+View\+Quality\+Str}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{get\+View\+Quality\+Str(\+View\+Quality\+T v)}{getViewQualityStr(ViewQualityT v)}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Soccer\+Types\+::get\+View\+Quality\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+QualityT}}]{vq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a9fdc4594b395c2fca8299f5d27a1be2e}{}\label{classSoccerTypes_a9fdc4594b395c2fca8299f5d27a1be2e}
+This method returns the string representation of a View\+QualityT as is used in the Robocup Soccer Simulation 
+\begin{DoxyParams}{Parameters}
+{\em vq} & View\+QualityT which should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string (enough memory should be allocated) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Ball@{is\+Ball}}
+\index{is\+Ball@{is\+Ball}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Ball(\+Object\+T o)}{isBall(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Ball (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a2451e7b0cec7daa0fdfd2867967e1fd1}{}\label{classSoccerTypes_a2451e7b0cec7daa0fdfd2867967e1fd1}
+This method determines whether object o is the ball 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is the ball (true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Flag@{is\+Flag}}
+\index{is\+Flag@{is\+Flag}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Flag(\+Object\+T o)}{isFlag(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Flag (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a5d3e343c52d9d2fd3d7d3c8ad7c698c9}{}\label{classSoccerTypes_a5d3e343c52d9d2fd3d7d3c8ad7c698c9}
+This method determines whether object o is a flag. 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a flag (return true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Goal@{is\+Goal}}
+\index{is\+Goal@{is\+Goal}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Goal(\+Object\+T o)}{isGoal(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Goal (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_aedb013f6f28627bfcd967df008045874}{}\label{classSoccerTypes_aedb013f6f28627bfcd967df008045874}
+This method determines whether object o is a goal 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a goal (return true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Goalie@{is\+Goalie}}
+\index{is\+Goalie@{is\+Goalie}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Goalie(\+Object\+T o)}{isGoalie(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Goalie (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a35b0354996d20c68c047162d14359f24}{}\label{classSoccerTypes_a35b0354996d20c68c047162d14359f24}
+This method determines whether object o is a goalie = teammate number is 1 (for now) 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a goalie (true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+In\+Set@{is\+In\+Set}}
+\index{is\+In\+Set@{is\+In\+Set}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+In\+Set(\+Object\+T o, Object\+Set\+T o\+\_\+s, Object\+T object\+Goalie=\+O\+B\+J\+E\+C\+T\+\_\+\+T\+E\+A\+M\+M\+A\+T\+E\+\_\+1)}{isInSet(ObjectT o, ObjectSetT o_s, ObjectT objectGoalie=OBJECT_TEAMMATE_1)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+In\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o, }
+\item[{{\bf Object\+SetT}}]{o\+\_\+g, }
+\item[{{\bf ObjectT}}]{obj\+Goalie = {\ttfamily {\bf O\+B\+J\+E\+C\+T\+\_\+\+T\+E\+A\+M\+M\+A\+T\+E\+\_\+1}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_addc22247cfbaacd256e68b16427de975}{}\label{classSoccerTypes_addc22247cfbaacd256e68b16427de975}
+This method returns a boolean indicating whether the object o is part of the object set o\+\_\+s. O\+B\+J\+E\+C\+T\+\_\+\+T\+E\+A\+M\+M\+A\+T\+E\+\_\+1 as o and O\+B\+J\+E\+C\+T\+\_\+\+S\+E\+T\+\_\+\+T\+E\+A\+M\+M\+A\+T\+ES will return for example the value true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & ObjectT of which should be checked whether it is a part of o\+\_\+s \\
+\hline
+{\em o\+\_\+s} & Object\+Set in which o should be \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when o is included in set o\+\_\+s, false otherwise 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Known\+Player@{is\+Known\+Player}}
+\index{is\+Known\+Player@{is\+Known\+Player}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Known\+Player(\+Object\+T o)}{isKnownPlayer(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Known\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a64d7793f1d82a653ddb1d3ac710e3b5a}{}\label{classSoccerTypes_a64d7793f1d82a653ddb1d3ac710e3b5a}
+This method determines whether object o is a known player, thus containing a number 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a known player (true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Line@{is\+Line}}
+\index{is\+Line@{is\+Line}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Line(\+Object\+T o)}{isLine(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_af50cc869d335bbd3b7409b25fe5c937a}{}\label{classSoccerTypes_af50cc869d335bbd3b7409b25fe5c937a}
+This method determines whether object o is a line. 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a line return true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Opponent@{is\+Opponent}}
+\index{is\+Opponent@{is\+Opponent}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Opponent(\+Object\+T o)}{isOpponent(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Opponent (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_aeda4e30db06751a19832b2ceba20ede5}{}\label{classSoccerTypes_aeda4e30db06751a19832b2ceba20ede5}
+This method determines whether object o is an opponent 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is an opponent (true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Player@{is\+Player}}
+\index{is\+Player@{is\+Player}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Player(\+Object\+T o)}{isPlayer(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_a7a8b2cadc840bb68e33d68be12b07021}{}\label{classSoccerTypes_a7a8b2cadc840bb68e33d68be12b07021}
+This method determines whether object o is a player without checking whether its number or side is available. 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a known player (true) or not (false) 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Player\+Type\+In\+Set@{is\+Player\+Type\+In\+Set}}
+\index{is\+Player\+Type\+In\+Set@{is\+Player\+Type\+In\+Set}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Player\+Type\+In\+Set(\+Player\+T p, Player\+Set\+T p\+\_\+s)}{isPlayerTypeInSet(PlayerT p, PlayerSetT p_s)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Player\+Type\+In\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf PlayerT}}]{p, }
+\item[{{\bf Player\+SetT}}]{p\+\_\+s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_ad47af414002fdfff182f2d9c8ec877f1}{}\label{classSoccerTypes_ad47af414002fdfff182f2d9c8ec877f1}
+This method returns a boolean value which indicates whether a given player type belongs to a specific set. The set P\+S\+\_\+\+D\+E\+F\+E\+N\+D\+E\+RS for example contains both the defender sweeper and the wing defenders. \index{Soccer\+Types@{Soccer\+Types}!is\+Primary\+Command@{is\+Primary\+Command}}
+\index{is\+Primary\+Command@{is\+Primary\+Command}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Primary\+Command(\+Command\+T com)}{isPrimaryCommand(CommandT com)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Primary\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf CommandT}}]{com}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_aee7fadf2b1a83daa0f5c00a1713d3b9e}{}\label{classSoccerTypes_aee7fadf2b1a83daa0f5c00a1713d3b9e}
+This method returns return true when argument is a primary action (action that can only be sent once a cycle). This is the case for kick, dash, move, turn and catch commands. 
+\begin{DoxyParams}{Parameters}
+{\em CommandT} & command that should be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when it is a primary action, false otherwise 
+\end{DoxyReturn}
+\index{Soccer\+Types@{Soccer\+Types}!is\+Teammate@{is\+Teammate}}
+\index{is\+Teammate@{is\+Teammate}!Soccer\+Types@{Soccer\+Types}}
+\subsubsection[{\texorpdfstring{is\+Teammate(\+Object\+T o)}{isTeammate(ObjectT o)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Soccer\+Types\+::is\+Teammate (
+\begin{DoxyParamCaption}
+\item[{{\bf ObjectT}}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSoccerTypes_ae712af370baa2f7fdcb0916d6ab59d29}{}\label{classSoccerTypes_ae712af370baa2f7fdcb0916d6ab59d29}
+This method determines whether object o is a teammate 
+\begin{DoxyParams}{Parameters}
+{\em o} & an object type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether o is a teammate (true) or not (false) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SoccerTypes_8h}{Soccer\+Types.\+h}\item 
+src/\hyperlink{SoccerTypes_8cpp}{Soccer\+Types.\+cpp}\end{DoxyCompactItemize}

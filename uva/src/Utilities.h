@@ -5,6 +5,7 @@
 #include "WorldModel.h"
 #include "SoccerTypes.h"
 #include "Player.h"
+#include "NEAT/NEAT.h"
 
 using namespace std;
 

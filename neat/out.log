@@ -1,0 +1,11 @@
+
+
+id:
+version 3.3.0, build date 21:20:11 Jun 28 2017
+
+Option              Argument         Action / Notes
+------              --------         --------------
+-Help, -H                            Print the command-line options for id.exe.
+-PrintSetup, -PS                     Print a default setup file for id.exe (default_forward.xml).
+-Setup, -S          SetupFileName    Specify the name of the XML setup file to use for this InverseDynamics tool.
+-PropertyInfo, -PI                   Print help information for properties in setup files.
