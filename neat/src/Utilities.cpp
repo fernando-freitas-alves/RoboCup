@@ -221,6 +221,7 @@ WorldState getWorldState(WorldModel *WM)
 vector<double> WorldAnalyseInput(WorldState state)
 {
     vector<double> input;
+    input.push_back(1.);
     input.push_back(state.ball.getX());
     input.push_back(state.ball.getY());
     for (auto player : state.player)
@@ -228,7 +229,6 @@ vector<double> WorldAnalyseInput(WorldState state)
         input.push_back(player.getX());
         input.push_back(player.getY());
     }
-    input.push_back(1.);
     return input;
 }
 

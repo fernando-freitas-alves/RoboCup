@@ -100,7 +100,7 @@ Population getPopulation(const string &filePath)
         // The type of activation function of the outputs and hidden neurons is also set. Hidden neurons are optional
         Genome genome(0,                // ID (can be anything at this point)
                       2*2*1+1, // 2*2*11+1,          // number of input  layers based on all players and ball (x,y) positions
-                      20,                // number of hidden layers
+                      5,                // number of hidden layers
                       5,                // number of output layers based on codification of possible action commands for an agent
                       false,            // enables to connect hidden neurons
                       UNSIGNED_SIGMOID, // sigmoidal activation function
