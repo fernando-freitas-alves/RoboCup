@@ -253,7 +253,7 @@ double evaluateWorldState(WorldModel *WM)
     static int lastGoalDiff = 0;
     if (lastGoalDiff != WM->getGoalDiff())
     {
-        fitness += 30*sign(WM->getGoalDiff() - lastGoalDiff);
+        fitness += 50*sign(WM->getGoalDiff() - lastGoalDiff);
         lastGoalDiff = WM->getGoalDiff();
     }
     static bool wasInOurPossesion = false;

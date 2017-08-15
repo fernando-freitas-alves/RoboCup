@@ -5,10 +5,5 @@
 
 [00m[37m/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
 [00m[37mMaking all in src
-[00m[37mdepbase=`echo PlayerTeams.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
-[00m[37m[35m[01m	g++ -DHAVE_CONFIG_H -I. -I..  -I/usr/local/include -pthread  -std=c++1y -stdlib=libc++ -mmacosx-version-min=10.9 -g -O2 -MT PlayerTeams.o -MD -MP -MF $depbase.Tpo -c -o PlayerTeams.o PlayerTeams.cpp &&\[00m
-[00m[37m[33m[01m	mv -f $depbase.Tpo $depbase.Po
-[00m[37m[00m[37m[33m[01m/bin/sh ../libtool  --tag=CXX   --mode=link g++ -std=c++1y -stdlib=libc++ -mmacosx-version-min=10.9 -g -O2 -lboost_system -L/usr/local/lib `pkg-config --libs grpc++ grpc` -lgrpc++_reflection -lprotobuf -lpthread -ldl  -o trilearn_player Connection.o SenseHandler.o ActHandler.o SoccerTypes.o Objects.o WorldModel.o WorldModelHighLevel.o WorldModelPredict.o WorldModelUpdate.o ServerSettings.o PlayerSettings.o GenericValues.o Formations.o Geometry.o Parse.o Logger.o BasicPlayer.o Player.o PlayerTeams.o main.o Utilities.o NEAT/Genome.o NEAT/Innovation.o NEAT/NEAT.o NEAT/NeuralNetwork.o NEAT/Parameters.o NEAT/PhenotypeBehavior.o NEAT/Population.o NEAT/PythonBindings.o NEAT/Random.o NEAT/Species.o NEAT/Substrate.o NEAT/Traits.o NEAT/Utils.o pbrpc/ServiceManager.o pbrpc/pbrpc.pb.o  -lpthread 
-[00m[37m[00m[37m[35m[01mlibtool: link: g++ -std=c++1y -stdlib=libc++ -mmacosx-version-min=10.9 -g -O2 -o trilearn_player Connection.o SenseHandler.o ActHandler.o SoccerTypes.o Objects.o WorldModel.o WorldModelHighLevel.o WorldModelPredict.o WorldModelUpdate.o ServerSettings.o PlayerSettings.o GenericValues.o Formations.o Geometry.o Parse.o Logger.o BasicPlayer.o Player.o PlayerTeams.o main.o Utilities.o NEAT/Genome.o NEAT/Innovation.o NEAT/NEAT.o NEAT/NeuralNetwork.o NEAT/Parameters.o NEAT/PhenotypeBehavior.o NEAT/Population.o NEAT/PythonBindings.o NEAT/Random.o NEAT/Species.o NEAT/Substrate.o NEAT/Traits.o NEAT/Utils.o pbrpc/ServiceManager.o pbrpc/pbrpc.pb.o -Wl,-bind_at_load  -lboost_system -L/usr/local/lib -lgrpc++ -lgrpc -lgrpc++_reflection /usr/local/lib/libprotobuf.a -lz -ldl -lpthread[00m
-[00m[37m[33mld[37m: warning: [32mobject file (/usr/local/lib/libprotobuf.a(service.o)) was built for newer OSX version (10.12) than being linked (10.9)
+[00m[37m[36mmake[2]: Nothing to be done for `all'.
 [00m

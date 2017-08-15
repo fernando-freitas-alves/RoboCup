@@ -55,7 +55,7 @@ void NEAT_end(Population population)
 {
     // Progress of evolution (generation, best fitness, etc.)
     double best = population.GetBestGenome().GetFitness();
-    if (updateGen)
+    // if (updateGen)
         printf("\nBest fitness: %f, Species: %lu\n\n", best, len(population.m_Species));
     
     // Starts a new Epoch
