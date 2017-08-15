@@ -88,8 +88,10 @@ echo Done.
 #     case ${answer:0:1} in
 #         y|Y|"")
             ./start.sh #9 2
-            ./start-2.sh #9 2
-            # "/Users/fernando/Google Drive/Sincronização/Fê/Inteligência Artificial em Robótica (ESZA022)/Projetos/RocoCup/trilearnBaseUFABC/start-2.sh" 9
+            # ./start-2.sh #9 2
+            cd "/Users/fernando/Google Drive/Sincronização/Fê/Inteligência Artificial em Robótica (ESZA022)/Projetos/RocoCup/trilearnBaseUFABC"
+            ./start-2.sh #9
+            cd -
             # cd "/Users/fernando/Google Drive/Sincronização/Fê/Inteligência Artificial em Robótica (ESZA022)/Projetos/RocoCup/Git/RoboCup/helios/src/"
             # ./start.sh
             # cd -

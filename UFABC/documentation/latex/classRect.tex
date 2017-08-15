@@ -1,0 +1,150 @@
+\hypertarget{classRect}{}\section{Rect Class Reference}
+\label{classRect}\index{Rect@{Rect}}
+
+
+{\ttfamily \#include $<$Geometry.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRect_acd4ab1dca00830ee6c06334b7aadf0e4}{Rect} (\hyperlink{classVecPosition}{Vec\+Position} pos, \hyperlink{classVecPosition}{Vec\+Position} pos2)
+\item 
+void \hyperlink{classRect_a2ff82935f25387a30d3159143e5c45c4}{show} (ostream \&os=cout)
+\item 
+bool \hyperlink{classRect_af52eb79feba16d3e31148957919376ed}{is\+Inside} (\hyperlink{classVecPosition}{Vec\+Position} pos)
+\item 
+void \hyperlink{classRect_a2f677777aaf238fd6d3ce34e77efae22}{set\+Rectangle\+Points} (\hyperlink{classVecPosition}{Vec\+Position} pos1, \hyperlink{classVecPosition}{Vec\+Position} pos2)
+\item 
+bool \hyperlink{classRect_a648dc485320cac37f5ab18fd9ae051ce}{set\+Pos\+Left\+Top} (\hyperlink{classVecPosition}{Vec\+Position} pos)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classRect_a13d10fcc4b6a231d3cc3043494756a00}{get\+Pos\+Left\+Top} ()
+\item 
+bool \hyperlink{classRect_ae7d9c65731893825164cc5b19f45ef08}{set\+Pos\+Right\+Bottom} (\hyperlink{classVecPosition}{Vec\+Position} pos)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classRect_aee8996c35d329dcf89ce5177facdea22}{get\+Pos\+Right\+Bottom} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a rectangle. A rectangle is defined by two Vec\+Positions the one at the upper left corner and the one at the right bottom. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Rect@{Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{Rect(\+Vec\+Position pos, Vec\+Position pos2)}{Rect(VecPosition pos, VecPosition pos2)}}]{\setlength{\rightskip}{0pt plus 5cm}Rect\+::\+Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{pos, }
+\item[{{\bf Vec\+Position}}]{pos2}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_acd4ab1dca00830ee6c06334b7aadf0e4}{}\label{classRect_acd4ab1dca00830ee6c06334b7aadf0e4}
+This is the constructor of a Rectangle. Two points will be given. The order does not matter as long as two opposite points are given (left top and right bottom or right top and left bottom). 
+\begin{DoxyParams}{Parameters}
+{\em pos} & first point that defines corner of rectangle \\
+\hline
+{\em pos2} & second point that defines other corner of rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rectangle with \textquotesingle{}pos\textquotesingle{} and \textquotesingle{}pos2\textquotesingle{} as opposite corners. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Rect@{Rect}!get\+Pos\+Left\+Top@{get\+Pos\+Left\+Top}}
+\index{get\+Pos\+Left\+Top@{get\+Pos\+Left\+Top}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{get\+Pos\+Left\+Top()}{getPosLeftTop()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Rect\+::get\+Pos\+Left\+Top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_a13d10fcc4b6a231d3cc3043494756a00}{}\label{classRect_a13d10fcc4b6a231d3cc3043494756a00}
+This method returns the top left position of the rectangle \begin{DoxyReturn}{Returns}
+top left position of the rectangle 
+\end{DoxyReturn}
+\index{Rect@{Rect}!get\+Pos\+Right\+Bottom@{get\+Pos\+Right\+Bottom}}
+\index{get\+Pos\+Right\+Bottom@{get\+Pos\+Right\+Bottom}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{get\+Pos\+Right\+Bottom()}{getPosRightBottom()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Rect\+::get\+Pos\+Right\+Bottom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_aee8996c35d329dcf89ce5177facdea22}{}\label{classRect_aee8996c35d329dcf89ce5177facdea22}
+This method returns the right bottom position of the rectangle \begin{DoxyReturn}{Returns}
+top right bottom of the rectangle 
+\end{DoxyReturn}
+\index{Rect@{Rect}!is\+Inside@{is\+Inside}}
+\index{is\+Inside@{is\+Inside}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{is\+Inside(\+Vec\+Position pos)}{isInside(VecPosition pos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Rect\+::is\+Inside (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_af52eb79feba16d3e31148957919376ed}{}\label{classRect_af52eb79feba16d3e31148957919376ed}
+This method determines whether the given position lies inside the current rectangle. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & position which is checked whether it lies in rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when \textquotesingle{}pos\textquotesingle{} lies in the rectangle, false otherwise 
+\end{DoxyReturn}
+\index{Rect@{Rect}!set\+Pos\+Left\+Top@{set\+Pos\+Left\+Top}}
+\index{set\+Pos\+Left\+Top@{set\+Pos\+Left\+Top}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{set\+Pos\+Left\+Top(\+Vec\+Position pos)}{setPosLeftTop(VecPosition pos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Rect\+::set\+Pos\+Left\+Top (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_a648dc485320cac37f5ab18fd9ae051ce}{}\label{classRect_a648dc485320cac37f5ab18fd9ae051ce}
+This method sets the top left position of the rectangle 
+\begin{DoxyParams}{Parameters}
+{\em pos} & new top left position of the rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when update was successful 
+\end{DoxyReturn}
+\index{Rect@{Rect}!set\+Pos\+Right\+Bottom@{set\+Pos\+Right\+Bottom}}
+\index{set\+Pos\+Right\+Bottom@{set\+Pos\+Right\+Bottom}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{set\+Pos\+Right\+Bottom(\+Vec\+Position pos)}{setPosRightBottom(VecPosition pos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Rect\+::set\+Pos\+Right\+Bottom (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_ae7d9c65731893825164cc5b19f45ef08}{}\label{classRect_ae7d9c65731893825164cc5b19f45ef08}
+This method sets the right bottom position of the rectangle 
+\begin{DoxyParams}{Parameters}
+{\em pos} & new right bottom position of the rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when update was succesfull 
+\end{DoxyReturn}
+\index{Rect@{Rect}!set\+Rectangle\+Points@{set\+Rectangle\+Points}}
+\index{set\+Rectangle\+Points@{set\+Rectangle\+Points}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{set\+Rectangle\+Points(\+Vec\+Position pos1, Vec\+Position pos2)}{setRectanglePoints(VecPosition pos1, VecPosition pos2)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rect\+::set\+Rectangle\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{pos1, }
+\item[{{\bf Vec\+Position}}]{pos2}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_a2f677777aaf238fd6d3ce34e77efae22}{}\label{classRect_a2f677777aaf238fd6d3ce34e77efae22}
+This method sets the upper left and right bottom point of the current rectangle. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & first point that defines corner of rectangle \\
+\hline
+{\em pos2} & second point that defines other corner of rectangle \\
+\hline
+\end{DoxyParams}
+\index{Rect@{Rect}!show@{show}}
+\index{show@{show}!Rect@{Rect}}
+\subsubsection[{\texorpdfstring{show(ostream \&os=cout)}{show(ostream &os=cout)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rect\+::show (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)}\hypertarget{classRect_a2ff82935f25387a30d3159143e5c45c4}{}\label{classRect_a2ff82935f25387a30d3159143e5c45c4}
+This method prints the rectangle to the specified output stream in the format rect( top\+\_\+left\+\_\+point, bottom\+\_\+right\+\_\+point ). 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to which rectangle is written. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Geometry_8h}{Geometry.\+h}\item 
+src/\hyperlink{Geometry_8cpp}{Geometry.\+cpp}\end{DoxyCompactItemize}

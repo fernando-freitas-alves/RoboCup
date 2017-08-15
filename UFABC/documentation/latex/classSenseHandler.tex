@@ -1,0 +1,276 @@
+\hypertarget{classSenseHandler}{}\section{Sense\+Handler Class Reference}
+\label{classSenseHandler}\index{Sense\+Handler@{Sense\+Handler}}
+
+
+{\ttfamily \#include $<$Sense\+Handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSenseHandler_a46ac6a49527ffd3ec440e03ba4715932}{Sense\+Handler} (\hyperlink{classConnection}{Connection} $\ast$c, \hyperlink{classWorldModel}{World\+Model} $\ast$wm, \hyperlink{classServerSettings}{Server\+Settings} $\ast$ss, \hyperlink{classPlayerSettings}{Player\+Settings} $\ast$ps)
+\item 
+void \hyperlink{classSenseHandler_ac0f4abc8eba5206791c25ba9274ce084}{handle\+Messages\+From\+Server} ()
+\item 
+void \hyperlink{classSenseHandler_a7f65bfb50f5f6704c114aeb2e8d3b648}{set\+Time\+Signal} ()
+\item 
+bool \hyperlink{classSenseHandler_afad33b483d0a755ab48634564f01420c}{analyze\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_a96d729a840d166dcb2260e2cab2cb7c5}{analyze\+See\+Global\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_add8e9a1d9bb5f1241fe489d0c789f939}{analyze\+Full\+State\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_afad1ea18935a06b7e8a40d867356a453}{analyze\+See\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_abe1febd4a564b87f03451f0f2941123f}{analyze\+Sense\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_a678a0c6b79da9966de0bfe1b411c4954}{analyze\+Init\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_add082258f3701fc654c292beb287b564}{analyze\+Hear\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_a147ada35356dc3094c97c4299a88ef5b}{analyze\+Player\+Message} (int i\+Time, char $\ast$str\+Msg)
+\item 
+bool {\bfseries analyze\+Coach\+Message} (char $\ast$str\+Msg)\hypertarget{classSenseHandler_a31cbb00d960203a651e2b57967151bba}{}\label{classSenseHandler_a31cbb00d960203a651e2b57967151bba}
+
+\item 
+bool \hyperlink{classSenseHandler_aa44909ec201afdda1ef2d7c6e06a795f}{analyze\+Change\+Player\+Type\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_a16fe093a0c0cafd65b15cfac75d8ca53}{analyze\+Server\+Param\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_a976653672fc494dfac0cb116d62ede27}{analyze\+Check\+Ball} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_aaf8c288f90d2fab73dea46fd1f5d6a8a}{analyze\+Player\+Type\+Message} (char $\ast$str\+Msg)
+\item 
+bool \hyperlink{classSenseHandler_ac448828caeca51cc661428c72dda44ac}{analyze\+Player\+Param\+Message} (char $\ast$str\+Msg)
+\item 
+bool {\bfseries read\+Server\+Param} (const char $\ast$str\+Param, char $\ast$str\+Msg)\hypertarget{classSenseHandler_a21fa42c454a09c642dc5f4d600768cac}{}\label{classSenseHandler_a21fa42c454a09c642dc5f4d600768cac}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classSenseHandler}{Sense\+Handler} receives input from a (Robocup Simulation) server (through an instance of \hyperlink{classConnection}{Connection}). The class contains methods to parse the incoming messages and sends these to the \hyperlink{classWorldModel}{World\+Model} accordingly. After this class is instantiated, a specific thread must call the function sense\+\_\+callback. This thread will then automatically call \hyperlink{classSenseHandler_ac0f4abc8eba5206791c25ba9274ce084}{handle\+Messages\+From\+Server()} which loops forever. In this way all messages are received and parsed (since the receive\+Message from the \hyperlink{classConnection}{Connection} blocks till a message arrives). Other threads can think about the next action while the \hyperlink{classSenseHandler}{Sense\+Handler} sends the new information to the \hyperlink{classWorldModel}{World\+Model}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sense\+Handler@{Sense\+Handler}!Sense\+Handler@{Sense\+Handler}}
+\index{Sense\+Handler@{Sense\+Handler}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{Sense\+Handler(\+Connection $\ast$c, World\+Model $\ast$wm, Server\+Settings $\ast$ss, Player\+Settings $\ast$ps)}{SenseHandler(Connection *c, WorldModel *wm, ServerSettings *ss, PlayerSettings *ps)}}]{\setlength{\rightskip}{0pt plus 5cm}Sense\+Handler\+::\+Sense\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf Connection} $\ast$}]{c, }
+\item[{{\bf World\+Model} $\ast$}]{wm, }
+\item[{{\bf Server\+Settings} $\ast$}]{ss, }
+\item[{{\bf Player\+Settings} $\ast$}]{ps}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a46ac6a49527ffd3ec440e03ba4715932}{}\label{classSenseHandler_a46ac6a49527ffd3ec440e03ba4715932}
+Constructor for the \hyperlink{classSenseHandler}{Sense\+Handler}. It needs a reference to a connection and a reference to a worldmodel. 
+\begin{DoxyParams}{Parameters}
+{\em c} & \hyperlink{classConnection}{Connection} from which input is received \\
+\hline
+{\em wm} & \hyperlink{classWorldModel}{World\+Model} to which new information will be sent for processing \\
+\hline
+{\em ss} & \hyperlink{classServerSettings}{Server\+Settings} that contain the parameters used by the server \\
+\hline
+{\em ps} & \hyperlink{classPlayerSettings}{Player\+Settings} that determine how to interact with messages. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Change\+Player\+Type\+Message@{analyze\+Change\+Player\+Type\+Message}}
+\index{analyze\+Change\+Player\+Type\+Message@{analyze\+Change\+Player\+Type\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Change\+Player\+Type\+Message(char $\ast$str\+Msg)}{analyzeChangePlayerTypeMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Change\+Player\+Type\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_aa44909ec201afdda1ef2d7c6e06a795f}{}\label{classSenseHandler_aa44909ec201afdda1ef2d7c6e06a795f}
+This method analyzes the change player type message. This method checks whether the player that changed type equals the agent. When this is the case, it adjust the \hyperlink{classServerSettings}{Server\+Settings} according to the values associated with this player type. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & string that contains the player type message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether player type of agent changed. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Check\+Ball@{analyze\+Check\+Ball}}
+\index{analyze\+Check\+Ball@{analyze\+Check\+Ball}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Check\+Ball(char $\ast$str\+Msg)}{analyzeCheckBall(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Check\+Ball (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a976653672fc494dfac0cb116d62ede27}{}\label{classSenseHandler_a976653672fc494dfac0cb116d62ede27}
+This method analyzes the check\+\_\+ball message that is only received by the coach. It sets the information in the Worldmodel what the status of the ball is. The format is as follows (check\+\_\+ball $<$time$>$ $<$status$>$). 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & string that contains the check\+\_\+ball message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether update succeeded. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Full\+State\+Message@{analyze\+Full\+State\+Message}}
+\index{analyze\+Full\+State\+Message@{analyze\+Full\+State\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Full\+State\+Message(char $\ast$str\+Msg)}{analyzeFullStateMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Full\+State\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_add8e9a1d9bb5f1241fe489d0c789f939}{}\label{classSenseHandler_add8e9a1d9bb5f1241fe489d0c789f939}
+This method parses a full state message. This message contains all information from the playing field without noise. It will not be used during real tournaments. \index{Sense\+Handler@{Sense\+Handler}!analyze\+Hear\+Message@{analyze\+Hear\+Message}}
+\index{analyze\+Hear\+Message@{analyze\+Hear\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Hear\+Message(char $\ast$str\+Msg)}{analyzeHearMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Hear\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_add082258f3701fc654c292beb287b564}{}\label{classSenseHandler_add082258f3701fc654c292beb287b564}
+This method analyzes a hear message. When the message is from the referee the message is parsed and the new play mode is set or the goal difference is adjusted. When the message comes from another player the method analyze\+Player\+Message is called A hear message looks like (hear 0 self$\vert$referee$\vert$dir message)
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & message that should be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed correctly. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Init\+Message@{analyze\+Init\+Message}}
+\index{analyze\+Init\+Message@{analyze\+Init\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Init\+Message(char $\ast$str\+Msg)}{analyzeInitMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Init\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a678a0c6b79da9966de0bfe1b411c4954}{}\label{classSenseHandler_a678a0c6b79da9966de0bfe1b411c4954}
+This method analyzes an init message. All information from the initialization is parsed and updated in the \hyperlink{classWorldModel}{World\+Model}. An init message looks like (init \mbox{[}l$\vert$r\mbox{]} 10 before\+\_\+kick\+\_\+off) 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & message that should be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed correctly. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Message@{analyze\+Message}}
+\index{analyze\+Message@{analyze\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Message(char $\ast$str\+Msg)}{analyzeMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_afad33b483d0a755ab48634564f01420c}{}\label{classSenseHandler_afad33b483d0a755ab48634564f01420c}
+This method analyzes the type of the incoming message and calls the message that corresponds to this message. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & message that should be parsed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed or not 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Player\+Message@{analyze\+Player\+Message}}
+\index{analyze\+Player\+Message@{analyze\+Player\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Player\+Message(int i\+Time, char $\ast$str\+Msg)}{analyzePlayerMessage(int iTime, char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Player\+Message (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+Time, }
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a147ada35356dc3094c97c4299a88ef5b}{}\label{classSenseHandler_a147ada35356dc3094c97c4299a88ef5b}
+This message analyzes an incoming communication message. Messages from opponents are discarded. First it is checked whether the message arrived from a teammate using a specific encoding string and then the contents are parsed and stored in the world model, which will process it when it updates the world model. 
+\begin{DoxyParams}{Parameters}
+{\em i\+Time} & time from the message \\
+\hline
+\end{DoxyParams}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Player\+Param\+Message@{analyze\+Player\+Param\+Message}}
+\index{analyze\+Player\+Param\+Message@{analyze\+Player\+Param\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Player\+Param\+Message(char $\ast$str\+Msg)}{analyzePlayerParamMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Player\+Param\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_ac448828caeca51cc661428c72dda44ac}{}\label{classSenseHandler_ac448828caeca51cc661428c72dda44ac}
+This method analyzes the player\+\_\+param message that indicates the ranges of the possible values for the heterogeneous player types. Nothing is done with this information. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & string that contains the player\+\_\+param message.  will always be true. \\
+\hline
+\end{DoxyParams}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Player\+Type\+Message@{analyze\+Player\+Type\+Message}}
+\index{analyze\+Player\+Type\+Message@{analyze\+Player\+Type\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Player\+Type\+Message(char $\ast$str\+Msg)}{analyzePlayerTypeMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Player\+Type\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_aaf8c288f90d2fab73dea46fd1f5d6a8a}{}\label{classSenseHandler_aaf8c288f90d2fab73dea46fd1f5d6a8a}
+This method analyze a player type message. This message contains the values associated with a specific heterogeneous player type. The values are parsed from the message and supplied to the \hyperlink{classWorldModel}{World\+Model} method process\+New\+Hetero\+Player. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & string that contains the player type information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed correctly. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+See\+Global\+Message@{analyze\+See\+Global\+Message}}
+\index{analyze\+See\+Global\+Message@{analyze\+See\+Global\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+See\+Global\+Message(char $\ast$str\+Msg)}{analyzeSeeGlobalMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+See\+Global\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a96d729a840d166dcb2260e2cab2cb7c5}{}\label{classSenseHandler_a96d729a840d166dcb2260e2cab2cb7c5}
+This method analyzes a see Message. All information from the different objects that is stored in a see message is send to worldmodel. A see message looks like(see 0 ((g r) 64.\+1 13) ((f r t) 65.\+4 -\/16) .... 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & message that should be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed correctly. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+See\+Message@{analyze\+See\+Message}}
+\index{analyze\+See\+Message@{analyze\+See\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+See\+Message(char $\ast$str\+Msg)}{analyzeSeeMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+See\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_afad1ea18935a06b7e8a40d867356a453}{}\label{classSenseHandler_afad1ea18935a06b7e8a40d867356a453}
+This method analyzes a see Message. It gets the time from the message and tries to synchronize with the server. Then the message is stored in the world model, which processes it when it performs an update. \begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed correctly. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Sense\+Message@{analyze\+Sense\+Message}}
+\index{analyze\+Sense\+Message@{analyze\+Sense\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Sense\+Message(char $\ast$str\+Msg)}{analyzeSenseMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Sense\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_abe1febd4a564b87f03451f0f2941123f}{}\label{classSenseHandler_abe1febd4a564b87f03451f0f2941123f}
+This method analyzes a sense message. All information from the player is parsed and updated in the \hyperlink{classWorldModel}{World\+Model}. A sense message looks like (sense\+\_\+body 0 (view\+\_\+mode high normal) (stamina 2000 1) (speed 0 0) (head\+\_\+angle 0) (kick 0) (dash 0) (turn 0) (say 0) (turn\+\_\+neck 0) (catch 0) (move 0) (change\+\_\+view 0)) 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & message that should be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the message was parsed correctly. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!analyze\+Server\+Param\+Message@{analyze\+Server\+Param\+Message}}
+\index{analyze\+Server\+Param\+Message@{analyze\+Server\+Param\+Message}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{analyze\+Server\+Param\+Message(char $\ast$str\+Msg)}{analyzeServerParamMessage(char *strMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sense\+Handler\+::analyze\+Server\+Param\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a16fe093a0c0cafd65b15cfac75d8ca53}{}\label{classSenseHandler_a16fe093a0c0cafd65b15cfac75d8ca53}
+This method analyzes the server\+\_\+param message. This message contains all the server parameters. All settings of the \hyperlink{classServerSettings}{Server\+Settings} are changed according to the supplied values. This makes the reading from a server configuration file obsolete. 
+\begin{DoxyParams}{Parameters}
+{\em str\+Msg} & string message with all the server parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booli indicating whether string was parsed. 
+\end{DoxyReturn}
+\index{Sense\+Handler@{Sense\+Handler}!handle\+Messages\+From\+Server@{handle\+Messages\+From\+Server}}
+\index{handle\+Messages\+From\+Server@{handle\+Messages\+From\+Server}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{handle\+Messages\+From\+Server()}{handleMessagesFromServer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sense\+Handler\+::handle\+Messages\+From\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_ac0f4abc8eba5206791c25ba9274ce084}{}\label{classSenseHandler_ac0f4abc8eba5206791c25ba9274ce084}
+This is the main routine of this class. It loops forever (till the thread is destroyed) and receives and parses the incoming messages. \index{Sense\+Handler@{Sense\+Handler}!set\+Time\+Signal@{set\+Time\+Signal}}
+\index{set\+Time\+Signal@{set\+Time\+Signal}!Sense\+Handler@{Sense\+Handler}}
+\subsubsection[{\texorpdfstring{set\+Time\+Signal()}{setTimeSignal()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sense\+Handler\+::set\+Time\+Signal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSenseHandler_a7f65bfb50f5f6704c114aeb2e8d3b648}{}\label{classSenseHandler_a7f65bfb50f5f6704c114aeb2e8d3b648}
+This method sets the time signal. This is the time that should be waited before the next action should be sent to the server. As soon as a sense message arrives this method is called. Using the information from the member variable \textquotesingle{}i\+Tri\+Counter\textquotesingle{} which denotes when the see message will arrive in this cycle (0=first half, 1=2nd half, 2=no see, all for the default view frequency) the timer is set. The values that denote the fraction of the simulation step that is waited are all defined in \hyperlink{classPlayerSettings}{Player\+Settings}, such that they can be easily changed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SenseHandler_8h}{Sense\+Handler.\+h}\item 
+src/\hyperlink{SenseHandler_8cpp}{Sense\+Handler.\+cpp}\end{DoxyCompactItemize}

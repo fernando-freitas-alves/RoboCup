@@ -1,0 +1,354 @@
+\hypertarget{classAgentObject}{}\section{Agent\+Object Class Reference}
+\label{classAgentObject}\index{Agent\+Object@{Agent\+Object}}
+
+
+{\ttfamily \#include $<$Objects.\+h$>$}
+
+
+
+Inheritance diagram for Agent\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classAgentObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Agent\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAgentObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAgentObject_a46e0f4f9c495d64be7387425ac96c2ab}{Agent\+Object} (double d\+Stamina\+Max=4000)
+\item 
+void \hyperlink{classAgentObject_a0043cea8d237828930412eb3c2b84e32}{show} (ostream \&os=cout)
+\item 
+void \hyperlink{classAgentObject_ad486225386c1baa9218b5aa5d2045427}{show} (const char $\ast$str\+Team\+Name, ostream \&os=cout)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classAgentObject_a332c731bfaad817e328bab1906f59359}{get\+Position\+Difference} () const 
+\item 
+bool \hyperlink{classAgentObject_a982932ce580cbb643ed6be3f5c676351}{set\+Position\+Difference} (\hyperlink{classVecPosition}{Vec\+Position} v)
+\item 
+\hyperlink{SoccerTypes_8h_ade95094b8e117801bea82ec390cccf64}{View\+AngleT} \hyperlink{classAgentObject_a82da0c18490bd63868c3a399b168c8fd}{get\+View\+Angle} () const 
+\item 
+bool \hyperlink{classAgentObject_a55a226e986485f9f1995987eb4e6487b}{set\+View\+Angle} (\hyperlink{SoccerTypes_8h_ade95094b8e117801bea82ec390cccf64}{View\+AngleT} v)
+\item 
+\hyperlink{SoccerTypes_8h_a5ae52e4e8062de90b118eacb03e99906}{View\+QualityT} \hyperlink{classAgentObject_a9bd2e9ea93f7c9f4dadfb2e44496528d}{get\+View\+Quality} () const 
+\item 
+bool \hyperlink{classAgentObject_a40347ef44cedf172b2a8edebade46805}{set\+View\+Quality} (\hyperlink{SoccerTypes_8h_a5ae52e4e8062de90b118eacb03e99906}{View\+QualityT} v)
+\item 
+\hyperlink{classStamina}{Stamina} \hyperlink{classAgentObject_a167b9e6b5a2571f1886279dafbbb59d7}{get\+Stamina} () const 
+\item 
+bool \hyperlink{classAgentObject_a0f2ec1a68d2edbf1cda4cea847f9e5b8}{set\+Stamina} (\hyperlink{classStamina}{Stamina} sta)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classAgentObject_a05a81dbb6cefe6ad2b4548d084ad456b}{get\+Speed\+Rel\+To\+Neck} () const 
+\item 
+bool \hyperlink{classAgentObject_a9fe0db948cb05d01707e78b44e96c7f8}{set\+Speed\+Rel\+To\+Neck} (\hyperlink{classVecPosition}{Vec\+Position} v)
+\item 
+bool \hyperlink{classAgentObject_ae340af787802701523f55cd40555b93e}{set\+Global\+Neck\+Angle} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang)
+\item 
+\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} \hyperlink{classAgentObject_aa259adf422ce7d54ae7c94b20a44c2f4}{get\+Body\+Angle\+Rel\+To\+Neck} () const 
+\item 
+bool \hyperlink{classAgentObject_abe8da0bb6a593c714986abacc4e5ec1b}{set\+Body\+Angle\+Rel\+To\+Neck} (\hyperlink{Geometry_8h_a6bfe02ae9bb185092902092561ab2865}{Ang\+Deg} ang)
+\item 
+bool \hyperlink{classAgentObject_a8ee30512544a38fb49be8667e8ed0771}{get\+Arm\+Movable} () const 
+\item 
+bool \hyperlink{classAgentObject_aabacf8e03d85102c4f89da2420617ab0}{set\+Arm\+Movable} (bool b)
+\item 
+int \hyperlink{classAgentObject_a0c8a7da5056999e880824a822a5f0e52}{get\+Arm\+Expires} () const 
+\item 
+bool \hyperlink{classAgentObject_af0d42bee948a9f5f145a39e7caed4d46}{set\+Arm\+Expires} (int i)
+\item 
+\hyperlink{classVecPosition}{Vec\+Position} \hyperlink{classAgentObject_a1e30ba9c7314fd067e4783aaf481d134}{get\+Global\+Arm\+Position} () const 
+\item 
+bool \hyperlink{classAgentObject_a238bbacbf6083bbf1cfa1ff986aa9df5}{set\+Global\+Arm\+Position} (\hyperlink{classVecPosition}{Vec\+Position} v)
+\item 
+int \hyperlink{classAgentObject_a63e7f857385824d37e63aaa5f7caf117}{get\+Tackle\+Expires} () const 
+\item 
+bool \hyperlink{classAgentObject_a20855b8884bf0e247aeb402661803fd8}{set\+Tackle\+Expires} (int i)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classAgentObject}{Agent\+Object} contains Robo\+Cup information that is available for the agent. New variables are declared that extend a normal \hyperlink{classPlayerObject}{Player\+Object}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Agent\+Object@{Agent\+Object}!Agent\+Object@{Agent\+Object}}
+\index{Agent\+Object@{Agent\+Object}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{Agent\+Object(double d\+Stamina\+Max=4000)}{AgentObject(double dStaminaMax=4000)}}]{\setlength{\rightskip}{0pt plus 5cm}Agent\+Object\+::\+Agent\+Object (
+\begin{DoxyParamCaption}
+\item[{double}]{d\+Stamina\+Max = {\ttfamily 4000}}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a46e0f4f9c495d64be7387425ac96c2ab}{}\label{classAgentObject_a46e0f4f9c495d64be7387425ac96c2ab}
+This is the constructor for the class \hyperlink{classAgentObject}{Agent\+Object} and initializes the variables with the \hyperlink{classAgentObject}{Agent\+Object}. This the class that contains information about the agent itself. 
+\begin{DoxyParams}{Parameters}
+{\em d\+Stamina\+Max} & maximum stamina for this agent (default 4000.\+0) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Agent\+Object@{Agent\+Object}!get\+Arm\+Expires@{get\+Arm\+Expires}}
+\index{get\+Arm\+Expires@{get\+Arm\+Expires}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Arm\+Expires() const }{getArmExpires() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\+Object\+::get\+Arm\+Expires (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a0c8a7da5056999e880824a822a5f0e52}{}\label{classAgentObject_a0c8a7da5056999e880824a822a5f0e52}
+This method returns the numer of cycles it will take the arm to expire. In case of zero, the arm doesn\textquotesingle{}t point anymore and the other players won\textquotesingle{}t see the arm pointing anymore. \index{Agent\+Object@{Agent\+Object}!get\+Arm\+Movable@{get\+Arm\+Movable}}
+\index{get\+Arm\+Movable@{get\+Arm\+Movable}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Arm\+Movable() const }{getArmMovable() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::get\+Arm\+Movable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a8ee30512544a38fb49be8667e8ed0771}{}\label{classAgentObject_a8ee30512544a38fb49be8667e8ed0771}
+This method sets whether it is allowed to move the arm of the agent. \index{Agent\+Object@{Agent\+Object}!get\+Body\+Angle\+Rel\+To\+Neck@{get\+Body\+Angle\+Rel\+To\+Neck}}
+\index{get\+Body\+Angle\+Rel\+To\+Neck@{get\+Body\+Angle\+Rel\+To\+Neck}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Body\+Angle\+Rel\+To\+Neck() const }{getBodyAngleRelToNeck() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ang\+Deg} Agent\+Object\+::get\+Body\+Angle\+Rel\+To\+Neck (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_aa259adf422ce7d54ae7c94b20a44c2f4}{}\label{classAgentObject_aa259adf422ce7d54ae7c94b20a44c2f4}
+This method returns the relative angle of the body to the neck of this \hyperlink{classAgentObject}{Agent\+Object}. Example\+: global angle neck is 90 degrees and global body angle is 0, means that relative angle of body to neck is -\/90 degrees. \begin{DoxyReturn}{Returns}
+relative body angle to the neck 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!get\+Global\+Arm\+Position@{get\+Global\+Arm\+Position}}
+\index{get\+Global\+Arm\+Position@{get\+Global\+Arm\+Position}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Global\+Arm\+Position() const }{getGlobalArmPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Agent\+Object\+::get\+Global\+Arm\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a1e30ba9c7314fd067e4783aaf481d134}{}\label{classAgentObject_a1e30ba9c7314fd067e4783aaf481d134}
+This method returns the global position to which the arm points. If \textquotesingle{}get\+Arm\+Expires\textquotesingle{} returns zero, it means that the arm doesn\textquotesingle{}t point anymore and this value is invalid. \index{Agent\+Object@{Agent\+Object}!get\+Position\+Difference@{get\+Position\+Difference}}
+\index{get\+Position\+Difference@{get\+Position\+Difference}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Position\+Difference() const }{getPositionDifference() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Agent\+Object\+::get\+Position\+Difference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a332c731bfaad817e328bab1906f59359}{}\label{classAgentObject_a332c731bfaad817e328bab1906f59359}
+This method returns the difference between the predicted global position of the agent and the actual derived global position. This difference can be used in determining the actual movement of other objects since the noise caused by the difference in the global position of the agent is then filtered out. \index{Agent\+Object@{Agent\+Object}!get\+Speed\+Rel\+To\+Neck@{get\+Speed\+Rel\+To\+Neck}}
+\index{get\+Speed\+Rel\+To\+Neck@{get\+Speed\+Rel\+To\+Neck}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Speed\+Rel\+To\+Neck() const }{getSpeedRelToNeck() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec\+Position} Agent\+Object\+::get\+Speed\+Rel\+To\+Neck (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a05a81dbb6cefe6ad2b4548d084ad456b}{}\label{classAgentObject_a05a81dbb6cefe6ad2b4548d084ad456b}
+This method returns the velocity (speed and direction) of this \hyperlink{classAgentObject}{Agent\+Object}. This information is directly availablefrom the sense message, in which the speed factor and the angle of this speed (relative to the neck) are given. \begin{DoxyReturn}{Returns}
+velocity agent relative to the neck. 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!get\+Stamina@{get\+Stamina}}
+\index{get\+Stamina@{get\+Stamina}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Stamina() const }{getStamina() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stamina} Agent\+Object\+::get\+Stamina (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a167b9e6b5a2571f1886279dafbbb59d7}{}\label{classAgentObject_a167b9e6b5a2571f1886279dafbbb59d7}
+This method returns the \hyperlink{classStamina}{Stamina} of the \hyperlink{classAgentObject}{Agent\+Object}. \begin{DoxyReturn}{Returns}
+stamina from the agent. 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!get\+Tackle\+Expires@{get\+Tackle\+Expires}}
+\index{get\+Tackle\+Expires@{get\+Tackle\+Expires}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+Tackle\+Expires() const }{getTackleExpires() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\+Object\+::get\+Tackle\+Expires (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a63e7f857385824d37e63aaa5f7caf117}{}\label{classAgentObject_a63e7f857385824d37e63aaa5f7caf117}
+This method returns the number of cycles it will take the tackle to expire. In case of 0 a tackle command can be issued. \index{Agent\+Object@{Agent\+Object}!get\+View\+Angle@{get\+View\+Angle}}
+\index{get\+View\+Angle@{get\+View\+Angle}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+View\+Angle() const }{getViewAngle() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View\+AngleT} Agent\+Object\+::get\+View\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a82da0c18490bd63868c3a399b168c8fd}{}\label{classAgentObject_a82da0c18490bd63868c3a399b168c8fd}
+This method returns the view angle of this \hyperlink{classPlayerObject}{Player\+Object}. The view angle equals V\+A\+\_\+\+N\+A\+R\+R\+OW, V\+A\+\_\+\+N\+O\+R\+M\+AL, V\+A\+\_\+\+W\+I\+DE or V\+A\+\_\+\+I\+L\+L\+E\+G\+AL. \begin{DoxyReturn}{Returns}
+view angle of this \hyperlink{classPlayerObject}{Player\+Object} 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!get\+View\+Quality@{get\+View\+Quality}}
+\index{get\+View\+Quality@{get\+View\+Quality}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{get\+View\+Quality() const }{getViewQuality() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf View\+QualityT} Agent\+Object\+::get\+View\+Quality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classAgentObject_a9bd2e9ea93f7c9f4dadfb2e44496528d}{}\label{classAgentObject_a9bd2e9ea93f7c9f4dadfb2e44496528d}
+This method returns the view quality of this \hyperlink{classAgentObject}{Agent\+Object}. The view angle equals V\+Q\+\_\+\+L\+OW, V\+Q\+\_\+\+H\+I\+GH, or V\+Q\+\_\+\+I\+L\+L\+E\+G\+AL. \begin{DoxyReturn}{Returns}
+view quality of this \hyperlink{classAgentObject}{Agent\+Object} 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+Arm\+Expires@{set\+Arm\+Expires}}
+\index{set\+Arm\+Expires@{set\+Arm\+Expires}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Arm\+Expires(int i)}{setArmExpires(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Arm\+Expires (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_af0d42bee948a9f5f145a39e7caed4d46}{}\label{classAgentObject_af0d42bee948a9f5f145a39e7caed4d46}
+This method sets the numer of cycles it will take the arm to expire. In case of zero, the arm doesn\textquotesingle{}t point anymore and the other players won\textquotesingle{}t see the arm pointing anymore. \index{Agent\+Object@{Agent\+Object}!set\+Arm\+Movable@{set\+Arm\+Movable}}
+\index{set\+Arm\+Movable@{set\+Arm\+Movable}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Arm\+Movable(bool b)}{setArmMovable(bool b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Arm\+Movable (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_aabacf8e03d85102c4f89da2420617ab0}{}\label{classAgentObject_aabacf8e03d85102c4f89da2420617ab0}
+This method returns whether it is allowed to move the arm of the agent. \index{Agent\+Object@{Agent\+Object}!set\+Body\+Angle\+Rel\+To\+Neck@{set\+Body\+Angle\+Rel\+To\+Neck}}
+\index{set\+Body\+Angle\+Rel\+To\+Neck@{set\+Body\+Angle\+Rel\+To\+Neck}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Body\+Angle\+Rel\+To\+Neck(\+Ang\+Deg ang)}{setBodyAngleRelToNeck(AngDeg ang)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Body\+Angle\+Rel\+To\+Neck (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{ang}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_abe8da0bb6a593c714986abacc4e5ec1b}{}\label{classAgentObject_abe8da0bb6a593c714986abacc4e5ec1b}
+This method sets the relative body angle to the neck for this \hyperlink{classAgentObject}{Agent\+Object}. 
+\begin{DoxyParams}{Parameters}
+{\em ang} & relative body angle to the neck \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+Global\+Arm\+Position@{set\+Global\+Arm\+Position}}
+\index{set\+Global\+Arm\+Position@{set\+Global\+Arm\+Position}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Global\+Arm\+Position(\+Vec\+Position v)}{setGlobalArmPosition(VecPosition v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Global\+Arm\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a238bbacbf6083bbf1cfa1ff986aa9df5}{}\label{classAgentObject_a238bbacbf6083bbf1cfa1ff986aa9df5}
+This method sets the global position to which the arm points. \index{Agent\+Object@{Agent\+Object}!set\+Global\+Neck\+Angle@{set\+Global\+Neck\+Angle}}
+\index{set\+Global\+Neck\+Angle@{set\+Global\+Neck\+Angle}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Global\+Neck\+Angle(\+Ang\+Deg ang)}{setGlobalNeckAngle(AngDeg ang)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Global\+Neck\+Angle (
+\begin{DoxyParamCaption}
+\item[{{\bf Ang\+Deg}}]{ang}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_ae340af787802701523f55cd40555b93e}{}\label{classAgentObject_ae340af787802701523f55cd40555b93e}
+This method sets the global neck angle for this \hyperlink{classAgentObject}{Agent\+Object}. 
+\begin{DoxyParams}{Parameters}
+{\em ang} & value for the global neck angle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+Position\+Difference@{set\+Position\+Difference}}
+\index{set\+Position\+Difference@{set\+Position\+Difference}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Position\+Difference(\+Vec\+Position v)}{setPositionDifference(VecPosition v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Position\+Difference (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a982932ce580cbb643ed6be3f5c676351}{}\label{classAgentObject_a982932ce580cbb643ed6be3f5c676351}
+This method sets the position difference between the derived global position from the previous cycle information and the global position from the latest see message. 
+\begin{DoxyParams}{Parameters}
+{\em p} & new position difference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether the update was succesfull. 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+Speed\+Rel\+To\+Neck@{set\+Speed\+Rel\+To\+Neck}}
+\index{set\+Speed\+Rel\+To\+Neck@{set\+Speed\+Rel\+To\+Neck}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Speed\+Rel\+To\+Neck(\+Vec\+Position v)}{setSpeedRelToNeck(VecPosition v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Speed\+Rel\+To\+Neck (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec\+Position}}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a9fe0db948cb05d01707e78b44e96c7f8}{}\label{classAgentObject_a9fe0db948cb05d01707e78b44e96c7f8}
+This method sets the velocity (speed and direction) of this \hyperlink{classAgentObject}{Agent\+Object}. This information comes directly from the sense message. 
+\begin{DoxyParams}{Parameters}
+{\em v} & new velocity for this agentobject \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+Stamina@{set\+Stamina}}
+\index{set\+Stamina@{set\+Stamina}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Stamina(\+Stamina sta)}{setStamina(Stamina sta)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Stamina (
+\begin{DoxyParamCaption}
+\item[{{\bf Stamina}}]{sta}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a0f2ec1a68d2edbf1cda4cea847f9e5b8}{}\label{classAgentObject_a0f2ec1a68d2edbf1cda4cea847f9e5b8}
+This method sets the stamina of this \hyperlink{classAgentObject}{Agent\+Object}. 
+\begin{DoxyParams}{Parameters}
+{\em sta} & new stamina for this \hyperlink{classAgentObject}{Agent\+Object} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+Tackle\+Expires@{set\+Tackle\+Expires}}
+\index{set\+Tackle\+Expires@{set\+Tackle\+Expires}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+Tackle\+Expires(int i)}{setTackleExpires(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+Tackle\+Expires (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a20855b8884bf0e247aeb402661803fd8}{}\label{classAgentObject_a20855b8884bf0e247aeb402661803fd8}
+This method sets the number of cycles it will take the tackle to expire. In case of 0 a tackle command can be issued. \index{Agent\+Object@{Agent\+Object}!set\+View\+Angle@{set\+View\+Angle}}
+\index{set\+View\+Angle@{set\+View\+Angle}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+View\+Angle(\+View\+Angle\+T v)}{setViewAngle(ViewAngleT v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+View\+Angle (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+AngleT}}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a55a226e986485f9f1995987eb4e6487b}{}\label{classAgentObject_a55a226e986485f9f1995987eb4e6487b}
+This method sets the view angle of this \hyperlink{classAgentObject}{Agent\+Object}. 
+\begin{DoxyParams}{Parameters}
+{\em v} & new view angle (V\+A\+\_\+\+N\+A\+R\+R\+OW, V\+A\+\_\+\+N\+O\+R\+M\+AL, V\+A\+\_\+\+W\+I\+DE or V\+A\+\_\+\+I\+L\+L\+E\+G\+AL) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!set\+View\+Quality@{set\+View\+Quality}}
+\index{set\+View\+Quality@{set\+View\+Quality}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{set\+View\+Quality(\+View\+Quality\+T v)}{setViewQuality(ViewQualityT v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\+Object\+::set\+View\+Quality (
+\begin{DoxyParamCaption}
+\item[{{\bf View\+QualityT}}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_a40347ef44cedf172b2a8edebade46805}{}\label{classAgentObject_a40347ef44cedf172b2a8edebade46805}
+Set the view quality of this \hyperlink{classAgentObject}{Agent\+Object}. 
+\begin{DoxyParams}{Parameters}
+{\em v} & new view quality (V\+Q\+\_\+\+L\+OW, V\+Q\+\_\+\+H\+I\+GH, V\+Q\+\_\+\+I\+L\+L\+E\+G\+AL) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool indicating whether value was set 
+\end{DoxyReturn}
+\index{Agent\+Object@{Agent\+Object}!show@{show}}
+\index{show@{show}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{show(ostream \&os=cout)}{show(ostream &os=cout)}}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\+Object\+::show (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classAgentObject_a0043cea8d237828930412eb3c2b84e32}{}\label{classAgentObject_a0043cea8d237828930412eb3c2b84e32}
+This methods prints the information about this \hyperlink{classAgentObject}{Agent\+Object} to the specified output stream. The default team name is used as the name. 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to which information is written. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classPlayerObject_a01d587f88139dddf2ca1b39a65523dd6}{Player\+Object}.
+
+\index{Agent\+Object@{Agent\+Object}!show@{show}}
+\index{show@{show}!Agent\+Object@{Agent\+Object}}
+\subsubsection[{\texorpdfstring{show(const char $\ast$str\+Team\+Name, ostream \&os=cout)}{show(const char *strTeamName, ostream &os=cout)}}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\+Object\+::show (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str\+Team\+Name, }
+\item[{ostream \&}]{os = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)}\hypertarget{classAgentObject_ad486225386c1baa9218b5aa5d2045427}{}\label{classAgentObject_ad486225386c1baa9218b5aa5d2045427}
+This methods prints the information about this \hyperlink{classAgentObject}{Agent\+Object} to the specified output stream. The specified team name is used as the name 
+\begin{DoxyParams}{Parameters}
+{\em str\+Team\+Name} & team name for this agent. \\
+\hline
+{\em os} & output stream to which information is written. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Objects_8h}{Objects.\+h}\item 
+src/\hyperlink{Objects_8cpp}{Objects.\+cpp}\end{DoxyCompactItemize}

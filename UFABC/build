@@ -1,0 +1,93 @@
+#!/bin/bash
+clear
+echo Building UFABC Robotics RCSS
+LOG_FILE=build_log.txt
+
+> $LOG_FILE
+if [ $# != 0 ]; then
+    if [ "$1" == "-r" ] || [ "$2" == "-r" ]; then
+        echo Ending previous program process...
+        killall trilearn_player &> /dev/null
+        killall trilearn_coach &> /dev/null
+        # echo Restarting server...
+        # pgrep rcssserver | xargs kill -9 &> /dev/null
+        # rcssserver &> /dev/null &
+    fi
+    if [ "$1" == "-n" ] || [ "$2" == "-n" ]; then
+        echo Reconfiguring parameters based on actual version...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# autoreconf ################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        autoreconf --force --install >> $LOG_FILE
+        autoreconf -i >> $LOG_FILE
+
+        echo Setting macros for scripts...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################## aclocal ##################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        set -e
+        aclocal >> $LOG_FILE
+
+        echo Generating configuration script...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################## autoconf #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        autoconf >> $LOG_FILE
+
+        echo Generating make script...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################## automake #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        automake --add-missing >> $LOG_FILE
+
+        echo Configuring project based on computer...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# configure #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        ./configure >> $LOG_FILE
+
+        echo Cleaning last make...
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        echo "################# configure #################" >> $LOG_FILE
+        echo "" >> $LOG_FILE
+        make clean 2>&1 | tee -a $LOG_FILE
+    fi
+fi
+
+echo Making binaries...
+echo "" >> $LOG_FILE
+echo "" >> $LOG_FILE
+echo "" >> $LOG_FILE
+echo "################### make ###################" >> $LOG_FILE
+echo "" >> $LOG_FILE
+set -e -o pipefail
+make 2>&1 | tee -a $LOG_FILE
+
+echo Done.
+# while true; do
+#     read -p "Do you wish to start the program? [Y/n] " answer
+#     case ${answer:0:1} in
+#         y|Y|"")
+            ./start.sh #9 #2
+            ./start-2.sh #2 #9
+            # "/Users/fernando/Google Drive/Sincronização/Fê/Inteligência Artificial em Robótica (ESZA022)/Projetos/RocoCup/trilearnBaseUFABC/start-2.sh"
+            ## cd ../helios/src/
+            #./start.sh test2
+            #cd -
+#             break
+#         ;;
+#         n|N) break;;
+#     esac
+# done

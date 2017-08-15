@@ -1,0 +1,101 @@
+\hypertarget{classHeteroPlayerSettings}{}\section{Hetero\+Player\+Settings Class Reference}
+\label{classHeteroPlayerSettings}\index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+
+
+{\ttfamily \#include $<$Server\+Settings.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classHeteroPlayerSettings_a36809eb83342f7bcdc564eb030989188}{show} (ostream \&os=cout)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classHeteroPlayerSettings_aa7aeceb8d73822e31567b0fc197c6107}{d\+Player\+Speed\+Max}
+\item 
+double \hyperlink{classHeteroPlayerSettings_a2ee242dc6e818b579022c7d81c573d86}{d\+Stamina\+Inc\+Max}
+\item 
+double \hyperlink{classHeteroPlayerSettings_afaa769b7ff145f0f56b3d4fb680ec81a}{d\+Player\+Decay}
+\item 
+double \hyperlink{classHeteroPlayerSettings_af7a5aad2979e605d3cedecd7b273420c}{d\+Inertia\+Moment}
+\item 
+double \hyperlink{classHeteroPlayerSettings_ad1faef7180c5118c2ec66ca5d14d8e3f}{d\+Dash\+Power\+Rate}
+\item 
+double \hyperlink{classHeteroPlayerSettings_ae9141d2aa716dabb576a382c8cbf9c2d}{d\+Player\+Size}
+\item 
+double \hyperlink{classHeteroPlayerSettings_a45c60e71a86c2424c9639a049b66b1c0}{d\+Kickable\+Margin}
+\item 
+double \hyperlink{classHeteroPlayerSettings_a3eac27320ad6fdb15c45ee0f1325626e}{d\+Kick\+Rand}
+\item 
+double \hyperlink{classHeteroPlayerSettings_a79c89d2b0733f8cd5e99ccfc1ddea52e}{d\+Extra\+Stamina}
+\item 
+double \hyperlink{classHeteroPlayerSettings_a10e6951be049003a8ffc56909a7f29dc}{d\+Effort\+Max}
+\item 
+double \hyperlink{classHeteroPlayerSettings_aeedb99aad3ee448861d0bc0e543caf81}{d\+Effort\+Min}
+\item 
+double \hyperlink{classHeteroPlayerSettings_ab91fb7040a4a9eb7acbc82f80b1006a6}{d\+Maximal\+Kick\+Dist}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains all the Soccer\+Server parameters which together define a heterogeneous player type. For each player type these parameters are initialized when the server is started. 
+
+\subsection{Member Function Documentation}
+\index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!show@{show}}
+\index{show@{show}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{show(ostream \&os=cout)}{show(ostream &os=cout)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hetero\+Player\+Settings\+::show (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os = {\ttfamily cout}}
+\end{DoxyParamCaption}
+)}\hypertarget{classHeteroPlayerSettings_a36809eb83342f7bcdc564eb030989188}{}\label{classHeteroPlayerSettings_a36809eb83342f7bcdc564eb030989188}
+This method prints all the values of this heterogeneous player type to the supplied output. 
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream to which values are printed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Dash\+Power\+Rate@{d\+Dash\+Power\+Rate}}
+\index{d\+Dash\+Power\+Rate@{d\+Dash\+Power\+Rate}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Dash\+Power\+Rate}{dDashPowerRate}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Dash\+Power\+Rate}\hypertarget{classHeteroPlayerSettings_ad1faef7180c5118c2ec66ca5d14d8e3f}{}\label{classHeteroPlayerSettings_ad1faef7180c5118c2ec66ca5d14d8e3f}
+dash\+\_\+power\+\_\+rate\+: rate by which the \textquotesingle{}Power\textquotesingle{} argument in a \textquotesingle{}dash\textquotesingle{} command is multiplied (thus determining the amount of displacement of the player as a result of the \textquotesingle{}dash\textquotesingle{}) \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Effort\+Max@{d\+Effort\+Max}}
+\index{d\+Effort\+Max@{d\+Effort\+Max}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Effort\+Max}{dEffortMax}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Effort\+Max}\hypertarget{classHeteroPlayerSettings_a10e6951be049003a8ffc56909a7f29dc}{}\label{classHeteroPlayerSettings_a10e6951be049003a8ffc56909a7f29dc}
+effort\+\_\+max\+: maximum value for player effort \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Effort\+Min@{d\+Effort\+Min}}
+\index{d\+Effort\+Min@{d\+Effort\+Min}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Effort\+Min}{dEffortMin}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Effort\+Min}\hypertarget{classHeteroPlayerSettings_aeedb99aad3ee448861d0bc0e543caf81}{}\label{classHeteroPlayerSettings_aeedb99aad3ee448861d0bc0e543caf81}
+effort\+\_\+min\+: minimum value for player effort \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Extra\+Stamina@{d\+Extra\+Stamina}}
+\index{d\+Extra\+Stamina@{d\+Extra\+Stamina}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Extra\+Stamina}{dExtraStamina}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Extra\+Stamina}\hypertarget{classHeteroPlayerSettings_a79c89d2b0733f8cd5e99ccfc1ddea52e}{}\label{classHeteroPlayerSettings_a79c89d2b0733f8cd5e99ccfc1ddea52e}
+extra\+\_\+stamina\+: extra stamina for heterogeneous player \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Inertia\+Moment@{d\+Inertia\+Moment}}
+\index{d\+Inertia\+Moment@{d\+Inertia\+Moment}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Inertia\+Moment}{dInertiaMoment}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Inertia\+Moment}\hypertarget{classHeteroPlayerSettings_af7a5aad2979e605d3cedecd7b273420c}{}\label{classHeteroPlayerSettings_af7a5aad2979e605d3cedecd7b273420c}
+inertia\+\_\+moment\+: inertia moment of a player; affects actual turn angle depending on speed \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Kickable\+Margin@{d\+Kickable\+Margin}}
+\index{d\+Kickable\+Margin@{d\+Kickable\+Margin}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Kickable\+Margin}{dKickableMargin}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Kickable\+Margin}\hypertarget{classHeteroPlayerSettings_a45c60e71a86c2424c9639a049b66b1c0}{}\label{classHeteroPlayerSettings_a45c60e71a86c2424c9639a049b66b1c0}
+kickable\+\_\+margin\+: margin around player in which ball is kickable; kickable area thus equals kickable\+\_\+margin + ball\+\_\+size + player\+\_\+size \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Kick\+Rand@{d\+Kick\+Rand}}
+\index{d\+Kick\+Rand@{d\+Kick\+Rand}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Kick\+Rand}{dKickRand}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Kick\+Rand}\hypertarget{classHeteroPlayerSettings_a3eac27320ad6fdb15c45ee0f1325626e}{}\label{classHeteroPlayerSettings_a3eac27320ad6fdb15c45ee0f1325626e}
+kick\+\_\+rand\+: random error in kick direction \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Maximal\+Kick\+Dist@{d\+Maximal\+Kick\+Dist}}
+\index{d\+Maximal\+Kick\+Dist@{d\+Maximal\+Kick\+Dist}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Maximal\+Kick\+Dist}{dMaximalKickDist}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Maximal\+Kick\+Dist}\hypertarget{classHeteroPlayerSettings_ab91fb7040a4a9eb7acbc82f80b1006a6}{}\label{classHeteroPlayerSettings_ab91fb7040a4a9eb7acbc82f80b1006a6}
+the maximum distance from a player for which the ball is still kickable \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Player\+Decay@{d\+Player\+Decay}}
+\index{d\+Player\+Decay@{d\+Player\+Decay}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Player\+Decay}{dPlayerDecay}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Player\+Decay}\hypertarget{classHeteroPlayerSettings_afaa769b7ff145f0f56b3d4fb680ec81a}{}\label{classHeteroPlayerSettings_afaa769b7ff145f0f56b3d4fb680ec81a}
+player\+\_\+decay\+: player speed decay per cycle \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Player\+Size@{d\+Player\+Size}}
+\index{d\+Player\+Size@{d\+Player\+Size}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Player\+Size}{dPlayerSize}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Player\+Size}\hypertarget{classHeteroPlayerSettings_ae9141d2aa716dabb576a382c8cbf9c2d}{}\label{classHeteroPlayerSettings_ae9141d2aa716dabb576a382c8cbf9c2d}
+dash\+\_\+power\+\_\+rate\+: rate by which the \textquotesingle{}Power\textquotesingle{} argument in a \textquotesingle{}dash\textquotesingle{} command is multiplied (thus determining the amount of displacement of the player as a result of the \textquotesingle{}dash\textquotesingle{}) \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Player\+Speed\+Max@{d\+Player\+Speed\+Max}}
+\index{d\+Player\+Speed\+Max@{d\+Player\+Speed\+Max}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Player\+Speed\+Max}{dPlayerSpeedMax}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Player\+Speed\+Max}\hypertarget{classHeteroPlayerSettings_aa7aeceb8d73822e31567b0fc197c6107}{}\label{classHeteroPlayerSettings_aa7aeceb8d73822e31567b0fc197c6107}
+player\+\_\+speed\+\_\+max\+: maximum speed of a player \index{Hetero\+Player\+Settings@{Hetero\+Player\+Settings}!d\+Stamina\+Inc\+Max@{d\+Stamina\+Inc\+Max}}
+\index{d\+Stamina\+Inc\+Max@{d\+Stamina\+Inc\+Max}!Hetero\+Player\+Settings@{Hetero\+Player\+Settings}}
+\subsubsection[{\texorpdfstring{d\+Stamina\+Inc\+Max}{dStaminaIncMax}}]{\setlength{\rightskip}{0pt plus 5cm}double Hetero\+Player\+Settings\+::d\+Stamina\+Inc\+Max}\hypertarget{classHeteroPlayerSettings_a2ee242dc6e818b579022c7d81c573d86}{}\label{classHeteroPlayerSettings_a2ee242dc6e818b579022c7d81c573d86}
+stamina\+\_\+inc\+\_\+max\+: maximum stamina increase of a player per cycle 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{ServerSettings_8h}{Server\+Settings.\+h}\item 
+src/\hyperlink{ServerSettings_8cpp}{Server\+Settings.\+cpp}\end{DoxyCompactItemize}

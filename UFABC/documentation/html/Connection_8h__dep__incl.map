@@ -1,0 +1,16 @@
+<map id="src/Connection.h" name="src/Connection.h">
+<area shape="rect" id="node2" href="$ActHandler_8h.html" title="src/ActHandler.h" alt="" coords="325,80,445,107"/>
+<area shape="rect" id="node14" href="$Connection_8cpp.html" title="src/Connection.cpp" alt="" coords="478,80,613,107"/>
+<area shape="rect" id="node15" href="$SenseHandler_8h.html" title="src/SenseHandler.h" alt="" coords="641,80,778,107"/>
+<area shape="rect" id="node3" href="$ActHandler_8cpp.html" title="src/ActHandler.cpp" alt="" coords="162,155,297,181"/>
+<area shape="rect" id="node4" href="$BasicCoach_8h.html" title="src/BasicCoach.h" alt="" coords="321,155,447,181"/>
+<area shape="rect" id="node6" href="$mainCoach_8cpp.html" title="src/mainCoach.cpp" alt="" coords="463,229,598,256"/>
+<area shape="rect" id="node7" href="$BasicPlayer_8h.html" title="src/BasicPlayer.h" alt="" coords="12,155,137,181"/>
+<area shape="rect" id="node13" href="$SenseHandler_8cpp.html" title="src/SenseHandler.cpp" alt="" coords="523,155,674,181"/>
+<area shape="rect" id="node5" href="$BasicCoach_8cpp.html" title="src/BasicCoach.cpp" alt="" coords="299,229,439,256"/>
+<area shape="rect" id="node8" href="$BasicPlayer_8cpp.html" title="src/BasicPlayer.cpp" alt="" coords="5,229,144,256"/>
+<area shape="rect" id="node9" href="$Player_8h.html" title="src/Player.h" alt="" coords="177,229,269,256"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="555,304,653,331"/>
+<area shape="rect" id="node11" href="$Player_8cpp.html" title="src/Player.cpp" alt="" coords="95,304,201,331"/>
+<area shape="rect" id="node12" href="$PlayerTeams_8cpp.html" title="src/PlayerTeams.cpp" alt="" coords="225,304,372,331"/>
+</map>
